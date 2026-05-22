@@ -32,10 +32,23 @@ xcd.log
 # ABSOLUTE BLACKLIST: Force ignore specific structures
 # ==============================================================================
 
-# Force ignore any directory named "build" and all of its content
+# Force ignore specific IDE/HLS directories
 **/build/
 **/.autopilot/
 **/autowrap/
-**/verilog/
 **/wrapc/
 **/wrapc_pc/
+
+# ==============================================================================
+# VERILOG DIRECTORY EXCEPTIONS
+# ==============================================================================
+
+# 1. Force ignore ALL files inside 'verilog' (overrides global !*.rpt and !*.log)
+**/verilog/**
+
+# 2. Allow Git to traverse subdirectories inside 'verilog'
+!**/verilog/**/
+
+# 3. Whitelist only the simulation databases and waveform configurations
+!**/verilog/**/*.wdb
+!**/verilog/**/*.wcfg
