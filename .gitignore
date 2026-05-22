@@ -1,0 +1,41 @@
+# ==============================================================================
+# DEFAULT POLICY: Ignore everything
+# ==============================================================================
+*
+
+# ==============================================================================
+# WHITELIST RULES: Allow specific directories and file extensions
+# ==============================================================================
+
+# Allow Git to look into the directory structure (required for whitelisting)
+!*/
+!**/
+
+# Allow .gitignore file
+!.gitignore
+
+# Whitelist specific file extensions everywhere
+!*.hpp
+!*.cpp
+!*.cfg
+!*.rpt
+
+# Whitelist log files generally, but exclude specific IDE logs
+!*.log
+ide_verbose.log
+ide.log
+vitis.log
+xcd.log
+*.steps.log
+
+# ==============================================================================
+# ABSOLUTE BLACKLIST: Force ignore specific structures
+# ==============================================================================
+
+# Force ignore any directory named "build" and all of its content
+**/build/
+**/.autopilot/
+**/autowrap/
+**/verilog/
+**/wrapc/
+**/wrapc_pc/
