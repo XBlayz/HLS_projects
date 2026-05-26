@@ -24,8 +24,8 @@ set PROJECT_NAME=project01_FIR
 set COMP_VERSION=fir_baseline
 set COMP_NAME=fir
 
-set TB_FILE_NAME=%PROJECT_NAME%_%COMP_NAME%_tb
-set CLOCK_FILE_NAME=%PROJECT_NAME%_%COMP_NAME%_clk
+set TB_FILE_NAME=%PROJECT_NAME%_%COMP_VERSION%_tb
+set CLOCK_FILE_NAME=%PROJECT_NAME%_%COMP_VERSION%_clk
 
 
 :: ============================================================
@@ -113,7 +113,7 @@ if not exist "%IP_ZIP%" (
 )
 
 echo [INFO ] Extracting IP to %IP_REPO_DIR%\%COMP_NAME%...
-7z x "%IP_ZIP%" -o"%IP_REPO_DIR%\%COMP_NAME%" -y > nul
+7z x "%IP_ZIP%" -o"..\..\..\%IP_REPO_DIR%\%COMP_NAME%" -y > nul
 if %errorlevel% neq 0 (
     echo [FAIL ] IP extraction failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -147,7 +147,6 @@ echo  Target : %COMP_VERSION%  (%COMP_NAME%)
 echo  Report : %BUILD_DIR%\reports\post_synth_power_report.txt
 echo ========================================================
 endlocal
-pause
 exit /b 0
 
 
@@ -158,5 +157,4 @@ echo  WORKFLOW INTERRUPTED -- Check the logs above
 echo  Target : %COMP_VERSION%  (%COMP_NAME%)
 echo ========================================================
 endlocal
-pause
 exit /b 1

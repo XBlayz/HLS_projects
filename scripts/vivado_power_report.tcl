@@ -79,8 +79,8 @@ set PRJ_NAME   "vivado_prj"
 set BUILD_DIR  "."
 set PRJ_DIR    "${BUILD_DIR}/${PRJ_NAME}"
 set IP_REPO_DIR "${BUILD_DIR}/ip_repo"
-set TB_FILE    "../../../src/vivado/${TB_FILE_NAME}.vhd"
-set CLOCK_FILE "../../../src/vivado/${CLOCK_FILE_NAME}.xdc"
+set TB_FILE    "../../../srcs/vivado/${TB_FILE_NAME}.vhd"
+set CLOCK_FILE "../../../srcs/vivado/const/${CLOCK_FILE_NAME}.xdc"
 set REPORT_DIR "../../../reports/${PROJECT_NAME}"
 
 # Paths internal to the Vivado project (automatically derived)
