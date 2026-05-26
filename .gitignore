@@ -15,7 +15,8 @@
 !.gitignore
 
 # Allow root files
-!scripts/*
+!scripts/**
+!reports/**
 !srcs/**
 
 # Whitelist specific file extensions everywhere
