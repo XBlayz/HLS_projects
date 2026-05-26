@@ -15,10 +15,17 @@ cd /d "%~dp0.."
 ::                 (e.g., fir_baseline, fir_pipelined)
 ::  COMP_NAME    : name of the top-level HLS function
 ::                 (e.g., fir — must match hls_config.cfg)
+::  TB_FILE_NAME : name of the testbench file
+::                 (Default: ${PROJECT_NAME}_${COMP_NAME}_tb)
+::  CLOCK_FILE_NAME : name of the clock constraint file
+::                 (Default: ${PROJECT_NAME}_${COMP_NAME}_clk)
 :: ============================================================
 set PROJECT_NAME=project01_FIR
 set COMP_VERSION=fir_baseline
 set COMP_NAME=fir
+
+set TB_FILE_NAME=%PROJECT_NAME%_%COMP_NAME%_tb
+set CLOCK_FILE_NAME=%PROJECT_NAME%_%COMP_NAME%_clk
 
 
 :: ============================================================
@@ -124,7 +131,7 @@ echo ========================================================
 cd %BUILD_DIR%
 call vivado -mode batch -notrace ^
     -source ..\..\..\scripts\vivado_power_report.tcl ^
-    -tclargs %PROJECT_NAME% %COMP_VERSION% %COMP_NAME%
+    -tclargs %PROJECT_NAME% %COMP_VERSION% %COMP_NAME% %TB_FILE_NAME% %CLOCK_FILE_NAME%
 if %errorlevel% neq 0 (
     echo [FAIL ] Vivado power analysis failed ^(errorlevel: %errorlevel%^)
     goto :error

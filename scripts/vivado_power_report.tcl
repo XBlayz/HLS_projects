@@ -22,21 +22,25 @@
 #   PROJECT_NAME : name of the project directory        (e.g., project01_FIR)
 #   COMP_VERSION : name of the HLS component directory  (e.g., fir_baseline)
 #   COMP_NAME    : name of the top-level HLS function   (e.g., fir)
+#   TB_FILE_NAME : name of the testbench file           (Default: ${PROJECT_NAME}_${COMP_NAME}_tb)
+#   CLOCK_FILE_NAME : name of the clock constraint file (Default: ${PROJECT_NAME}_${COMP_NAME}_clk)
 #==============================================================================
 
 
 #------------------------------------------------------------------------------
 # Arguments received from workflow.bat via -tclargs
 #------------------------------------------------------------------------------
-if {[llength $argv] < 3} {
+if {[llength $argv] < 5} {
     puts "\[FAIL \] Arguments missing."
     puts "\[FAIL \] Usage: vivado ... -tclargs <COMP_VERSION> <COMP_NAME>"
     exit 1
 }
 
-set PROJECT_NAME [lindex $argv 0]   ;# e.g., project01_FIR
-set COMP_VERSION [lindex $argv 0]   ;# e.g., fir_baseline
-set COMP_NAME    [lindex $argv 1]   ;# e.g., fir
+set PROJECT_NAME    [lindex $argv 0]   ;# e.g., project01_FIR
+set COMP_VERSION    [lindex $argv 1]   ;# e.g., fir_baseline
+set COMP_NAME       [lindex $argv 2]   ;# e.g., fir
+set TB_FILE_NAME    [lindex $argv 3]   ;# Default: ${PROJECT_NAME}_${COMP_NAME}_tb"
+set CLOCK_FILE_NAME [lindex $argv 4]   ;# Default: ${PROJECT_NAME}_${COMP_NAME}_clk"
 
 # Derived names by convention (modify if naming convention differs)
 set TOP_MODULE  $COMP_NAME
@@ -75,8 +79,8 @@ set PRJ_NAME   "vivado_prj"
 set BUILD_DIR  "."
 set PRJ_DIR    "${BUILD_DIR}/${PRJ_NAME}"
 set IP_REPO_DIR "${BUILD_DIR}/ip_repo"
-set TB_FILE    "../../../src/vivado/${PROJECT_NAME}/${COMP_NAME}_tb.vhd"
-set CLOCK_FILE "../../../src/vivado/${PROJECT_NAME}/const/${COMP_NAME}_clk.xdc"
+set TB_FILE    "../../../src/vivado/${TB_FILE_NAME}.vhd"
+set CLOCK_FILE "../../../src/vivado/${CLOCK_FILE_NAME}.xdc"
 set REPORT_DIR "../../../reports/${PROJECT_NAME}"
 
 # Paths internal to the Vivado project (automatically derived)

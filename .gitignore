@@ -14,8 +14,9 @@
 # Allow .gitignore file
 !.gitignore
 
-# Allow scripts
+# Allow root files
 !scripts/*
+!srcs/**
 
 # Whitelist specific file extensions everywhere
 !*.hpp
