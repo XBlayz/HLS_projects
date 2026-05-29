@@ -1,0 +1,42 @@
+INFO: [SIM 2] *************** CSIM start ***************
+mingw32-make: 'csim.exe' is up to date.
+==============================================================
+                 FIR FILTER HLS TESTBENCH                     
+==============================================================
+CYCLE     INPUT (x)      DUT OUT (y)    GOLDEN OUT     STATUS    
+--------------------------------------------------------------
+0         1              53             53             PASS      
+1         0              0              0              PASS      
+2         0              -91            -91            PASS      
+3         0              0              0              PASS      
+4         0              313            313            PASS      
+5         0              500            500            PASS      
+6         0              313            313            PASS      
+7         0              0              0              PASS      
+8         0              -91            -91            PASS      
+9         0              0              0              PASS      
+10        0              53             53             PASS      
+11        0              0              0              PASS      
+12        0              0              0              PASS      
+13        0              0              0              PASS      
+14        0              0              0              PASS      
+15        2              106            106            PASS      
+16        0              0              0              PASS      
+17        0              -182           -182           PASS      
+18        0              0              0              PASS      
+19        0              626            626            PASS      
+20        0              1000           1000           PASS      
+21        0              626            626            PASS      
+22        0              0              0              PASS      
+23        0              -182           -182           PASS      
+24        0              0              0              PASS      
+25        0              106            106            PASS      
+26        0              0              0              PASS      
+27        0              0              0              PASS      
+28        0              0              0              PASS      
+29        0              0              0              PASS      
+--------------------------------------------------------------
+>> SIMULATION STATUS: PASSED
+==============================================================
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
