@@ -33,6 +33,7 @@ set "DEFAULT_SIM_TIME=1000ns"
 ::                3 = C/RTL co-simulation
 ::                4 = RTL IP export
 ::                5 = Vivado power analysis
+::                0 = Report aggregation
 ::    /simtime  Co-simulation duration (default: %DEFAULT_SIM_TIME%)
 :: ============================================================
 
@@ -75,8 +76,8 @@ if not "%FROM_STEP_VAL%"=="%FROM_STEP%" (
     echo [FAIL ] /from must be a number between 1 and 5.
     goto :usage
 )
-if %FROM_STEP% lss 1 ( echo [FAIL ] /from must be between 1 and 5. & goto :usage )
-if %FROM_STEP% gtr 5 ( echo [FAIL ] /from must be between 1 and 5. & goto :usage )
+if %FROM_STEP% lss 0 ( echo [FAIL ] /from must be between 0 and 5. & goto :usage )
+if %FROM_STEP% gtr 5 ( echo [FAIL ] /from must be between 0 and 5. & goto :usage )
 set /a "FROM_STEP_PREV=%FROM_STEP%-1"
 
 
@@ -99,6 +100,9 @@ echo ========================================================
 echo  TARGET  : %COMP_VERSION%  (%COMP_NAME%)
 echo  BUILD   : %BUILD_DIR%
 echo  SIMTIME : %SIM_TIME%
+if %FROM_STEP% == 0 (
+    echo  START   : report aggregation
+)
 if %FROM_STEP% gtr 1 (
     echo  START   : step %FROM_STEP%  ^(steps 1-%FROM_STEP_PREV% skipped^)
 )
@@ -118,7 +122,8 @@ if %FROM_STEP%==1 goto :step1
 if %FROM_STEP%==2 goto :step2
 if %FROM_STEP%==3 goto :step3
 if %FROM_STEP%==4 goto :step4
-goto :step5
+if %FROM_STEP%==5 goto :step5
+goto :step0
 
 
 :step1
@@ -211,23 +216,24 @@ if %errorlevel% neq 0 (
 echo [ OK  ] Vivado power analysis completed
 
 
+:: ============================================================
+::  REPORT AGGREGATION (SUCCESS)
+:: ============================================================
+:step0
+echo.
+echo ========================================================
+echo  SAVING REPORTS
+echo ========================================================
+cd /d "%~dp0.."
+cd "../.."
+call ".\scripts\aggregate_reports.bat" "%PROJECT_NAME%" "%COMP_VERSION%" "%COMP_NAME%" SUCCESS
+
 echo.
 echo.
 echo ========================================================
 echo  WORKFLOW COMPLETED SUCCESSFULLY
 echo  Target : %COMP_VERSION%  (%COMP_NAME%)
 echo ========================================================
-endlocal
-exit /b 0
-
-:: ============================================================
-::  REPORT AGGREGATION (SUCCESS)
-:: ============================================================
-echo.
-echo ========================================================
-echo  SAVING REPORTS
-echo ========================================================
-call "%~dp0aggregate_reports.bat" "%PROJECT_NAME%" "%COMP_VERSION%" "%COMP_NAME%" SUCCESS
 
 endlocal
 exit /b 0
@@ -254,14 +260,6 @@ endlocal
 exit /b 1
 
 :error
-echo.
-echo ========================================================
-echo  WORKFLOW INTERRUPTED -- Check the logs above
-echo  Target : %COMP_VERSION%  (%COMP_NAME%)
-echo ========================================================
-endlocal
-exit /b 1
-
 :: ============================================================
 ::  REPORT AGGREGATION (FAILURE)
 :: ============================================================
@@ -269,7 +267,15 @@ echo.
 echo ========================================================
 echo  SAVING REPORTS (PARTIAL EXPORT)
 echo ========================================================
-call "%~dp0aggregate_reports.bat" "%PROJECT_NAME%" "%COMP_VERSION%" "%COMP_NAME%" FAILURE
+cd /d "%~dp0.."
+cd "../.."
+call ".\scripts\aggregate_reports.bat" "%PROJECT_NAME%" "%COMP_VERSION%" "%COMP_NAME%" FAILURE
+
+echo.
+echo ========================================================
+echo  WORKFLOW INTERRUPTED -- Check the logs above
+echo  Target : %COMP_VERSION%  (%COMP_NAME%)
+echo ========================================================
 
 endlocal
 exit /b 1
