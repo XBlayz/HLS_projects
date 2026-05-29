@@ -3,6 +3,10 @@
 ## TdDoList
 - [ ] VHDL simulation time automatic grab from hls_cosim.rpt
 
+## Commands
+- `.\scripts\workflow.bat project01_FIR fir_baseline fir`
+- `.\scripts\workflow.bat project01_FIR fir_code-hoisting fir /tb project01_FIR_fir_baseline_tb /clk project01_FIR_fir_baseline_clk`
+
 ## Project structure
 ### Report generation directories
 .
