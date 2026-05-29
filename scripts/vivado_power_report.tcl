@@ -19,18 +19,19 @@
 #   vivado -mode batch -source scripts/run_vivado_power.tcl \
 #          -tclargs <COMP_VERSION> <COMP_NAME>
 #
-#   PROJECT_NAME : name of the project directory        (e.g., project01_FIR)
-#   COMP_VERSION : name of the HLS component directory  (e.g., fir_baseline)
-#   COMP_NAME    : name of the top-level HLS function   (e.g., fir)
-#   TB_FILE_NAME : name of the testbench file           (Default: ${PROJECT_NAME}_${COMP_NAME}_tb)
-#   CLOCK_FILE_NAME : name of the clock constraint file (Default: ${PROJECT_NAME}_${COMP_NAME}_clk)
+#   PROJECT_NAME    : name of the project directory        (e.g., project01_FIR)
+#   COMP_VERSION    : name of the HLS component directory  (e.g., fir_baseline)
+#   COMP_NAME       : name of the top-level HLS function   (e.g., fir)
+#   TB_FILE_NAME    : name of the testbench file           (Default: ${PROJECT_NAME}_${COMP_NAME}_tb)
+#   CLOCK_FILE_NAME : name of the clock constraint file    (Default: ${PROJECT_NAME}_${COMP_NAME}_clk)
+#   SIM_TIME        : co-simulation duration               (Default: 1000ns)
 #==============================================================================
 
 
 #------------------------------------------------------------------------------
 # Arguments received from workflow.bat via -tclargs
 #------------------------------------------------------------------------------
-if {[llength $argv] < 5} {
+if {[llength $argv] < 6} {
     puts "\[FAIL \] Arguments missing."
     puts "\[FAIL \] Usage: vivado ... -tclargs <COMP_VERSION> <COMP_NAME>"
     exit 1
@@ -41,6 +42,7 @@ set COMP_VERSION    [lindex $argv 1]   ;# e.g., fir_baseline
 set COMP_NAME       [lindex $argv 2]   ;# e.g., fir
 set TB_FILE_NAME    [lindex $argv 3]   ;# Default: ${PROJECT_NAME}_${COMP_NAME}_tb"
 set CLOCK_FILE_NAME [lindex $argv 4]   ;# Default: ${PROJECT_NAME}_${COMP_NAME}_clk"
+set SIM_RUNTIME     [lindex $argv 5]   ;# Default: 1000ns
 
 # Derived names by convention (modify if naming convention differs)
 set TOP_MODULE  $COMP_NAME
@@ -57,7 +59,6 @@ set IP_VENDOR  "xilinx.com"
 set IP_LIBRARY "hls"
 set IP_VERSION "1.0"
 
-set SIM_RUNTIME "2000ns"
 set NUM_JOBS     8
 
 
