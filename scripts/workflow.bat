@@ -25,8 +25,8 @@ set "DEFAULT_SIM_TIME=1000ns"
 ::    COMP_NAME      Top-level HLS function name   (e.g., fir)
 ::
 ::  Named (optional):
-::    /tb       Testbench file name    (default: <PROJECT_NAME>_<COMP_NAME>_tb)
-::    /clk      Clock file name        (default: <PROJECT_NAME>_<COMP_NAME>_clk)
+::    /tb       Testbench file name    (default: <PROJECT_NAME>_<COMP_VERSION>_tb)
+::    /clk      Clock file name        (default: <PROJECT_NAME>_<COMP_VERSION>_clk)
 ::    /from     Step to start from     (default: 1)
 ::                1 = C simulation
 ::                2 = HLS synthesis
@@ -66,8 +66,8 @@ goto :parse_opts
 :end_parse
 
 :: -- Apply defaults for unset optional parameters
-if "%TB_FILE_NAME%"==""    set "TB_FILE_NAME=%PROJECT_NAME%_%COMP_NAME%_tb"
-if "%CLOCK_FILE_NAME%"=="" set "CLOCK_FILE_NAME=%PROJECT_NAME%_%COMP_NAME%_clk"
+if "%TB_FILE_NAME%"==""    set "TB_FILE_NAME=%PROJECT_NAME%_%COMP_VERSION%_tb"
+if "%CLOCK_FILE_NAME%"=="" set "CLOCK_FILE_NAME=%PROJECT_NAME%_%COMP_VERSION%_clk"
 
 :: -- Validate /from
 set /a "FROM_STEP_VAL=%FROM_STEP%" 2>nul
@@ -185,7 +185,7 @@ if not exist "%IP_ZIP%" (
 )
 
 echo [INFO ] Extracting IP to %IP_REPO_DIR%\%COMP_NAME%...
-7z x "%IP_ZIP%" -o"..\..\..\%IP_REPO_DIR%\%COMP_NAME%" -y > nul
+7z x "%IP_ZIP%" -o"%IP_REPO_DIR%\%COMP_NAME%" -y > nul
 if %errorlevel% neq 0 (
     echo [FAIL ] IP extraction failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -234,13 +234,12 @@ echo    COMP_VERSION   HLS component dir      ^(e.g., fir_baseline^)
 echo    COMP_NAME      Top-level HLS function ^(e.g., fir^)
 echo.
 echo  Named ^(optional^):
-echo    /tb       Testbench file  ^(default: ^<PROJECT_NAME^>_^<COMP_NAME^>_tb^)
-echo    /clk      Clock file      ^(default: ^<PROJECT_NAME^>_^<COMP_NAME^>_clk^)
+echo    /tb       Testbench file  ^(default: ^<PROJECT_NAME^>_^<COMP_VERSION^>_tb^)
+echo    /clk      Clock file      ^(default: ^<PROJECT_NAME^>_^<COMP_VERSION^>_clk^)
 echo    /from     Step to start from, 1-5      ^(default: 1^)
 echo    /simtime  Co-simulation duration        ^(default: %DEFAULT_SIM_TIME%^)
 echo.
 endlocal
-pause
 exit /b 1
 
 :error
