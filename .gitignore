@@ -32,3 +32,6 @@
 !/projects/*/*/*.hpp
 !/projects/*/*/*.cpp
 !/projects/*/*/*.cfg
+
+# 4. Allow specific files
+!README.md
