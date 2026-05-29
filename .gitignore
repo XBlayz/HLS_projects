@@ -4,56 +4,31 @@
 *
 
 # ==============================================================================
-# WHITELIST RULES: Allow specific directories and file extensions
+# DIRECTORY TRAVERSAL
 # ==============================================================================
-
-# Allow Git to look into the directory structure (required for whitelisting)
+# Allow Git to traverse directories to evaluate nested whitelist rules
 !*/
-!**/
-
-# Allow .gitignore file
-!.gitignore
-
-# Allow root files
-!scripts/**
-!reports/**
-!srcs/**
-
-# Whitelist specific file extensions everywhere
-!*.hpp
-!*.cpp
-!*.cfg
-!*.rpt
-
-# Whitelist log files generally, but exclude specific IDE logs
-!*.log
-ide_verbose.log
-ide.log
-vitis.log
-xcd.log
-*.steps.log
 
 # ==============================================================================
 # ABSOLUTE BLACKLIST: Force ignore specific structures
 # ==============================================================================
-
-# Force ignore specific IDE/HLS directories
-**/build/
-**/.autopilot/
-**/autowrap/
-**/wrapc/
-**/wrapc_pc/
+# Prevent traversal and tracking of build and IDE specific directories
+/build/
+/projects/*/_ide/
 
 # ==============================================================================
-# VERILOG DIRECTORY EXCEPTIONS
+# WHITELIST RULES: Allow specific files and directories
 # ==============================================================================
+# 1. Allow only the root .gitignore
+!/.gitignore
 
-# 1. Force ignore ALL files inside 'verilog' (overrides global !*.rpt and !*.log)
-**/verilog/**
+# 2. Allow specific root directories and all their contents
+!/scripts/**
+!/reports/**
+!/srcs/**
 
-# 2. Allow Git to traverse subdirectories inside 'verilog'
-!**/verilog/**/
-
-# 3. Whitelist only the simulation databases and waveform configurations
-!**/verilog/**/*.wdb
-!**/verilog/**/*.wcfg
+# 3. Allow specific source files only inside project components
+# Structure targeted: /projects/<project_name>/<component_name>/
+!/projects/*/*/*.hpp
+!/projects/*/*/*.cpp
+!/projects/*/*/*.cfg
