@@ -128,7 +128,7 @@ echo.
 echo ========================================================
 echo  1. RUNNING C SIMULATION (vitis-run)
 echo ========================================================
-call vitis-run --mode hls --csim --config %CFG_FILE% --work_dir %HLS_WORK_DIR%
+call vitis-run --mode hls --csim --config "%CFG_FILE%" --work_dir "%HLS_WORK_DIR%"
 if %errorlevel% neq 0 (
     echo [FAIL ] C simulation failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -143,7 +143,7 @@ echo.
 echo ========================================================
 echo  2. RUNNING HIGH-LEVEL SYNTHESIS (v++)
 echo ========================================================
-call v++ -c --mode hls --config %CFG_FILE% --work_dir %HLS_WORK_DIR%
+call v++ -c --mode hls --config "%CFG_FILE%" --work_dir "%HLS_WORK_DIR%"
 if %errorlevel% neq 0 (
     echo [FAIL ] HLS synthesis failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -158,7 +158,7 @@ echo.
 echo ========================================================
 echo  3. RUNNING C/RTL CO-SIMULATION (vitis-run)
 echo ========================================================
-call vitis-run --mode hls --cosim --config %CFG_FILE% --work_dir %HLS_WORK_DIR%
+call vitis-run --mode hls --cosim --config "%CFG_FILE%" --work_dir "%HLS_WORK_DIR%"
 if %errorlevel% neq 0 (
     echo [FAIL ] C/RTL co-simulation failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -173,7 +173,7 @@ echo.
 echo ========================================================
 echo  4. EXPORTING RTL IP (vitis-run)
 echo ========================================================
-call vitis-run --mode hls --package --config %CFG_FILE% --work_dir %HLS_WORK_DIR%
+call vitis-run --mode hls --package --config "%CFG_FILE%" --work_dir "%HLS_WORK_DIR%"
 if %errorlevel% neq 0 (
     echo [FAIL ] IP export failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -203,7 +203,7 @@ echo ========================================================
 cd %BUILD_DIR%
 call vivado -mode batch -notrace ^
     -source ..\..\..\scripts\vivado_power_report.tcl ^
-    -tclargs %PROJECT_NAME% %COMP_VERSION% %COMP_NAME% %TB_FILE_NAME% %CLOCK_FILE_NAME% %SIM_TIME%
+    -tclargs "%PROJECT_NAME%" "%COMP_VERSION%" "%COMP_NAME%" "%TB_FILE_NAME%" "%CLOCK_FILE_NAME%" "%SIM_TIME%"
 if %errorlevel% neq 0 (
     echo [FAIL ] Vivado power analysis failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -216,8 +216,19 @@ echo.
 echo ========================================================
 echo  WORKFLOW COMPLETED SUCCESSFULLY
 echo  Target : %COMP_VERSION%  (%COMP_NAME%)
-echo  Report : %BUILD_DIR%\reports\post_synth_power_report.txt
 echo ========================================================
+endlocal
+exit /b 0
+
+:: ============================================================
+::  REPORT AGGREGATION (SUCCESS)
+:: ============================================================
+echo.
+echo ========================================================
+echo  SAVING REPORTS
+echo ========================================================
+call "%~dp0aggregate_reports.bat" "%PROJECT_NAME%" "%COMP_VERSION%" "%COMP_NAME%" SUCCESS
+
 endlocal
 exit /b 0
 
@@ -248,5 +259,17 @@ echo ========================================================
 echo  WORKFLOW INTERRUPTED -- Check the logs above
 echo  Target : %COMP_VERSION%  (%COMP_NAME%)
 echo ========================================================
+endlocal
+exit /b 1
+
+:: ============================================================
+::  REPORT AGGREGATION (FAILURE)
+:: ============================================================
+echo.
+echo ========================================================
+echo  SAVING REPORTS (PARTIAL EXPORT)
+echo ========================================================
+call "%~dp0aggregate_reports.bat" "%PROJECT_NAME%" "%COMP_VERSION%" "%COMP_NAME%" FAILURE
+
 endlocal
 exit /b 1
