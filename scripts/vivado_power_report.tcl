@@ -89,7 +89,7 @@ set IP_SYNTH_RUN "${IP_NAME}_synth_1"
 set XCI_FILE     "${PRJ_DIR}/${PRJ_NAME}.srcs/sources_1/ip/${IP_NAME}/${IP_NAME}.xci"
 set SAIF_XSIM    "dump.saif"
 set SAIF_FILE    "${PRJ_DIR}/${PRJ_NAME}.sim/sim_1/synth/timing/xsim/${SAIF_XSIM}"
-set POWER_REPORT "${REPORT_DIR}/${COMP_NAME}_post_synth_power_report.txt"
+set POWER_REPORT "${REPORT_DIR}/${COMP_VERSION}_post_synth_power_report.txt"
 
 
 #------------------------------------------------------------------------------
