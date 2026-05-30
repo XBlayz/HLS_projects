@@ -85,11 +85,12 @@ set CLOCK_FILE "../../../srcs/vivado/const/${CLOCK_FILE_NAME}.xdc"
 set REPORT_DIR "../../../reports/${PROJECT_NAME}"
 
 # Paths internal to the Vivado project (automatically derived)
-set IP_SYNTH_RUN "${IP_NAME}_synth_1"
-set XCI_FILE     "${PRJ_DIR}/${PRJ_NAME}.srcs/sources_1/ip/${IP_NAME}/${IP_NAME}.xci"
-set SAIF_XSIM    "dump.saif"
-set SAIF_FILE    "${PRJ_DIR}/${PRJ_NAME}.sim/sim_1/synth/timing/xsim/${SAIF_XSIM}"
-set POWER_REPORT "${REPORT_DIR}/${COMP_VERSION}/vivado/power/${COMP_NAME}_post-synth_power_report.txt"
+set IP_SYNTH_RUN      "${IP_NAME}_synth_1"
+set XCI_FILE          "${PRJ_DIR}/${PRJ_NAME}.srcs/sources_1/ip/${IP_NAME}/${IP_NAME}.xci"
+set SAIF_XSIM         "dump.saif"
+set SAIF_FILE         "${PRJ_DIR}/${PRJ_NAME}.sim/sim_1/synth/timing/xsim/${SAIF_XSIM}"
+set POWER_REPORT_DIR  "${REPORT_DIR}/${COMP_VERSION}/vivado/power"
+set POWER_REPORT_FILE "${POWER_REPORT_DIR}/${COMP_NAME}_post-synth_power_report"
 
 
 #------------------------------------------------------------------------------
@@ -295,7 +296,7 @@ print_ok "SAIF written to: $SAIF_FILE"
 #------------------------------------------------------------------------------
 print_section 10 "Power report  (OOC netlist + SAIF annotation)"
 
-file mkdir $REPORT_DIR
+file mkdir $POWER_REPORT_DIR
 
 # Open OOC synthesis results (not the top-level synth or impl)
 open_run $IP_SYNTH_RUN
@@ -308,12 +309,21 @@ read_saif [file normalize $SAIF_FILE]
 print_ok "SAIF annotation loaded"
 
 report_power \
-    -name   ${IP_NAME}_power_1 \
-    -file   $POWER_REPORT \
-    -format text
+    -name     ${IP_NAME}_power_1 \
+    -file     "${POWER_REPORT_FILE}.txt" \
+    -format   text \
+    -hier     all \
+    -xpe      "${POWER_REPORT_FILE}.xml" \
+    -rpx      "${POWER_REPORT_FILE}.rpx"
 
-assert_exists $POWER_REPORT "Power report"
-print_ok "Power report written to: $POWER_REPORT"
+assert_exists "${POWER_REPORT_FILE}.txt" "Text-Power report"
+print_ok "Text-Power report written to: ${POWER_REPORT_FILE}.txt"
+
+assert_exists "${POWER_REPORT_FILE}.xml" "XML-Power report"
+print_ok "XML-Power report written to: ${POWER_REPORT_FILE}.xml"
+
+assert_exists "${POWER_REPORT_FILE}.rpx" "RPX-Power report"
+print_ok "RPX-Power report written to: ${POWER_REPORT_FILE}.rpx"
 
 
 #------------------------------------------------------------------------------
@@ -321,8 +331,8 @@ print_ok "Power report written to: $POWER_REPORT"
 #------------------------------------------------------------------------------
 puts ""
 puts "========================================================"
-puts " WORKFLOW COMPLETED SUCCESSFULLY"
+puts " VIVADO WORKFLOW COMPLETED SUCCESSFULLY"
 puts " Target : $COMP_VERSION  ($COMP_NAME)"
-puts " Report : $POWER_REPORT"
+puts " Report : $POWER_REPORT_FILE"
 puts "========================================================"
 puts ""
