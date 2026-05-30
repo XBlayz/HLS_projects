@@ -1,7 +1,6 @@
 # HLS_projects
 
 ## TdDoList
-- [ ] Create vivado power folder in TCL script
 - [ ] VHDL simulation time automatic grab from hls_cosim.rpt
 
 ## Commands
@@ -93,7 +92,9 @@
     │   │   └── vivado
     │   │       ├── vivado.log
     │   │       ├── power
-    │   │       │   └── <COMP_NAME>_post-synth_power_report.txt
+    │   │       │   ├── <COMP_NAME>_post-synth_power_report.txt
+    │   │       │   ├── <COMP_NAME>_post-synth_power_report.xml
+    │   │       │   └── <COMP_NAME>_post-synth_power_report.rpx
     │   │       ├── synth_ooc
     │   │       │   ├── <COMP_NAME>_0_utilization_synth.rpt
     │   │       │   └── runme.log                                   (from "<COMP_NAME>_0_synth_1/")
