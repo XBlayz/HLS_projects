@@ -1,14 +1,8 @@
 # HLS_projects
-
 ## TdDoList
 - [ ] VHDL simulation time automatic grab from hls_cosim.rpt
 
-## Commands
-- `.\scripts\workflow.bat project01_FIR fir_baseline fir`
-- `.\scripts\workflow.bat project01_FIR fir_code-hoisting fir /tb project01_FIR_fir_baseline_tb /clk project01_FIR_fir_baseline_clk`
-- `.\scripts\workflow.bat project01_FIR fir_loop-fission fir /tb project01_FIR_fir_baseline_tb /clk project01_FIR_fir_baseline_clk`
-
-## Project structure
+## Projects structure
 ### Report generation directories
 .
 ├── build
@@ -108,3 +102,36 @@
     │   │               └── simulate.log
     │   └── ...
     └── ...
+
+# Project-01 (FIR)
+## Components revisions
+### Commands
+1. `.\scripts\workflow.bat project01_FIR fir_baseline fir`
+2. `.\scripts\workflow.bat project01_FIR fir_code-hoisting fir /tb project01_FIR_fir_baseline_tb /clk project01_FIR_fir_baseline_clk`
+3. `.\scripts\workflow.bat project01_FIR fir_loop-fission fir /tb project01_FIR_fir_baseline_tb /clk project01_FIR_fir_baseline_clk`
+4. `.\scripts\workflow.bat project01_FIR fir_ap-int fir /clk project01_FIR_fir_baseline_clk`
+
+### Revisions graph
+```mermaid
+flowchart TD
+    1[1. Baseline] --> 2(2. Code hoisting)
+    2 --> 3(3. Loop fission)
+    2 --> 4(4. Type `ap_int`)
+    4 --> 5(5. Operation chaining)
+
+    %%TODO: Next steps
+    5 --> 6(6. Class `ap_shift_reg`)
+    4 --> 7(7. Class `ap_shift_reg`)
+    3 --> 8(8. Loop unroll)
+    %%TODO: potential "Array partition"
+
+    3 --> 9(9. Class `ap_shift_reg`)
+
+    %%TODO: 7/8/9 --> ...
+    10(10. Operation chaining)
+
+    %%TODO: Best --> "Unrolling"
+    %%TODO: Best --> "Pipeline"
+    %%TODO: Others --> "Pipeline"
+    %%TODO: Best --> "AXI"
+```
