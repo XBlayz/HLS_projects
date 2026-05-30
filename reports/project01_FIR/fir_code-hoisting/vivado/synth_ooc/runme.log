@@ -8,12 +8,12 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Fri May 29 22:36:51 2026
+  **** Start of session at: Sat May 30 11:29:29 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source fir_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 533.027 ; gain = 220.992
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 532.996 ; gain = 221.039
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_code-hoisting/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
@@ -26,9 +26,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-3
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1708
+INFO: [Synth 8-7075] Helper process launched with PID 27016
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1314.934 ; gain = 539.312
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1315.371 ; gain = 540.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'fir_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:70]
 INFO: [Synth 8-3491] module 'fir' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:11' bound to instance 'U0' of component 'fir' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:121]
@@ -59,18 +59,18 @@ INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' throug
 INFO: [Synth 8-7129] Port reset in module fir_c_ROM_AUTO_1R is either unconnected or has no load
 INFO: [Synth 8-7129] Port reset in module fir_shift_reg_RAM_AUTO_1R1W is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1434.473 ; gain = 658.852
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1433.531 ; gain = 658.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1434.473 ; gain = 658.852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1433.531 ; gain = 658.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1434.473 ; gain = 658.852
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1433.531 ; gain = 658.406
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1434.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1433.531 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -81,32 +81,32 @@ Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/proj
 Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_code-hoisting/vivado_prj/vivado_prj.runs/fir_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1510.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1501.004 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1510.324 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1501.004 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1510.324 ; gain = 734.703
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1501.004 ; gain = 725.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1510.324 ; gain = 734.703
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1501.004 ; gain = 725.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1510.324 ; gain = 734.703
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1501.004 ; gain = 725.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1510.324 ; gain = 734.703
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 1501.004 ; gain = 725.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -193,7 +193,7 @@ INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[19]) is unused and
 INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[18]) is unused and will be removed from module fir.
 INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[17]) is unused and will be removed from module fir.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1510.324 ; gain = 734.703
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 1501.004 ; gain = 725.879
 ---------------------------------------------------------------------------------
  Sort Area is  mul_10s_32s_32_1_1_U1/tmp_product_0 : 0 0 : 1785 3526 : Used 1 time 0
  Sort Area is  mul_10s_32s_32_1_1_U1/tmp_product_0 : 0 1 : 1741 3526 : Used 1 time 0
@@ -226,13 +226,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 1679.891 ; gain = 904.270
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:05 . Memory (MB): peak = 1675.164 ; gain = 900.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 1680.938 ; gain = 905.316
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:05 . Memory (MB): peak = 1676.137 ; gain = 901.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -252,7 +252,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 1691.016 ; gain = 915.395
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:01:05 . Memory (MB): peak = 1686.633 ; gain = 911.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -270,37 +270,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1939.648 ; gain = 1164.027
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:16 . Memory (MB): peak = 1935.027 ; gain = 1159.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1939.648 ; gain = 1164.027
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:16 . Memory (MB): peak = 1935.027 ; gain = 1159.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:07 . Memory (MB): peak = 1939.648 ; gain = 1164.027
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:16 . Memory (MB): peak = 1935.027 ; gain = 1159.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:07 . Memory (MB): peak = 1939.648 ; gain = 1164.027
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:16 . Memory (MB): peak = 1935.027 ; gain = 1159.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:07 . Memory (MB): peak = 1939.648 ; gain = 1164.027
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:16 . Memory (MB): peak = 1935.027 ; gain = 1159.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:07 . Memory (MB): peak = 1939.648 ; gain = 1164.027
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:16 . Memory (MB): peak = 1935.027 ; gain = 1159.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -338,18 +338,18 @@ Report Cell Usage:
 |12    |FDSE     |     3|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:07 . Memory (MB): peak = 1939.648 ; gain = 1164.027
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:16 . Memory (MB): peak = 1935.027 ; gain = 1159.902
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:01:03 . Memory (MB): peak = 1939.648 ; gain = 1088.176
-Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:07 . Memory (MB): peak = 1939.648 ; gain = 1164.027
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:11 . Memory (MB): peak = 1935.027 ; gain = 1092.430
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:17 . Memory (MB): peak = 1935.027 ; gain = 1159.902
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1948.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1944.191 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1952.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1947.902 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 32 instances were transformed.
   RAM16X1S => RAM32X1S (RAMS32): 32 instances
@@ -358,12 +358,12 @@ Synth Design complete | Checksum: e7bd41f0
 INFO: [Common 17-83] Releasing license: Synthesis
 68 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:19 . Memory (MB): peak = 1952.453 ; gain = 1408.934
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1952.453 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:28 . Memory (MB): peak = 1947.902 ; gain = 1401.457
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1947.902 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_code-hoisting/vivado_prj/vivado_prj.runs/fir_0_synth_1/fir_0.dcp' has been generated.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fir_0, cache-ID = f69c6d4603f79ae9
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1952.453 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1947.902 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_code-hoisting/vivado_prj/vivado_prj.runs/fir_0_synth_1/fir_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file fir_0_utilization_synth.rpt -pb fir_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri May 29 22:38:27 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat May 30 11:31:15 2026...
