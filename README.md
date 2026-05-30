@@ -117,9 +117,9 @@ flowchart TD
     1[1. Baseline] --> 2(2. Code hoisting)
     2 --> 3(3. Loop fission)
     2 --> 4(4. Type `ap_int`)
-    4 --> 5(5. Operation chaining)
 
     %%TODO: Next steps
+    4 --> 5(5. Operation chaining)
     5 --> 6(6. Class `ap_shift_reg`)
     4 --> 7(7. Class `ap_shift_reg`)
     3 --> 8(8. Loop unroll)
