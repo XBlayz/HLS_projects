@@ -110,28 +110,23 @@
 2. `.\scripts\workflow.bat project01_FIR fir_code-hoisting fir /tb project01_FIR_fir_baseline_tb /clk project01_FIR_fir_baseline_clk`
 3. `.\scripts\workflow.bat project01_FIR fir_loop-fission fir /tb project01_FIR_fir_baseline_tb /clk project01_FIR_fir_baseline_clk`
 4. `.\scripts\workflow.bat project01_FIR fir_ap-int fir /clk project01_FIR_fir_baseline_clk`
+5. `.\scripts\workflow.bat project01_FIR fir_ap-shift-reg fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
+
+- `.\scripts\workflow.bat project01_FIR fir_ap-int fir /wf clk ` + `<CLK_VAL>`
 
 ### Revisions graph
 ```mermaid
 flowchart TD
-    1[1. Baseline] --> 2(2. Code hoisting)
-    2 --> 3(3. Loop fission)
-    2 --> 4(4. Type `ap_int`)
+    1[1. Baseline] --> 2(2. Code hoisting) --> 3(3. Loop fission) --> 6(*6. Type `ap_int`)
+    2 --> 4(4. Type `ap_int`) --> 5(5. Class `ap_shift_reg`) --> 11{*11. Operation chaining}
 
-    %%TODO: Next steps
-    4 --> 5(5. Operation chaining)
-    5 --> 6(6. Class `ap_shift_reg`)
-    4 --> 7(7. Class `ap_shift_reg`)
-    3 --> 8(8. Loop unroll)
+    6 --> 7(*7. Loop unroll) --> 12{*12. Operation chaining}
+    6 --> 8(*8. Pipeline) --> 13{*13. Operation chaining}
     %%TODO: potential "Array partition"
 
-    3 --> 9(9. Class `ap_shift_reg`)
+    5 --> 9(*9. Loop unroll) --> 14{*14. Operation chaining}
+    5 --> 10(*10. Pipeline) --> 15{*15. Operation chaining}
+    %%TODO: potential "Array partition"
 
-    %%TODO: 7/8/9 --> ...
-    10(10. Operation chaining)
-
-    %%TODO: Best --> "Unrolling"
-    %%TODO: Best --> "Pipeline"
-    %%TODO: Others --> "Pipeline"
-    %%TODO: Best --> "AXI"
+    %%TODO: <BEST> --> 16[16. AXI4-Stream]
 ```
