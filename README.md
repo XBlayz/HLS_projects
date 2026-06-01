@@ -1,9 +1,11 @@
 # HLS_projects
-## TdDoList
+## ToDoList
 - [ ] VHDL simulation time automatic grab from hls_cosim.rpt
+- [ ] Add structure of clk reports
 
 ## Projects structure
 ### Report generation directories
+```markdown
 .
 ├── build
 │   ├── <PROJECT_NAME>
@@ -57,8 +59,10 @@
     │    │           └── hls_cosim.rpt
     │    └── ...
     └── ...
+```
 
 ### Report saving directories
+```markdown
 .
 └── reports
     ├── <PROJECT_NAME>
@@ -102,6 +106,7 @@
     │   │               └── simulate.log
     │   └── ...
     └── ...
+```
 
 # Project-01 (FIR)
 ## Components revisions
@@ -130,3 +135,6 @@ flowchart TD
 
     %%TODO: <BEST> --> 16[16. AXI4-Stream]
 ```
+
+# Project-02 (SpMV)
+TODO
