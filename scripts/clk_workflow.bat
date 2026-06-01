@@ -26,6 +26,12 @@ set "ROOT_DIR=%CD%"
 ::                2 = HLS synthesis  (with clock override)
 ::                3 = C/RTL co-simulation
 ::                0 = Report aggregation
+::
+::  Clock override mechanism:
+::    A temporary config file (hls_config_clk.cfg) is generated next to
+::    hls_config.cfg with the "clock=" line stripped from the [hls] section.
+::    The CLK_VAL is then passed via --hls.clock on the command line, which
+::    is the sole clock source. The temporary file is deleted on exit.
 :: ============================================================
 
 :: -- Positional required arguments
@@ -68,8 +74,9 @@ set /a "FROM_STEP_PREV=%FROM_STEP%-1"
 ::  Derived paths -- Do not modify
 :: ============================================================
 set "HLS_ROOT_DIR=%ROOT_DIR%\projects\%PROJECT_NAME%\%COMP_VERSION%"
-set "HLS_WORK_DIR=.\%COMP_VERSION%_script"
+set "HLS_WORK_DIR=.\%COMP_VERSION%_clk-%CLK_VAL%_script"
 set "CFG_FILE=.\hls_config.cfg"
+set "CFG_FILE_CLK=.\hls_config_clk.cfg"
 
 :: Reports land in a clock-specific subdirectory
 set "REPORT_SUBDIR=%COMP_VERSION%_clk-%CLK_VAL%"
@@ -90,12 +97,27 @@ if %FROM_STEP% gtr 1 (
 echo ========================================================
 
 if %FROM_STEP%==0 goto :step0
+
 cd /d "%HLS_ROOT_DIR%"
 if not exist "%CFG_FILE%" (
     echo [FAIL ] HLS config not found: %CFG_FILE%
-    goto :error
+    goto :error_no_cleanup
 )
-echo [INFO ] HLS config: %CFG_FILE%
+
+:: ============================================================
+::  Generate temporary config with "clock=" line stripped.
+::  findstr /v /i /r performs a case-insensitive regex exclusion:
+::    ^clock=  matches any line starting with "clock=" (the [hls] directive).
+:: ============================================================
+echo [INFO ] Generating temporary config: %CFG_FILE_CLK%
+findstr /v /i /r "^clock=" "%CFG_FILE%" > "%CFG_FILE_CLK%"
+if %errorlevel% neq 0 (
+    echo [FAIL ] Failed to generate temporary config.
+    goto :error_no_cleanup
+)
+echo [INFO ] HLS config (original) : %CFG_FILE%
+echo [INFO ] HLS config (patched)  : %CFG_FILE_CLK%  ^(clock= removed^)
+echo [INFO ] Clock override        : --hls.clock=%CLK_VAL%
 
 :: -- Route to the requested start step
 if %FROM_STEP%==1 goto :step1
@@ -111,7 +133,7 @@ echo.
 echo ========================================================
 echo  1. RUNNING C SIMULATION (vitis-run)
 echo ========================================================
-call vitis-run --mode hls --csim --config "%CFG_FILE%" --work_dir "%HLS_WORK_DIR%" --hls.clock=%CLK_VAL%
+call vitis-run --mode hls --csim --config "%CFG_FILE_CLK%" --work_dir "%HLS_WORK_DIR%" --hls.clock=%CLK_VAL%
 if %errorlevel% neq 0 (
     echo [FAIL ] C simulation failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -126,7 +148,7 @@ echo.
 echo ========================================================
 echo  2. RUNNING HIGH-LEVEL SYNTHESIS (v++)
 echo ========================================================
-call v++ -c --mode hls --config "%CFG_FILE%" --work_dir "%HLS_WORK_DIR%" --hls.clock=%CLK_VAL%
+call v++ -c --mode hls --config "%CFG_FILE_CLK%" --work_dir "%HLS_WORK_DIR%" --hls.clock=%CLK_VAL%
 if %errorlevel% neq 0 (
     echo [FAIL ] HLS synthesis failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -141,7 +163,7 @@ echo.
 echo ========================================================
 echo  3. RUNNING C/RTL CO-SIMULATION (vitis-run)
 echo ========================================================
-call vitis-run --mode hls --cosim --config "%CFG_FILE%" --work_dir "%HLS_WORK_DIR%" --hls.clock=%CLK_VAL%
+call vitis-run --mode hls --cosim --config "%CFG_FILE_CLK%" --work_dir "%HLS_WORK_DIR%" --hls.clock=%CLK_VAL%
 if %errorlevel% neq 0 (
     echo [FAIL ] C/RTL co-simulation failed ^(errorlevel: %errorlevel%^)
     goto :error
@@ -160,6 +182,7 @@ echo ========================================================
 cd /d "%ROOT_DIR%"
 call ".\scripts\aggregate_reports.bat" "%PROJECT_NAME%" "%REPORT_SUBDIR%" "%COMP_NAME%" SUCCESS
 
+call :CLEANUP
 echo.
 echo.
 echo ========================================================
@@ -206,6 +229,8 @@ echo ========================================================
 cd /d "%ROOT_DIR%"
 call ".\scripts\aggregate_reports.bat" "%PROJECT_NAME%" "%REPORT_SUBDIR%" "%COMP_NAME%" FAILURE
 
+call :CLEANUP
+
 echo.
 echo ========================================================
 echo  WORKFLOW INTERRUPTED -- Check the logs above
@@ -215,3 +240,27 @@ echo ========================================================
 
 endlocal
 exit /b 1
+
+:error_no_cleanup
+:: Pre-patch failure: temporary config was never created, skip cleanup.
+echo.
+echo ========================================================
+echo  WORKFLOW INTERRUPTED -- Check the logs above
+echo  Target  : %COMP_VERSION%  (%COMP_NAME%)
+echo  Clock   : %CLK_VAL%
+echo ========================================================
+
+endlocal
+exit /b 1
+
+:: ============================================================
+::  SUBROUTINES
+:: ============================================================
+:CLEANUP
+:: Delete the temporary patched config if it exists.
+cd /d "%HLS_ROOT_DIR%"
+if exist "%CFG_FILE_CLK%" (
+    del /f /q "%CFG_FILE_CLK%"
+    echo [INFO ] Temporary config deleted: %CFG_FILE_CLK%
+)
+exit /b 0
