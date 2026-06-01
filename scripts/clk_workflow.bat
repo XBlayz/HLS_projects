@@ -180,7 +180,7 @@ echo ========================================================
 echo  SAVING REPORTS
 echo ========================================================
 cd /d "%ROOT_DIR%"
-call ".\scripts\aggregate_reports.bat" "%PROJECT_NAME%" "%REPORT_SUBDIR%" "%COMP_NAME%" SUCCESS
+call ".\scripts\aggregate_reports.bat" "%PROJECT_NAME%" "%REPORT_SUBDIR%" "%COMP_NAME%" SUCCESS clk
 
 call :CLEANUP
 echo.
@@ -227,7 +227,7 @@ echo ========================================================
 echo  SAVING REPORTS (PARTIAL EXPORT)
 echo ========================================================
 cd /d "%ROOT_DIR%"
-call ".\scripts\aggregate_reports.bat" "%PROJECT_NAME%" "%REPORT_SUBDIR%" "%COMP_NAME%" FAILURE
+call ".\scripts\aggregate_reports.bat" "%PROJECT_NAME%" "%REPORT_SUBDIR%" "%COMP_NAME%" FAILURE clk
 
 call :CLEANUP
 

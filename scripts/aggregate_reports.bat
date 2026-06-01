@@ -6,7 +6,7 @@ setlocal enabledelayedexpansion
 :: ==============================================================================
 if "%~3"=="" (
     echo [ERROR] Missing arguments.
-    echo Usage: %~nx0 ^<PROJECT_NAME^> ^<COMP_VERSION^> ^<COMP_NAME^> [STATUS]
+    echo Usage: %~nx0 ^<PROJECT_NAME^> ^<COMP_VERSION^> ^<COMP_NAME^> [STATUS] [WORKFLOW]
     exit /b 1
 )
 
@@ -14,23 +14,48 @@ set "PRJ_NAME=%~1"
 set "COMP_VER=%~2"
 set "COMP_NAME=%~3"
 set "STATUS=%~4"
+set "WORKFLOW=%~5"
+
+:: Default workflow is power if not specified
+if "%WORKFLOW%"=="" set "WORKFLOW=power"
 
 :: Resolve absolute project root directory (parent of scripts\)
 for %%I in ("%~dp0..") do set "ROOT_DIR=%%~fI"
 
 :: ==============================================================================
 :: PATH DEFINITIONS
+::
+:: power workflow:
+::   SRC_HLS   = projects\<PRJ>\<COMP_VER>\<COMP_VER>_script
+::   SRC_BUILD = build\<PRJ>\<COMP_VER>
+::   DST_BASE  = reports\<PRJ>\<COMP_VER>
+::
+:: clk workflow:
+::   COMP_VER is the full report subdir, e.g. fir_baseline_clk-10ns.
+::   The HLS work dir lives inside the base component folder, derived by
+::   stripping the "_clk-<value>" suffix from COMP_VER.
+::   SRC_HLS   = projects\<PRJ>\<BASE_VER>\<COMP_VER>_script
+::   SRC_BUILD = (unused)
+::   DST_BASE  = reports\<PRJ>\<COMP_VER>
 :: ==============================================================================
-set "SRC_BUILD=%ROOT_DIR%\build\%PRJ_NAME%\%COMP_VER%"
-set "SRC_HLS=%ROOT_DIR%\projects\%PRJ_NAME%\%COMP_VER%\%COMP_VER%_script"
+if /i "%WORKFLOW%"=="clk" (
+    call :STRIP_CLK_SUFFIX "%COMP_VER%"
+    set "SRC_HLS=%ROOT_DIR%\projects\%PRJ_NAME%\%BASE_VER%\%COMP_VER%_script"
+    set "SRC_BUILD="
+) else (
+    set "SRC_HLS=%ROOT_DIR%\projects\%PRJ_NAME%\%COMP_VER%\%COMP_VER%_script"
+    set "SRC_BUILD=%ROOT_DIR%\build\%PRJ_NAME%\%COMP_VER%"
+)
+
 set "DST_BASE=%ROOT_DIR%\reports\%PRJ_NAME%\%COMP_VER%"
 
 echo [INFO] Starting report aggregation for:
 echo        Project:   %PRJ_NAME%
 echo        Version:   %COMP_VER%
 echo        Component: %COMP_NAME%
+echo        Workflow:  %WORKFLOW%
 if /i "%STATUS%"=="FAILURE" (
-    echo        Mode:      Partial Export (Muting missing file warnings)
+    echo        Mode:      Partial Export ^(Muting missing file warnings^)
 )
 echo.
 
@@ -59,13 +84,18 @@ call :COPY_FILE "%SRC_HLS%\logs\hls_compile.log" "%DST_BASE%\hls\syn"
 call :COPY_FILE "%SRC_HLS%\reports\hls_compile.rpt" "%DST_BASE%\hls\syn"
 call :COPY_FILE "%SRC_HLS%\hls\syn\report\%COMP_NAME%_csynth.rpt" "%DST_BASE%\hls\syn"
 
-:: hls/impl & hls root
-call :COPY_FILE "%SRC_HLS%\logs\hls_run_package.log" "%DST_BASE%\hls\impl"
+:: hls/impl (power workflow only -- package step not run in clk workflow)
+if /i not "%WORKFLOW%"=="clk" (
+    call :COPY_FILE "%SRC_HLS%\logs\hls_run_package.log" "%DST_BASE%\hls\impl"
+)
+
+:: hls root
 call :COPY_FILE "%SRC_HLS%\logs\%COMP_VER%_script.steps.log" "%DST_BASE%\hls"
 
 :: ==============================================================================
-:: VIVADO FILE AGGREGATION
+:: VIVADO FILE AGGREGATION (power workflow only)
 :: ==============================================================================
+if /i "%WORKFLOW%"=="clk" goto :aggregation_done
 
 :: vivado root
 call :COPY_FILE "%SRC_BUILD%\vivado.log" "%DST_BASE%\vivado"
@@ -82,6 +112,7 @@ call :COPY_FILE "%SRC_BUILD%\vivado_prj\vivado_prj.runs\synth_1\runme.log" "%DST
 call :COPY_FILE "%SRC_BUILD%\vivado_prj\vivado_prj.sim\sim_1\synth\timing\xsim\%COMP_NAME%_tb_time_synth.wdb" "%DST_BASE%\vivado\sim\post-synth_timing"
 call :COPY_FILE "%SRC_BUILD%\vivado_prj\vivado_prj.sim\sim_1\synth\timing\xsim\simulate.log" "%DST_BASE%\vivado\sim\post-synth_timing"
 
+:aggregation_done
 echo.
 echo [INFO] File aggregation completed.
 exit /b 0
@@ -89,22 +120,49 @@ exit /b 0
 :: ==============================================================================
 :: SUBROUTINES
 :: ==============================================================================
+
+:: ------------------------------------------------------------------------------
+:: STRIP_CLK_SUFFIX <string>
+:: Sets BASE_VER to the portion of <string> before the last "_clk-" segment.
+:: Uses string substitution to locate and remove "_clk-*" from the right.
+::
+:: Strategy: replace "_clk-" with a newline-delimited token via a temp file
+:: is brittle in batch. Instead, iterate through known token splits.
+::
+:: Simpler and reliable approach for the expected naming convention
+:: "<prefix>_clk-<value>": split on "_clk-" as a literal delimiter by
+:: replacing it with a recognisable placeholder, then extract the left side.
+::
+:: Example: fir_baseline_clk-10ns -> BASE_VER=fir_baseline
+::          fir_v2_clk-100MHz    -> BASE_VER=fir_v2
+:: ------------------------------------------------------------------------------
+:STRIP_CLK_SUFFIX
+set "_S=%~1"
+:: Replace the first occurrence of "_clk-" with a DEL character (unused in paths)
+:: then keep only the left part. Batch has no direct split-on-substring, so we
+:: use a FOR /F trick: write "left_clk-right", read tokens with _clk- as delim.
+for /f "tokens=1 delims==" %%A in ("!_S:_clk-==!") do set "BASE_VER=%%A"
+exit /b 0
+
+:: ------------------------------------------------------------------------------
+:: COPY_FILE <src> <dst_dir>
+:: Copies <src> to <dst_dir>, creating the directory if needed.
+:: Warnings are suppressed when STATUS=FAILURE or WORKFLOW=clk.
+:: ------------------------------------------------------------------------------
 :COPY_FILE
 set "SRC_FILE=%~1"
 set "DST_DIR=%~2"
 
-:: Create destination directory if it does not exist
-if not exist "%DST_DIR%" (
-    mkdir "%DST_DIR%"
-)
+if not exist "%DST_DIR%" mkdir "%DST_DIR%"
 
-:: Perform copy and handle standard output
 if exist "%SRC_FILE%" (
     copy /Y "%SRC_FILE%" "%DST_DIR%" >nul
     echo   [OK] Copied: %SRC_FILE%
 ) else (
     if /i not "%STATUS%"=="FAILURE" (
-        echo   [WARNING] File not found: %SRC_FILE%
+        if /i not "%WORKFLOW%"=="clk" (
+            echo   [WARNING] File not found: %SRC_FILE%
+        )
     )
 )
 exit /b 0
