@@ -39,8 +39,12 @@ for %%I in ("%~dp0..") do set "ROOT_DIR=%%~fI"
 ::   DST_BASE  = reports\<PRJ>\<COMP_VER>
 :: ==============================================================================
 if /i "%WORKFLOW%"=="clk" (
-    call :STRIP_CLK_SUFFIX "%COMP_VER%"
-    set "SRC_HLS=%ROOT_DIR%\projects\%PRJ_NAME%\%BASE_VER%\%COMP_VER%_script"
+    :: Derive BASE_VER by stripping "_clk-<value>" suffix from COMP_VER.
+    :: Replace the first "_clk-" with "=" then extract the left token.
+    :: Example: fir_baseline_clk-10ns -> BASE_VER=fir_baseline
+    set "_TMP=!COMP_VER:_clk-==!"
+    for /f "tokens=1 delims==" %%A in ("!_TMP!") do set "BASE_VER=%%A"
+    set "SRC_HLS=!ROOT_DIR!\projects\!PRJ_NAME!\!BASE_VER!\!COMP_VER!_script"
     set "SRC_BUILD="
 ) else (
     set "SRC_HLS=%ROOT_DIR%\projects\%PRJ_NAME%\%COMP_VER%\%COMP_VER%_script"
@@ -122,29 +126,6 @@ exit /b 0
 :: ==============================================================================
 
 :: ------------------------------------------------------------------------------
-:: STRIP_CLK_SUFFIX <string>
-:: Sets BASE_VER to the portion of <string> before the last "_clk-" segment.
-:: Uses string substitution to locate and remove "_clk-*" from the right.
-::
-:: Strategy: replace "_clk-" with a newline-delimited token via a temp file
-:: is brittle in batch. Instead, iterate through known token splits.
-::
-:: Simpler and reliable approach for the expected naming convention
-:: "<prefix>_clk-<value>": split on "_clk-" as a literal delimiter by
-:: replacing it with a recognisable placeholder, then extract the left side.
-::
-:: Example: fir_baseline_clk-10ns -> BASE_VER=fir_baseline
-::          fir_v2_clk-100MHz    -> BASE_VER=fir_v2
-:: ------------------------------------------------------------------------------
-:STRIP_CLK_SUFFIX
-set "_S=%~1"
-:: Replace the first occurrence of "_clk-" with a DEL character (unused in paths)
-:: then keep only the left part. Batch has no direct split-on-substring, so we
-:: use a FOR /F trick: write "left_clk-right", read tokens with _clk- as delim.
-for /f "tokens=1 delims==" %%A in ("!_S:_clk-==!") do set "BASE_VER=%%A"
-exit /b 0
-
-:: ------------------------------------------------------------------------------
 :: COPY_FILE <src> <dst_dir>
 :: Copies <src> to <dst_dir>, creating the directory if needed.
 :: Warnings are suppressed when STATUS=FAILURE or WORKFLOW=clk.
@@ -160,9 +141,7 @@ if exist "%SRC_FILE%" (
     echo   [OK] Copied: %SRC_FILE%
 ) else (
     if /i not "%STATUS%"=="FAILURE" (
-        if /i not "%WORKFLOW%"=="clk" (
-            echo   [WARNING] File not found: %SRC_FILE%
-        )
+        echo   [WARNING] File not found: %SRC_FILE%
     )
 )
 exit /b 0
