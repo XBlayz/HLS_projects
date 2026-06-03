@@ -2,6 +2,7 @@
 ## ToDoList
 - [ ] VHDL simulation time automatic grab from hls_cosim.rpt
 - [ ] Add structure of clk reports
+- [ ] Saving `<COMP_NAME>.verbose.sched.rpt` file (in `<COMP_VERSION>_script/hls/.autopilot/db/`)
 
 ## Projects structure
 ### Report generation directories
@@ -117,16 +118,14 @@
 4. `.\scripts\workflow.bat project01_FIR fir_ap-int fir /clk project01_FIR_fir_baseline_clk`
 5. `.\scripts\workflow.bat project01_FIR fir_ap-shift-reg fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
 6. `.\scripts\workflow.bat project01_FIR fir_loop-fission-ap-int fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-7. ``
-8. ``
-9. ``
-10. ``
-11. ``
-12. ``
-13. ``
-14. ``
-15. ``
-16. ``
+7. `.\scripts\workflow.bat project01_FIR fir_loop-fission-unroll fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
+8. `.\scripts\workflow.bat project01_FIR fir_loop-fission-array-partition fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
+9. `.\scripts\workflow.bat project01_FIR fir_loop-fission-pipeline fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
+10. `.\scripts\workflow.bat project01_FIR fir_loop-fission-unroll-pipeline fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
+11. `.\scripts\workflow.bat project01_FIR fir_total-unroll fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
+12. `.\scripts\workflow.bat project01_FIR fir_partial-unroll fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
+13. `.\scripts\workflow.bat project01_FIR fir_unroll fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
+14. `.\scripts\workflow.bat project01_FIR fir_pipeline fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
 
 - `.\scripts\workflow.bat project01_FIR fir_ap-int fir /wf clk ` + `<CLK_VAL>`
 
@@ -138,16 +137,19 @@ flowchart TD
     2 --> 3(3. Loop fission) --> 6(6. Type `ap_int`)
     2 --> 4(4. Type `ap_int`) --> 5(5. Class `ap_shift_reg`)
 
-    6 --> 7(*7. Loop unroll) --> 12{*12. Operation chaining}
-    6 --> 8(*8. Pipeline) --> 13{*13. Operation chaining}
-    %%TODO: potential "Array partition"
+    6 --> 7(7. Loop unroll) --> 8(8. Array partition) --> 10(10. Pipeline)
+    6 --> 9(9. Pipeline)
 
-    5 --> 9(*9. Loop unroll) --> 14{*14. Operation chaining}
-    5 --> 10(*10. Pipeline) --> 15{*15. Operation chaining}
-    5 --> 11{*11. Operation chaining}
-    %%TODO: potential "Array partition"
+    8 --> 11(11. Total unroll)
+    8 --> 12(12. Partial unroll)
 
-    %%TODO: <BEST> --> 16[16. AXI4-Stream]
+    5 --> 13(13. Loop unroll)
+    5 --> 14(14. Pipeline)
+
+    %% <BEST_1> --> 15{*15. Operation chaining}
+    %% <BEST_2> --> 16{*16. Operation chaining}
+
+    %%TODO: <BEST> --> 17[17. AXI4-Stream]
 ```
 
 # Project-02 (SpMV)
