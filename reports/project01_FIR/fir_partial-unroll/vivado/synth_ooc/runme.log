@@ -1,0 +1,498 @@
+
+*** Running vivado
+    with args -log fir_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_0.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Jun  3 14:43:50 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source fir_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.cache/ip 
+Command: synth_design -top fir_0 -part xc7z020clg484-3 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39836
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1316.277 ; gain = 541.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fir_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:70]
+INFO: [Synth 8-3491] module 'fir' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:11' bound to instance 'U0' of component 'fir' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'fir' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:25]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 11 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'fir_c_ROM_AUTO_1R' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_c_ROM_AUTO_1R.vhd:10' bound to instance 'c_U' of component 'fir_c_ROM_AUTO_1R' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:386]
+INFO: [Synth 8-638] synthesizing module 'fir_c_ROM_AUTO_1R' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_c_ROM_AUTO_1R.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'fir_c_ROM_AUTO_1R' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_c_ROM_AUTO_1R.vhd:32]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 4'b0000 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter CASE1 bound to: 4'b0001 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter CASE2 bound to: 4'b0010 
+	Parameter din2_WIDTH bound to: 12 - type: integer 
+	Parameter CASE3 bound to: 4'b0011 
+	Parameter din3_WIDTH bound to: 12 - type: integer 
+	Parameter CASE4 bound to: 4'b0100 
+	Parameter din4_WIDTH bound to: 12 - type: integer 
+	Parameter CASE5 bound to: 4'b0101 
+	Parameter din5_WIDTH bound to: 12 - type: integer 
+	Parameter CASE6 bound to: 4'b0110 
+	Parameter din6_WIDTH bound to: 12 - type: integer 
+	Parameter CASE7 bound to: 4'b0111 
+	Parameter din7_WIDTH bound to: 12 - type: integer 
+	Parameter CASE8 bound to: 4'b1000 
+	Parameter din8_WIDTH bound to: 12 - type: integer 
+	Parameter CASE9 bound to: 4'b1001 
+	Parameter din9_WIDTH bound to: 12 - type: integer 
+	Parameter CASE10 bound to: 4'b1010 
+	Parameter din10_WIDTH bound to: 12 - type: integer 
+	Parameter def_WIDTH bound to: 12 - type: integer 
+	Parameter sel_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-3491] module 'fir_sparsemux_23_4_12_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_23_4_12_1_1.vhd:11' bound to instance 'sparsemux_23_4_12_1_1_U1' of component 'fir_sparsemux_23_4_12_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:401]
+INFO: [Synth 8-638] synthesizing module 'fir_sparsemux_23_4_12_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_23_4_12_1_1.vhd:96]
+WARNING: [Synth 8-614] signal 'def' is read in the process but is not in the sensitivity list [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_23_4_12_1_1.vhd:104]
+INFO: [Synth 8-256] done synthesizing module 'fir_sparsemux_23_4_12_1_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_23_4_12_1_1.vhd:96]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 3'b000 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter CASE1 bound to: 3'b001 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter CASE2 bound to: 3'b010 
+	Parameter din2_WIDTH bound to: 12 - type: integer 
+	Parameter CASE3 bound to: 3'b011 
+	Parameter din3_WIDTH bound to: 12 - type: integer 
+	Parameter CASE4 bound to: 3'b100 
+	Parameter din4_WIDTH bound to: 12 - type: integer 
+	Parameter CASE5 bound to: 3'b101 
+	Parameter din5_WIDTH bound to: 12 - type: integer 
+	Parameter def_WIDTH bound to: 12 - type: integer 
+	Parameter sel_WIDTH bound to: 3 - type: integer 
+	Parameter dout_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-3491] module 'fir_sparsemux_13_3_12_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_13_3_12_1_1.vhd:11' bound to instance 'sparsemux_13_3_12_1_1_U2' of component 'fir_sparsemux_13_3_12_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:446]
+INFO: [Synth 8-638] synthesizing module 'fir_sparsemux_13_3_12_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_13_3_12_1_1.vhd:66]
+WARNING: [Synth 8-614] signal 'def' is read in the process but is not in the sensitivity list [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_13_3_12_1_1.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'fir_sparsemux_13_3_12_1_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_13_3_12_1_1.vhd:66]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 3'b000 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter CASE1 bound to: 3'b001 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter CASE2 bound to: 3'b010 
+	Parameter din2_WIDTH bound to: 12 - type: integer 
+	Parameter CASE3 bound to: 3'b011 
+	Parameter din3_WIDTH bound to: 12 - type: integer 
+	Parameter CASE4 bound to: 3'b100 
+	Parameter din4_WIDTH bound to: 12 - type: integer 
+	Parameter CASE5 bound to: 3'b101 
+	Parameter din5_WIDTH bound to: 12 - type: integer 
+	Parameter def_WIDTH bound to: 12 - type: integer 
+	Parameter sel_WIDTH bound to: 3 - type: integer 
+	Parameter dout_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-3491] module 'fir_sparsemux_13_3_12_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_13_3_12_1_1.vhd:11' bound to instance 'sparsemux_13_3_12_1_1_U3' of component 'fir_sparsemux_13_3_12_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:476]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 3'b000 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter CASE1 bound to: 3'b001 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter CASE2 bound to: 3'b010 
+	Parameter din2_WIDTH bound to: 12 - type: integer 
+	Parameter CASE3 bound to: 3'b011 
+	Parameter din3_WIDTH bound to: 12 - type: integer 
+	Parameter CASE4 bound to: 3'b100 
+	Parameter din4_WIDTH bound to: 12 - type: integer 
+	Parameter CASE5 bound to: 3'b101 
+	Parameter din5_WIDTH bound to: 12 - type: integer 
+	Parameter def_WIDTH bound to: 12 - type: integer 
+	Parameter sel_WIDTH bound to: 3 - type: integer 
+	Parameter dout_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-3491] module 'fir_sparsemux_13_3_12_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_13_3_12_1_1.vhd:11' bound to instance 'sparsemux_13_3_12_1_1_U4' of component 'fir_sparsemux_13_3_12_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:506]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 3'b000 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter CASE1 bound to: 3'b001 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter CASE2 bound to: 3'b010 
+	Parameter din2_WIDTH bound to: 12 - type: integer 
+	Parameter CASE3 bound to: 3'b011 
+	Parameter din3_WIDTH bound to: 12 - type: integer 
+	Parameter CASE4 bound to: 3'b100 
+	Parameter din4_WIDTH bound to: 12 - type: integer 
+	Parameter CASE5 bound to: 3'b101 
+	Parameter din5_WIDTH bound to: 12 - type: integer 
+	Parameter def_WIDTH bound to: 12 - type: integer 
+	Parameter sel_WIDTH bound to: 3 - type: integer 
+	Parameter dout_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-3491] module 'fir_sparsemux_13_3_12_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_sparsemux_13_3_12_1_1.vhd:11' bound to instance 'sparsemux_13_3_12_1_1_U5' of component 'fir_sparsemux_13_3_12_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:536]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-3491] module 'fir_mul_12ns_10s_22_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mul_12ns_10s_22_1_1.vhd:7' bound to instance 'mul_12ns_10s_22_1_1_U6' of component 'fir_mul_12ns_10s_22_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:566]
+INFO: [Synth 8-638] synthesizing module 'fir_mul_12ns_10s_22_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mul_12ns_10s_22_1_1.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'fir_mul_12ns_10s_22_1_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mul_12ns_10s_22_1_1.vhd:23]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'fir_mac_muladd_12ns_10s_26s_26_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:59' bound to instance 'mac_muladd_12ns_10s_26s_26_4_1_U7' of component 'fir_mac_muladd_12ns_10s_26s_26_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:578]
+INFO: [Synth 8-638] synthesizing module 'fir_mac_muladd_12ns_10s_26s_26_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:10' bound to instance 'fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U' of component 'fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'fir_mac_muladd_12ns_10s_26s_26_4_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-3491] module 'fir_mac_muladd_12ns_10s_26s_26_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:59' bound to instance 'mac_muladd_12ns_10s_26s_26_4_1_U8' of component 'fir_mac_muladd_12ns_10s_26s_26_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:595]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 22 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-3491] module 'fir_mac_muladd_12ns_10s_22s_23_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:59' bound to instance 'mac_muladd_12ns_10s_22s_23_4_1_U9' of component 'fir_mac_muladd_12ns_10s_22s_23_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:612]
+INFO: [Synth 8-638] synthesizing module 'fir_mac_muladd_12ns_10s_22s_23_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:10' bound to instance 'fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U' of component 'fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'fir_mac_muladd_12ns_10s_22s_23_4_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'fir_mac_muladd_12ns_10s_23s_24_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:59' bound to instance 'mac_muladd_12ns_10s_23s_24_4_1_U10' of component 'fir_mac_muladd_12ns_10s_23s_24_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:629]
+INFO: [Synth 8-638] synthesizing module 'fir_mac_muladd_12ns_10s_23s_24_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:10' bound to instance 'fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U' of component 'fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'fir_mac_muladd_12ns_10s_23s_24_4_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'fir' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'fir_0' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:70]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port rst in module fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port rst in module fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port rst in module fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module fir_c_ROM_AUTO_1R is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1436.621 ; gain = 661.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1436.621 ; gain = 661.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1436.621 ; gain = 661.824
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1436.621 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/constraints/fir_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/constraints/fir_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.runs/fir_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.runs/fir_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1504.457 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1504.457 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1504.457 ; gain = 729.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1504.457 ; gain = 729.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1504.457 ; gain = 729.660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'p_reg_reg' and it is trimmed from '48' to '26' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:47]
+INFO: [Synth 8-3936] Found unconnected internal register 'm_reg_reg' and it is trimmed from '43' to '26' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_26s_26_4_1.vhd:40]
+INFO: [Synth 8-3936] Found unconnected internal register 'p_reg_reg' and it is trimmed from '48' to '23' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:47]
+INFO: [Synth 8-3936] Found unconnected internal register 'm_reg_reg' and it is trimmed from '43' to '23' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:40]
+INFO: [Synth 8-3936] Found unconnected internal register 'a_reg_reg' and it is trimmed from '25' to '23' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_22s_23_4_1.vhd:39]
+INFO: [Synth 8-3936] Found unconnected internal register 'p_reg_reg' and it is trimmed from '48' to '24' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:47]
+INFO: [Synth 8-3936] Found unconnected internal register 'm_reg_reg' and it is trimmed from '43' to '24' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:40]
+INFO: [Synth 8-3936] Found unconnected internal register 'a_reg_reg' and it is trimmed from '25' to '24' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mac_muladd_12ns_10s_23s_24_4_1.vhd:39]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1504.457 ; gain = 729.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   26 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 3     
+	               18 Bit    Registers := 4     
+	               12 Bit    Registers := 26    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	  12 Input   10 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A''*B'')')'.
+DSP Report: register c_U/q1_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register acc_3_reg_717_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP mul_12ns_10s_22_1_1_U6/tmp_product, operation Mode is: A2*B2.
+DSP Report: register c_U/q0_reg is absorbed into DSP mul_12ns_10s_22_1_1_U6/tmp_product.
+DSP Report: register mul_12ns_10s_22_1_1_U6/tmp_product is absorbed into DSP mul_12ns_10s_22_1_1_U6/tmp_product.
+DSP Report: operator mul_12ns_10s_22_1_1_U6/tmp_product is absorbed into DSP mul_12ns_10s_22_1_1_U6/tmp_product.
+DSP Report: Generating DSP mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A''*B'')')'.
+DSP Report: register c_U/q0_reg is absorbed into DSP mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A''*B'')')'.
+DSP Report: register mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register c_U/q0_reg is absorbed into DSP mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A''*B'')')'.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register acc_fu_102_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register c_U/q0_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1504.457 ; gain = 729.660
+---------------------------------------------------------------------------------
+ Sort Area is  mac_muladd_12ns_10s_26s_26_4_1_U7/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg_8 : 0 0 : 1783 1783 : Used 1 time 0
+ Sort Area is  mac_muladd_12ns_10s_26s_26_4_1_U8/fir_mac_muladd_12ns_10s_26s_26_4_1_DSP48_0_U/p_reg_reg_6 : 0 0 : 1783 1783 : Used 1 time 0
+ Sort Area is  mac_muladd_12ns_10s_23s_24_4_1_U10/fir_mac_muladd_12ns_10s_23s_24_4_1_DSP48_0_U/p_reg_reg_4 : 0 0 : 1691 1691 : Used 1 time 0
+ Sort Area is  mac_muladd_12ns_10s_22s_23_4_1_U9/fir_mac_muladd_12ns_10s_22s_23_4_1_DSP48_0_U/p_reg_reg_2 : 0 0 : 1628 1628 : Used 1 time 0
+ Sort Area is  mul_12ns_10s_22_1_1_U6/tmp_product_0 : 0 0 : 909 909 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | (C'+(A''*B'')')' | 25     | 10     | 26     | -      | 26     | 2    | 2    | 1    | -    | -     | 1    | 1    | 
+|fir         | A2*B2            | 13     | 10     | -      | -      | 23     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (C+(A''*B'')')'  | 23     | 10     | 22     | -      | 23     | 2    | 2    | 0    | -    | -     | 1    | 1    | 
+|fir         | (C+(A''*B'')')'  | 24     | 10     | 23     | -      | 24     | 2    | 2    | 0    | -    | -     | 1    | 1    | 
+|fir         | (C'+(A''*B'')')' | 25     | 10     | 26     | -      | 26     | 2    | 2    | 1    | -    | -     | 1    | 1    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1687.355 ; gain = 912.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1689.094 ; gain = 914.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1700.836 ; gain = 926.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1947.629 ; gain = 1172.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1947.629 ; gain = 1172.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1947.629 ; gain = 1172.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1947.629 ; gain = 1172.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1947.629 ; gain = 1172.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1947.629 ; gain = 1172.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | (C+(A''*B'')')'  | 12     | 18     | 48     | -      | 23     | 2    | 2    | 0    | -    | -     | 1    | 1    | 
+|fir         | (C+(A''*B'')')'  | 12     | 18     | 48     | -      | 24     | 2    | 2    | 0    | -    | -     | 1    | 1    | 
+|fir         | (C'+(A''*B'')')' | 12     | 18     | 48     | -      | 26     | 2    | 2    | 1    | -    | -     | 1    | 1    | 
+|fir         | (C'+(A''*B'')')' | 12     | 18     | 48     | -      | 26     | 2    | 2    | 1    | -    | -     | 1    | 1    | 
+|fir         | A'*B'            | 12     | 18     | -      | -      | 23     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     7|
+|2     |DSP48E1 |     5|
+|5     |LUT1    |     2|
+|6     |LUT2    |    30|
+|7     |LUT3    |    14|
+|8     |LUT4    |    10|
+|9     |LUT5    |    18|
+|10    |LUT6    |   124|
+|11    |FDRE    |   299|
+|12    |FDSE    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1947.629 ; gain = 1172.832
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1947.629 ; gain = 1104.996
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1947.629 ; gain = 1172.832
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1956.758 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1960.434 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 9329975b
+INFO: [Common 17-83] Releasing license: Synthesis
+72 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1960.434 ; gain = 1415.777
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1960.434 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.runs/fir_0_synth_1/fir_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fir_0, cache-ID = 1aac0ee7a5cf3b9e
+INFO: [Coretcl 2-1174] Renamed 10 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1960.434 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/fir_partial-unroll/vivado_prj/vivado_prj.runs/fir_0_synth_1/fir_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fir_0_utilization_synth.rpt -pb fir_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  3 14:44:30 2026...
