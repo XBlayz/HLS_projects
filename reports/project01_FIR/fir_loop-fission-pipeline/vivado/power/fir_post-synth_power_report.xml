@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<POWERDATA author="Vivado Power Analysis" dataVersion="2025.2" design="fir_0" designState="synthesized" date="Wed Jun  3 11:23:21 2026" pwrOpt="None" activityLevel="simulation">
+	<ENVIRONMENT>
+		<DEVICE part="xc7z020" grade="extended" package="clg484" speed="-3" process="typical" vid="No">
+		</DEVICE>
+		<VOLTAGESOURCES>
+			<SOURCE name="Vccbram" voltage="1.000000" icc="0.000000" iccq="0.000439" power="0.000439">
+			</SOURCE>
+			<SOURCE name="Vccint" voltage="1.000000" icc="0.001116" iccq="0.007416" power="0.008532">
+			</SOURCE>
+			<SOURCE name="Vccaux" voltage="1.800000" icc="0.000000" iccq="0.010242" power="0.018435">
+			</SOURCE>
+			<SOURCE name="Vccpint" voltage="1.000000" icc="0.000000" iccq="0.016295" power="0.016295">
+			</SOURCE>
+			<SOURCE name="Vccpaux" voltage="1.800000" icc="0.000000" iccq="0.010330" power="0.018594">
+			</SOURCE>
+			<SOURCE name="Vccpll" voltage="1.800000" icc="0.000000" iccq="0.003000" power="0.005400">
+			</SOURCE>
+			<SOURCE name="Vccadc" voltage="1.800000" icc="0.000000" iccq="0.020000" power="0.036000">
+			</SOURCE>
+		</VOLTAGESOURCES>
+		<THERMAL>
+			<AMBIENT value="25.000000">
+			</AMBIENT>
+			<AIRFLOW value="250.000000">
+			</AIRFLOW>
+			<HEATSINK value="none">
+			</HEATSINK>
+			<BOARDSELECTION value="medium (10&quot;x10&quot;)">
+			</BOARDSELECTION>
+			<BOARDLAYERS value="8to11 (8 to 11 Layers)">
+			</BOARDLAYERS>
+			<TSA value="0.000000">
+			</TSA>
+			<TJB value="7.400000">
+			</TJB>
+			<BOARDTEMP value="25.0 (C)">
+			</BOARDTEMP>
+			<JUNCTION value="26.2 (C)">
+			</JUNCTION>
+		</THERMAL>
+	</ENVIRONMENT>
+	<BLOCKDETAILS>
+		<BYTYPE>
+			<BLOCKTYPE name="Clocks">
+				<CLOCK name="ap_clk" freq="100.000000" belFanout="90" sliceFanout="45" FoPerSite="2.000000" sliceEnableRate="0.328209" leafs="0.000000" hrows="0.000000" power="0.000858">
+				</CLOCK>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="LOGIC">
+				<LOGIC clock="Unclocked_or_HFN_instance" clockFreq="100.000000" clockFreq2="100.000000" toggleRate="5.604411" toggleRate2="7.133333" totalRate="320.999998" name="ap_clk" hierName="fir_0/U0" writeRate="0.000000" enableRate="0.000000" fanout="2.176471" ru="9.001784" fanout2="3.285714" totalFanout="148.000000" fanoutRate="694.499998" numNets="78" extNets="68" luts="70" logicCap="32419601" signalCap="16791.954254" power="0.000085" sp="0.000072">
+				</LOGIC>
+				<LOGIC clock="ap_clk" clockFreq="100.000000" clockFreq2="100.000000" toggleRate="1.000000" toggleRate2="2.000000" totalRate="2.000000" name="ap_clk" hierName="fir_0/U0" writeRate="0.000000" enableRate="1.000000" fanout="0.000000" ru="0.000000" fanout2="0.000000" totalFanout="0.000000" fanoutRate="0.000000" numNets="1" extNets="0" SRL="1" logicCap="636000" signalCap="0.000000" power="0.000000" sp="0.000000">
+				</LOGIC>
+				<LOGIC clock="ap_clk" clockFreq="100.000000" clockFreq2="100.000000" toggleRate="0.211183" toggleRate2="3.000000" totalRate="3.000000" name="ap_clk" hierName="fir_0/U0" writeRate="0.110000" enableRate="0.000000" fanout="0.000000" ru="0.000000" fanout2="0.000000" totalFanout="0.000000" fanoutRate="0.000000" numNets="12" extNets="0" RAM="12" logicCap="124300" signalCap="0.000000" power="0.000000" sp="0.000000">
+				</LOGIC>
+				<LOGIC clock="ap_clk" clockFreq="100.000000" clockFreq2="100.000000" toggleRate="1.720000" toggleRate2="4.161290" totalRate="128.999999" name="ap_clk" hierName="fir_0/U0" writeRate="0.000000" enableRate="0.380517" fanout="3.320000" ru="11.901449" fanout2="6.612903" totalFanout="249.000000" fanoutRate="651.000000" numNets="75" extNets="75" ffs="75" logicCap="1395000" signalCap="35474.008636" power="0.000003" sp="0.000082">
+				</LOGIC>
+				<LOGIC clock="Unclocked_or_HFN_instance" clockFreq="100.000000" clockFreq2="2.000000" toggleRate="2.000000" toggleRate2="2.000000" totalRate="4.000000" name="High_Fanout_Nets" hierName="fir_0/U0" writeRate="0.000000" enableRate="1.000000" fanout="41.000000" ru="22.265999" fanout2="41.000000" totalFanout="82.000000" fanoutRate="81.999998" numNets="2" extNets="2" ffs="1" luts="1" logicCap="361800" signalCap="6358.060303" power="0.000000" sp="0.000006">
+				</LOGIC>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="DSP">
+				<MODULE name="ap_clk" count="1">
+					<GROUPSUMMARY>
+						<DSP48E1 name="ap_clk" hierName="fir_0/U0" clock="ap_clk" toggleRate="0.153846" clockFreq="100.000000" multUsed="Yes" mregUsed="Yes" preAdderUsed="No" power="0.000007">
+						</DSP48E1>
+					</GROUPSUMMARY>
+				</MODULE>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="IOBANK">
+				<IOBANK numInternalVref="0" numDelayControl="0" numLVDSBanks="0">
+				</IOBANK>
+			</BLOCKTYPE>
+		</BYTYPE>
+	</BLOCKDETAILS>
+</POWERDATA>
+
