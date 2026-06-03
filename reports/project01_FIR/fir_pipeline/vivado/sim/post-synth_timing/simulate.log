@@ -1,0 +1,21 @@
+Time resolution is 1 ps
+Note: =========================================================
+Time: 0 ps  Iteration: 0  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
+Note:  INIZIO SIMULAZIONE E GENERAZIONE STIMOLI
+Time: 0 ps  Iteration: 0  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
+Note: =========================================================
+Time: 0 ps  Iteration: 0  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
+Error: Ciclo 0 -> FAIL! Atteso: 53 Ottenuto: -38
+Time: 205 ns  Iteration: 1  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
+Error: Ciclo 1 -> FAIL! Atteso: 0 Ottenuto: -91
+Time: 325 ns  Iteration: 1  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
+Error: Ciclo 2 -> FAIL! Atteso: -91 Ottenuto: 222
+Time: 445 ns  Iteration: 1  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
+Error: Ciclo 3 -> FAIL! Atteso: 0 Ottenuto: 813
+Time: 565 ns  Iteration: 1  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
+Error: Ciclo 4 -> FAIL! Atteso: 313 Ottenuto: 1126
+Time: 685 ns  Iteration: 1  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
+Error: Ciclo 5 -> FAIL! Atteso: 500 Ottenuto: 813
+Time: 805 ns  Iteration: 1  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
+Error: Ciclo 6 -> FAIL! Atteso: 313 Ottenuto: 222
+Time: 925 ns  Iteration: 1  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_fir_ap-int_tb.vhd
