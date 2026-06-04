@@ -1,0 +1,912 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Jun  4 16:59:25 2026
+# Process ID         : 17440
+# Current directory  : C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting
+# Command line       : vivado.exe -mode batch -notrace -source ..\..\..\scripts\vivado_power_report.tcl -tclargs project01_FIR 01_code-hoisting fir project01_FIR_00_baseline_tb project01_FIR_00_baseline_clk 1000ns
+# Log file           : C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado.log
+# Journal file       : C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting\vivado.jou
+# Running On         : Legion5-Stefano
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 260 w/ Radeon 780M Graphics
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33617 MB
+# Swap memory        : 3087 MB
+# Total Virtual      : 36704 MB
+# Available Virtual  : 10378 MB
+#-----------------------------------------------------------
+source {..\..\..\scripts\vivado_power_report.tcl} -notrace
+
+========================================================
+ TARGET: 01_code-hoisting  (fir)
+ PART  : xc7z020clg484-3
+ BUILD : .
+========================================================
+
+========================================================
+ STEP 1 -- Create project
+========================================================
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj'
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 534.871 ; gain = 221.344
+[ OK  ] Project 'vivado_prj' created -- PART: xc7z020clg484-3
+
+========================================================
+ STEP 2 -- Import IP repository
+========================================================
+[ OK  ] IP repository directory: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/ip_repo
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
+[ OK  ] IP catalog updated -- repo: ./ip_repo
+
+========================================================
+ STEP 3 -- Instantiate IP and generate targets
+========================================================
+[INFO ] Creating IP: xilinx.com:hls:fir:1.0 -> fir_0
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fir_0'...
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'fir_0'...
+[ OK  ] XCI file: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.srcs/sources_1/ip/fir_0/fir_0.xci
+[ OK  ] IP 'fir_0' instantiated and all targets generated
+
+========================================================
+ STEP 4 -- IP OOC synthesis  (fir_0_synth_1)
+========================================================
+[INFO ] Launching fir_0_synth_1 (8 jobs)...
+[Thu Jun  4 16:59:35 2026] Launched fir_0_synth_1...
+Run output will be captured here: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.runs/fir_0_synth_1/runme.log
+[Thu Jun  4 16:59:35 2026] Waiting for fir_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log fir_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_0.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 16:59:37 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source fir_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.cache/ip 
+Command: synth_design -top fir_0 -part xc7z020clg484-3 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2320
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1318.910 ; gain = 542.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fir_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:70]
+INFO: [Synth 8-3491] module 'fir' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:11' bound to instance 'U0' of component 'fir' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'fir' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:25]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 11 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'fir_shift_reg_RAM_AUTO_1R1W' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_shift_reg_RAM_AUTO_1R1W.vhd:11' bound to instance 'shift_reg_U' of component 'fir_shift_reg_RAM_AUTO_1R1W' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'fir_shift_reg_RAM_AUTO_1R1W' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_shift_reg_RAM_AUTO_1R1W.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'fir_shift_reg_RAM_AUTO_1R1W' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_shift_reg_RAM_AUTO_1R1W.vhd:29]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 11 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'fir_c_ROM_AUTO_1R' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_c_ROM_AUTO_1R.vhd:10' bound to instance 'c_U' of component 'fir_c_ROM_AUTO_1R' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'fir_c_ROM_AUTO_1R' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_c_ROM_AUTO_1R.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'fir_c_ROM_AUTO_1R' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_c_ROM_AUTO_1R.vhd:28]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fir_mul_10s_32s_32_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mul_10s_32s_32_1_1.vhd:7' bound to instance 'mul_10s_32s_32_1_1_U1' of component 'fir_mul_10s_32s_32_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'fir_mul_10s_32s_32_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mul_10s_32s_32_1_1.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'fir_mul_10s_32s_32_1_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mul_10s_32s_32_1_1.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'fir' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'fir_0' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:70]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port reset in module fir_c_ROM_AUTO_1R is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module fir_shift_reg_RAM_AUTO_1R1W is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1436.340 ; gain = 659.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1436.340 ; gain = 659.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1436.340 ; gain = 659.488
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1436.340 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/constraints/fir_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/constraints/fir_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.runs/fir_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.runs/fir_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1516.633 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1516.633 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1516.633 ; gain = 739.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1516.633 ; gain = 739.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1516.633 ; gain = 739.781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1516.633 ; gain = 739.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input   32 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
++---Multipliers : 
+	              10x32  Multipliers := 1     
++---RAMs : 
+	              352 Bit	(11 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	  12 Input   10 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP mul_10s_32s_32_1_1_U1/tmp_product, operation Mode is: A''*B''.
+DSP Report: register c_U/q0_reg is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: register c_load_reg_257_reg is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: register mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: register mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: operator mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: operator mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: Generating DSP mul_ln18_reg_262_reg, operation Mode is: (PCIN>>17)+A''*B''.
+DSP Report: register c_U/q0_reg is absorbed into DSP mul_ln18_reg_262_reg.
+DSP Report: register shift_reg_U/q0_reg is absorbed into DSP mul_ln18_reg_262_reg.
+DSP Report: register shift_reg_load_reg_252_reg is absorbed into DSP mul_ln18_reg_262_reg.
+DSP Report: register c_load_reg_257_reg is absorbed into DSP mul_ln18_reg_262_reg.
+DSP Report: register mul_ln18_reg_262_reg is absorbed into DSP mul_ln18_reg_262_reg.
+DSP Report: operator mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_ln18_reg_262_reg.
+DSP Report: operator mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_ln18_reg_262_reg.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[47]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[46]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[45]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[44]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[43]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[42]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[41]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[40]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[39]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[38]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[37]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[36]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[35]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[34]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[33]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[32]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[31]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[30]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[29]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[28]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[27]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[26]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[25]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[24]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[23]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[22]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[21]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[20]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[19]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[18]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln18_reg_262_reg[17]) is unused and will be removed from module fir.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1516.633 ; gain = 739.781
+---------------------------------------------------------------------------------
+ Sort Area is  mul_10s_32s_32_1_1_U1/tmp_product_0 : 0 0 : 1785 3526 : Used 1 time 0
+ Sort Area is  mul_10s_32s_32_1_1_U1/tmp_product_0 : 0 1 : 1741 3526 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+---------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object          | Inference | Size (Depth x Width) | Primitives     | 
++------------+---------------------+-----------+----------------------+----------------+
+|U0          | shift_reg_U/ram_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
++------------+---------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | A''*B''            | 18     | 10     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A''*B'' | 15     | 10     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 1    | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1680.949 ; gain = 904.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.188 ; gain = 905.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+---------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object          | Inference | Size (Depth x Width) | Primitives     | 
++------------+---------------------+-----------+----------------------+----------------+
+|U0          | shift_reg_U/ram_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
++------------+---------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1692.039 ; gain = 915.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1940.836 ; gain = 1163.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1940.836 ; gain = 1163.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1940.836 ; gain = 1163.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1940.836 ; gain = 1163.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1940.836 ; gain = 1163.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1940.836 ; gain = 1163.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | (PCIN>>17+A''*B'')' | 30     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|fir         | A''*B''             | 17     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 0    | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    24|
+|2     |DSP48E1  |     2|
+|4     |LUT1     |     1|
+|5     |LUT2     |    46|
+|6     |LUT3     |    88|
+|7     |LUT4     |    57|
+|8     |LUT5     |     5|
+|9     |LUT6     |     5|
+|10    |RAM16X1S |    32|
+|11    |FDRE     |   123|
+|12    |FDSE     |     3|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1940.836 ; gain = 1163.984
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1940.836 ; gain = 1083.691
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1940.836 ; gain = 1163.984
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1946.094 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1948.254 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 32 instances
+
+Synth Design complete | Checksum: e7bd41f0
+INFO: [Common 17-83] Releasing license: Synthesis
+68 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1948.254 ; gain = 1402.820
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1948.254 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.runs/fir_0_synth_1/fir_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fir_0, cache-ID = f69c6d4603f79ae9
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1948.254 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.runs/fir_0_synth_1/fir_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fir_0_utilization_synth.rpt -pb fir_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  4 17:00:19 2026...
+[Thu Jun  4 17:00:20 2026] fir_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:45 . Memory (MB): peak = 560.145 ; gain = 0.000
+[ OK  ] Run 'fir_0_synth_1' -- synth_design Complete!
+
+========================================================
+ STEP 5 -- Generate IP RTL wrapper
+========================================================
+INFO: [IP_Flow 19-1706] Not generating 'Instantiation Template' target for IP 'fir_0'. Target already exists and is up to date.
+[ OK  ] Wrapper generated -- synthesis top: 'fir_0_sv'
+
+========================================================
+ STEP 6 -- Import clock constraint
+========================================================
+[ OK  ] Clock constraint file: ../../../srcs/vivado/const/project01_FIR_00_baseline_clk.xdc
+[ OK  ] Constraint added: ../../../srcs/vivado/const/project01_FIR_00_baseline_clk.xdc
+
+========================================================
+ STEP 7 -- Import testbench
+========================================================
+[ OK  ] Testbench file: ../../../srcs/vivado/project01_FIR_00_baseline_tb.vhd
+[ OK  ] Testbench 'fir_tb' added to sim_1
+
+========================================================
+ STEP 8 -- Top-level synthesis  (synth_1)
+========================================================
+[INFO ] Launching synth_1 (8 jobs)...
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Thu Jun  4 17:00:21 2026] Launched synth_1...
+Run output will be captured here: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.runs/synth_1/runme.log
+[Thu Jun  4 17:00:21 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log fir_0_sv.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_0_sv.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 17:00:24 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source fir_0_sv.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.cache/ip 
+Command: synth_design -top fir_0_sv -part xc7z020clg484-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39200
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1316.422 ; gain = 540.613
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir_0_sv' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/fir_0_sv.sv:55]
+INFO: [Synth 8-638] synthesizing module 'fir_0' [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.runs/synth_1/.Xil/Vivado-16364-Legion5-Stefano/realtime/fir_0_stub.vhdl:29]
+INFO: [Synth 8-6155] done synthesizing module 'fir_0_sv' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/fir_0_sv.sv:55]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1434.945 ; gain = 659.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1434.945 ; gain = 659.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1434.945 ; gain = 659.137
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1434.945 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/fir_0/fir_0_in_context.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/fir_0/fir_0_in_context.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/const/project01_FIR_00_baseline_clk.xdc]
+Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/const/project01_FIR_00_baseline_clk.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1434.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1434.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1434.945 ; gain = 659.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1434.945 ; gain = 659.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1434.945 ; gain = 659.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1434.945 ; gain = 659.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1442.586 ; gain = 666.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1617.336 ; gain = 841.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1617.336 ; gain = 841.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1626.898 ; gain = 851.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1876.125 ; gain = 1100.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1876.125 ; gain = 1100.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1876.125 ; gain = 1100.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1876.125 ; gain = 1100.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1876.125 ; gain = 1100.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1876.125 ; gain = 1100.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |fir_0         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |fir  |     1|
+|2     |IBUF |    35|
+|3     |OBUF |    36|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1876.125 ; gain = 1100.316
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1876.125 ; gain = 1100.316
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1876.125 ; gain = 1100.316
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1885.195 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1888.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: eab03b20
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1888.883 ; gain = 1343.043
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1888.883 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.runs/synth_1/fir_0_sv.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fir_0_sv_utilization_synth.rpt -pb fir_0_sv_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  4 17:01:01 2026...
+[Thu Jun  4 17:01:07 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:45 . Memory (MB): peak = 560.145 ; gain = 0.000
+[ OK  ] Run 'synth_1' -- synth_design Complete!
+
+========================================================
+ STEP 9 -- Post-synthesis timing simulation + SAIF
+========================================================
+[INFO ] Simulation runtime : 1000ns
+[INFO ] SAIF output        : ./vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/dump.saif
+[INFO ] Launching post-synthesis timing simulation...
+Command: launch_simulation  -mode post-synthesis -type timing
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jun  4 17:01:07 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'fir_tb'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis timing simulation in 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Softwares/AMD-Design/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-20] The target language is set to VHDL, it is not supported for simulation type 'timing', using Verilog instead.
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-3
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/fir_0.dcp' for cell 'inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 816.551 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/const/project01_FIR_00_baseline_clk.xdc]
+Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/const/project01_FIR_00_baseline_clk.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 960.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 32 instances
+
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/fir_tb_time_synth.v"
+INFO: [SIM-utils-27] Writing SDF file...
+INFO: [SIM-utils-28] write_sdf -mode timesim -process_corner slow -force -file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/fir_tb_time_synth.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/fir_tb_time_synth.v
+INFO: [SIM-utils-37] SDF generated:C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/fir_tb_time_synth.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Softwares/AMD-Design/2025.2/Vivado/data/xsim/xsim.ini' copied to run dir:'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fir_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim'
+"xvlog --incr --relax -prj fir_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/fir_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM32X1S_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD1
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD10
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD11
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD12
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD13
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD14
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD15
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD16
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD17
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD18
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD19
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD2
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD20
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD21
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD22
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD23
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD24
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD25
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD26
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD27
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD28
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD29
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD3
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD30
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD31
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD4
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD5
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD6
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD7
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD8
+INFO: [VRFC 10-311] analyzing module RAM32X1S_HD9
+INFO: [VRFC 10-311] analyzing module fir_0
+INFO: [VRFC 10-311] analyzing module fir_0_fir
+INFO: [VRFC 10-311] analyzing module fir_0_fir_mul_10s_32s_32_1_1
+INFO: [VRFC 10-311] analyzing module fir_0_fir_shift_reg_RAM_AUTO_1R1W
+INFO: [VRFC 10-311] analyzing module fir_0_sv
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj fir_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_00_baseline_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim'
+"xelab --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot fir_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.fir_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Softwares/AMD-Design/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot fir_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.fir_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.FDSE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.DSP48E1(ACASCREG=2,ALUMODEREG=0,...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1(INIT=2'b01)
+Compiling module xil_defaultlib.fir_0_fir_mul_10s_32s_32_1_1
+Compiling module simprims_ver.DSP48E1(ACASCREG=2,ALUMODEREG=0,...
+Compiling module simprims_ver.RAMS32
+Compiling module xil_defaultlib.RAM32X1S_UNIQ_BASE_
+Compiling module xil_defaultlib.RAM32X1S_HD1
+Compiling module xil_defaultlib.RAM32X1S_HD2
+Compiling module xil_defaultlib.RAM32X1S_HD3
+Compiling module xil_defaultlib.RAM32X1S_HD4
+Compiling module xil_defaultlib.RAM32X1S_HD5
+Compiling module xil_defaultlib.RAM32X1S_HD6
+Compiling module xil_defaultlib.RAM32X1S_HD7
+Compiling module xil_defaultlib.RAM32X1S_HD8
+Compiling module xil_defaultlib.RAM32X1S_HD9
+Compiling module xil_defaultlib.RAM32X1S_HD10
+Compiling module xil_defaultlib.RAM32X1S_HD11
+Compiling module xil_defaultlib.RAM32X1S_HD12
+Compiling module xil_defaultlib.RAM32X1S_HD13
+Compiling module xil_defaultlib.RAM32X1S_HD14
+Compiling module xil_defaultlib.RAM32X1S_HD15
+Compiling module xil_defaultlib.RAM32X1S_HD16
+Compiling module xil_defaultlib.RAM32X1S_HD17
+Compiling module xil_defaultlib.RAM32X1S_HD18
+Compiling module xil_defaultlib.RAM32X1S_HD19
+Compiling module xil_defaultlib.RAM32X1S_HD20
+Compiling module xil_defaultlib.RAM32X1S_HD21
+Compiling module xil_defaultlib.RAM32X1S_HD22
+Compiling module xil_defaultlib.RAM32X1S_HD23
+Compiling module xil_defaultlib.RAM32X1S_HD24
+Compiling module xil_defaultlib.RAM32X1S_HD25
+Compiling module xil_defaultlib.RAM32X1S_HD26
+Compiling module xil_defaultlib.RAM32X1S_HD27
+Compiling module xil_defaultlib.RAM32X1S_HD28
+Compiling module xil_defaultlib.RAM32X1S_HD29
+Compiling module xil_defaultlib.RAM32X1S_HD30
+Compiling module xil_defaultlib.RAM32X1S_HD31
+Compiling module xil_defaultlib.fir_0_fir_shift_reg_RAM_AUTO_1R1...
+Compiling module xil_defaultlib.fir_0_fir
+Compiling module xil_defaultlib.fir_0
+Compiling architecture behavioral of entity xil_defaultlib.fir_tb
+Built simulation snapshot fir_tb_time_synth
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1436.809 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fir_tb_time_synth -key {Post-Synthesis:sim_1:Timing:fir_tb} -tclbatch {fir_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source fir_tb.tcl
+Note: =========================================================
+Time: 0 ps  Iteration: 0  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_00_baseline_tb.vhd
+Note:  INIZIO SIMULAZIONE E GENERAZIONE STIMOLI
+Time: 0 ps  Iteration: 0  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_00_baseline_tb.vhd
+Note: =========================================================
+Time: 0 ps  Iteration: 0  Process: /fir_tb/stim_process  File: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project01_FIR_00_baseline_tb.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fir_tb_time_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 1436.809 ; gain = 876.664
+[ OK  ] SAIF file: ./vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/dump.saif
+[ OK  ] SAIF written to: ./vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/dump.saif
+
+========================================================
+ STEP 10 -- Power report  (OOC netlist + SAIF annotation)
+========================================================
+Design is defaulting to impl run constrset: fir_0
+Design is defaulting to synth run part: xc7z020clg484-3
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1436.809 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/constraints/fir_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/constraints/fir_ooc.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1549.414 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 32 instances
+
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Power 33-167] Parsing SAIF file C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/dump.saif
+WARNING: [Power 33-330] Read_saif is trying to annotate activities on clock net and this will be ignored. Users shall manually specify clock net frequency using sdc timing constraints(e.g. create_clock)
+INFO: [Power 33-177] SAIF annotation done from file C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/01_code-hoisting/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/dump.saif
+INFO: [Power 33-26] Design nets matched = 426 of 726
+[ OK  ] SAIF annotation loaded
+Command: report_power -name fir_0_power_1 -file ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report.txt -format text -hier all -xpe ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report.xml -rpx ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report.rpx
+WARNING: [Common 17-708] report_power: The '-name' option will be ignored because it is only relevant in GUI mode.
+59% of nets annotated
+Doing probabilistic computation for the remaining nets
+
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+12 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+[ OK  ] Text-Power report: ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report.txt
+[ OK  ] Text-Power report written to: ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report.txt
+[ OK  ] XML-Power report: ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report.xml
+[ OK  ] XML-Power report written to: ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report.xml
+[ OK  ] RPX-Power report: ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report.rpx
+[ OK  ] RPX-Power report written to: ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report.rpx
+
+========================================================
+ VIVADO WORKFLOW COMPLETED SUCCESSFULLY
+ Target : 01_code-hoisting  (fir)
+ Report : ../../../reports/project01_FIR/01_code-hoisting/vivado/power/fir_post-synth_power_report
+========================================================
+
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  4 17:01:28 2026...

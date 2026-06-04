@@ -112,42 +112,43 @@
 # Project-01 (FIR)
 ## Components revisions
 ### Commands
-1. `.\scripts\workflow.bat project01_FIR fir_baseline fir`
-2. `.\scripts\workflow.bat project01_FIR fir_code-hoisting fir /tb project01_FIR_fir_baseline_tb /clk project01_FIR_fir_baseline_clk`
-3. `.\scripts\workflow.bat project01_FIR fir_loop-fission fir /tb project01_FIR_fir_baseline_tb /clk project01_FIR_fir_baseline_clk`
-4. `.\scripts\workflow.bat project01_FIR fir_ap-int fir /clk project01_FIR_fir_baseline_clk`
-5. `.\scripts\workflow.bat project01_FIR fir_ap-shift-reg fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-6. `.\scripts\workflow.bat project01_FIR fir_loop-fission-ap-int fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-7. `.\scripts\workflow.bat project01_FIR fir_loop-fission-unroll fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-8. `.\scripts\workflow.bat project01_FIR fir_loop-fission-array-partition fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-9. `.\scripts\workflow.bat project01_FIR fir_loop-fission-pipeline fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-10. `.\scripts\workflow.bat project01_FIR fir_loop-fission-unroll-pipeline fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-11. `.\scripts\workflow.bat project01_FIR fir_total-unroll fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-12. `.\scripts\workflow.bat project01_FIR fir_partial-unroll fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-13. `.\scripts\workflow.bat project01_FIR fir_unroll fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
-14. `.\scripts\workflow.bat project01_FIR fir_pipeline fir /tb project01_FIR_fir_ap-int_tb /clk project01_FIR_fir_baseline_clk`
+0. Baseline: `.\scripts\workflow.bat project01_FIR 00_baseline fir`
+1. Code hoisting: `.\scripts\workflow.bat project01_FIR 01_code-hoisting fir /tb project01_FIR_00_baseline_tb /clk project01_FIR_00_baseline_clk`
+2. Loop fission: `.\scripts\workflow.bat project01_FIR 02_loop-fission fir /tb project01_FIR_00_baseline_tb /clk project01_FIR_00_baseline_clk`
+3. AP_int: `.\scripts\workflow.bat project01_FIR 03_ap-int fir /clk project01_FIR_00_baseline_clk`
+4. AP_shift_reg: `.\scripts\workflow.bat project01_FIR 04_ap-shift-reg fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
+5. Loop fission + AP_int: `.\scripts\workflow.bat project01_FIR 05_loop-fission-ap-int fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
+6. Loop fission + unroll: `.\scripts\workflow.bat project01_FIR 06_loop-fission-unroll fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
+7. Loop fission + array partition: `.\scripts\workflow.bat project01_FIR 07_loop-fission-array-partition fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
+8. Loop fission + pipeline: `.\scripts\workflow.bat project01_FIR 08_loop-fission-pipeline fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
+9. Loop fission + unroll + pipeline: `.\scripts\workflow.bat project01_FIR 09_loop-fission-unroll-pipeline fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
+10. Loop fission + total unroll: `.\scripts\workflow.bat project01_FIR 10_total-unroll fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
+11. Loop fission + partial unroll: `.\scripts\workflow.bat project01_FIR 11_partial-unroll fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
+12. Unroll: `.\scripts\workflow.bat project01_FIR 12_unroll fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
+13. Pipeline: `.\scripts\workflow.bat project01_FIR 13_pipeline fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
 
-- `.\scripts\workflow.bat project01_FIR fir_ap-int fir /wf clk ` + `<CLK_VAL>`
+- `.\scripts\workflow.bat project01_FIR 03_ap-int fir /wf clk ` + `<CLK_VAL>`
 
 ### Revisions graph
 ```mermaid
 flowchart TD
-    1[1. Baseline] --> 2(2. Code hoisting)
+    0[0. Baseline] --> 1(1. Code hoisting)
 
-    2 --> 3(3. Loop fission) --> 6(6. Type `ap_int`)
-    2 --> 4(4. Type `ap_int`) --> 5(5. Class `ap_shift_reg`)
+    1 --> 2(2. Loop fission) --> 5(5. Type `ap_int`)
+    1 --> 3(3. Type `ap_int`) --> 4(4. Class `ap_shift_reg`)
 
-    6 --> 7(7. Loop unroll) --> 8(8. Array partition) --> 10(10. Pipeline)
-    6 --> 9(9. Pipeline)
+    5 --> 6(6. Loop unroll) --> 7(7. Array partition) --> 9(9. Pipeline)
+    5 --> 8(8. Pipeline)
 
-    8 --> 11(11. Total unroll)
-    8 --> 12(12. Partial unroll)
+    7 --> 10(10. Total unroll)
+    7 --> 11(11. Partial unroll)
 
-    5 --> 13(13. Loop unroll)
-    5 --> 14(14. Pipeline)
+    4 --> 12(12. Loop unroll)
+    4 --> 13(13. Pipeline)
 
-    %% <BEST_1> --> 15{*15. Operation chaining}
-    %% <BEST_2> --> 16{*16. Operation chaining}
+    %% <BEST_1> --> 14{*14. Operation chaining}
+    %% <BEST_2> --> 15{*15. Operation chaining}
+    %% <BEST_3> --> 16{*16. Operation chaining}
 
     %%TODO: <BEST> --> 17[17. AXI4-Stream]
 ```

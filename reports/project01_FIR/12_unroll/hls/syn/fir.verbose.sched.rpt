@@ -1,0 +1,251 @@
+
+
+================================================================
+== Vitis HLS Report for 'fir'
+================================================================
+* Date:           Thu Jun  4 17:16:18 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 12 2025)
+* Project:        12_unroll_script
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.486 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       10|       10|  0.100 us|  0.100 us|   11|   11|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.19>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%x_read = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %x" [fir.cpp:5]   --->   Operation 12 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.19ns)   --->   "%p_08 = memshiftread i12 @_ssdm_op_MemShiftRead.[11 x i12]P0A, i12 0, i12 %x_read, i1 1" [fir.cpp:15]   --->   Operation 13 'memshiftread' 'p_08' <Predicate = true> <Delay = 1.19> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 1.19> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 12> <Depth = 11> <ShiftMem>
+
+State 2 <SV = 1> <Delay = 1.19>
+ST_2 : Operation 14 [1/1] (1.19ns)   --->   "%p_s = memshiftread i12 @_ssdm_op_MemShiftRead.[11 x i12]P0A, i12 0, i12 0, i1 0" [fir.cpp:22]   --->   Operation 14 'memshiftread' 'p_s' <Predicate = true> <Delay = 1.19> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 1.19> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 12> <Depth = 11> <ShiftMem>
+
+State 3 <SV = 2> <Delay = 1.19>
+ST_3 : Operation 15 [1/1] (1.19ns)   --->   "%p_1 = memshiftread i12 @_ssdm_op_MemShiftRead.[11 x i12]P0A, i12 2, i12 0, i1 0" [fir.cpp:22]   --->   Operation 15 'memshiftread' 'p_1' <Predicate = true> <Delay = 1.19> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 1.19> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 12> <Depth = 11> <ShiftMem>
+
+State 4 <SV = 3> <Delay = 1.19>
+ST_4 : Operation 16 [1/1] (1.19ns)   --->   "%p_2 = memshiftread i12 @_ssdm_op_MemShiftRead.[11 x i12]P0A, i12 4, i12 0, i1 0" [fir.cpp:22]   --->   Operation 16 'memshiftread' 'p_2' <Predicate = true> <Delay = 1.19> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 1.19> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 12> <Depth = 11> <ShiftMem>
+
+State 5 <SV = 4> <Delay = 2.12>
+ST_5 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln22 = zext i12 %p_s" [fir.cpp:22]   --->   Operation 17 'zext' 'zext_ln22' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 18 [3/3] (0.93ns) (grouped into DSP with root node add_ln22)   --->   "%acc = mul i18 %zext_ln22, i18 53" [fir.cpp:22]   --->   Operation 18 'mul' 'acc' <Predicate = true> <Delay = 0.93> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 19 [1/1] (1.19ns)   --->   "%p_3 = memshiftread i12 @_ssdm_op_MemShiftRead.[11 x i12]P0A, i12 5, i12 0, i1 0" [fir.cpp:22]   --->   Operation 19 'memshiftread' 'p_3' <Predicate = true> <Delay = 1.19> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 1.19> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 12> <Depth = 11> <ShiftMem>
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln22_4 = zext i12 %p_3" [fir.cpp:22]   --->   Operation 20 'zext' 'zext_ln22_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 21 [3/3] (0.93ns) (grouped into DSP with root node add_ln22_2)   --->   "%mul_ln22_2 = mul i21 %zext_ln22_4, i21 500" [fir.cpp:22]   --->   Operation 21 'mul' 'mul_ln22_2' <Predicate = true> <Delay = 0.93> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 1.19>
+ST_6 : Operation 22 [2/3] (0.93ns) (grouped into DSP with root node add_ln22)   --->   "%acc = mul i18 %zext_ln22, i18 53" [fir.cpp:22]   --->   Operation 22 'mul' 'acc' <Predicate = true> <Delay = 0.93> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln22_1 = zext i12 %p_1" [fir.cpp:22]   --->   Operation 23 'zext' 'zext_ln22_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 24 [3/3] (0.93ns) (grouped into DSP with root node add_ln22_1)   --->   "%mul_ln22 = mul i20 %zext_ln22_1, i20 1048485" [fir.cpp:22]   --->   Operation 24 'mul' 'mul_ln22' <Predicate = true> <Delay = 0.93> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 25 [2/3] (0.93ns) (grouped into DSP with root node add_ln22_2)   --->   "%mul_ln22_2 = mul i21 %zext_ln22_4, i21 500" [fir.cpp:22]   --->   Operation 25 'mul' 'mul_ln22_2' <Predicate = true> <Delay = 0.93> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 26 [1/1] (1.19ns)   --->   "%p_4 = memshiftread i12 @_ssdm_op_MemShiftRead.[11 x i12]P0A, i12 6, i12 0, i1 0" [fir.cpp:22]   --->   Operation 26 'memshiftread' 'p_4' <Predicate = true> <Delay = 1.19> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 1.19> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 12> <Depth = 11> <ShiftMem>
+
+State 7 <SV = 6> <Delay = 6.48>
+ST_7 : Operation 27 [1/3] (0.00ns) (grouped into DSP with root node add_ln22)   --->   "%acc = mul i18 %zext_ln22, i18 53" [fir.cpp:22]   --->   Operation 27 'mul' 'acc' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 28 [1/1] (0.00ns) (grouped into DSP with root node add_ln22)   --->   "%zext_ln12 = zext i18 %acc" [fir.cpp:12]   --->   Operation 28 'zext' 'zext_ln12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 29 [2/3] (0.93ns) (grouped into DSP with root node add_ln22_1)   --->   "%mul_ln22 = mul i20 %zext_ln22_1, i20 1048485" [fir.cpp:22]   --->   Operation 29 'mul' 'mul_ln22' <Predicate = true> <Delay = 0.93> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln22_2 = zext i12 %p_2" [fir.cpp:22]   --->   Operation 30 'zext' 'zext_ln22_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 31 [1/1] (3.75ns)   --->   "%mul_ln22_1 = mul i21 %zext_ln22_2, i21 313" [fir.cpp:22]   --->   Operation 31 'mul' 'mul_ln22_1' <Predicate = true> <Delay = 3.75> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.75> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln22_3 = zext i21 %mul_ln22_1" [fir.cpp:22]   --->   Operation 32 'zext' 'zext_ln22_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 33 [1/3] (0.00ns) (grouped into DSP with root node add_ln22_2)   --->   "%mul_ln22_2 = mul i21 %zext_ln22_4, i21 500" [fir.cpp:22]   --->   Operation 33 'mul' 'mul_ln22_2' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 34 [1/1] (0.00ns) (grouped into DSP with root node add_ln22_2)   --->   "%zext_ln22_5 = zext i21 %mul_ln22_2" [fir.cpp:22]   --->   Operation 34 'zext' 'zext_ln22_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 35 [1/1] (1.19ns)   --->   "%p_5 = memshiftread i12 @_ssdm_op_MemShiftRead.[11 x i12]P0A, i12 8, i12 0, i1 0" [fir.cpp:22]   --->   Operation 35 'memshiftread' 'p_5' <Predicate = true> <Delay = 1.19> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 1.19> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 12> <Depth = 11> <ShiftMem>
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln22_7 = zext i12 %p_5" [fir.cpp:22]   --->   Operation 36 'zext' 'zext_ln22_7' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] (3.75ns)   --->   "%mul_ln22_4 = mul i20 %zext_ln22_7, i20 1048485" [fir.cpp:22]   --->   Operation 37 'mul' 'mul_ln22_4' <Predicate = true> <Delay = 3.75> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.75> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 38 [2/2] (1.54ns) (root node of the DSP)   --->   "%add_ln22 = add i20 %zext_ln12, i20 %mul_ln22_4" [fir.cpp:22]   --->   Operation 38 'add' 'add_ln22' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 39 [2/2] (1.54ns) (root node of the DSP)   --->   "%add_ln22_2 = add i22 %zext_ln22_3, i22 %zext_ln22_5" [fir.cpp:22]   --->   Operation 39 'add' 'add_ln22_2' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 3.08>
+ST_8 : Operation 40 [1/3] (0.00ns) (grouped into DSP with root node add_ln22_1)   --->   "%mul_ln22 = mul i20 %zext_ln22_1, i20 1048485" [fir.cpp:22]   --->   Operation 40 'mul' 'mul_ln22' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 41 [1/1] (0.00ns) (grouped into DSP with root node add_ln22_1)   --->   "%sext_ln22 = sext i20 %mul_ln22" [fir.cpp:22]   --->   Operation 41 'sext' 'sext_ln22' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 42 [1/1] (1.19ns)   --->   "%p_0 = memshiftread i12 @_ssdm_op_MemShiftRead.[11 x i12]P0A, i12 10, i12 0, i1 0" [fir.cpp:22]   --->   Operation 42 'memshiftread' 'p_0' <Predicate = true> <Delay = 1.19> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 1.19> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 12> <Depth = 11> <ShiftMem>
+ST_8 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln22_8 = zext i12 %p_0" [fir.cpp:22]   --->   Operation 43 'zext' 'zext_ln22_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 44 [3/3] (0.93ns) (grouped into DSP with root node add_ln22_3)   --->   "%mul_ln22_5 = mul i18 %zext_ln22_8, i18 53" [fir.cpp:22]   --->   Operation 44 'mul' 'mul_ln22_5' <Predicate = true> <Delay = 0.93> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 45 [1/2] (1.54ns) (root node of the DSP)   --->   "%add_ln22 = add i20 %zext_ln12, i20 %mul_ln22_4" [fir.cpp:22]   --->   Operation 45 'add' 'add_ln22' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 46 [1/1] (0.00ns)   --->   "%sext_ln22_1 = sext i20 %add_ln22" [fir.cpp:22]   --->   Operation 46 'sext' 'sext_ln22_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 47 [2/2] (1.54ns) (root node of the DSP)   --->   "%add_ln22_1 = add i21 %sext_ln22_1, i21 %sext_ln22" [fir.cpp:22]   --->   Operation 47 'add' 'add_ln22_1' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 48 [1/2] (1.54ns) (root node of the DSP)   --->   "%add_ln22_2 = add i22 %zext_ln22_3, i22 %zext_ln22_5" [fir.cpp:22]   --->   Operation 48 'add' 'add_ln22_2' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 8> <Delay = 1.54>
+ST_9 : Operation 49 [2/3] (0.93ns) (grouped into DSP with root node add_ln22_3)   --->   "%mul_ln22_5 = mul i18 %zext_ln22_8, i18 53" [fir.cpp:22]   --->   Operation 49 'mul' 'mul_ln22_5' <Predicate = true> <Delay = 0.93> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 50 [1/2] (1.54ns) (root node of the DSP)   --->   "%add_ln22_1 = add i21 %sext_ln22_1, i21 %sext_ln22" [fir.cpp:22]   --->   Operation 50 'add' 'add_ln22_1' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 9> <Delay = 5.29>
+ST_10 : Operation 51 [1/1] (0.00ns)   --->   "%zext_ln22_6 = zext i12 %p_4" [fir.cpp:22]   --->   Operation 51 'zext' 'zext_ln22_6' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 52 [1/1] (3.75ns)   --->   "%mul_ln22_3 = mul i21 %zext_ln22_6, i21 313" [fir.cpp:22]   --->   Operation 52 'mul' 'mul_ln22_3' <Predicate = true> <Delay = 3.75> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.75> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 53 [1/3] (0.00ns) (grouped into DSP with root node add_ln22_3)   --->   "%mul_ln22_5 = mul i18 %zext_ln22_8, i18 53" [fir.cpp:22]   --->   Operation 53 'mul' 'mul_ln22_5' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 54 [1/1] (0.00ns) (grouped into DSP with root node add_ln22_3)   --->   "%zext_ln22_9 = zext i18 %mul_ln22_5" [fir.cpp:22]   --->   Operation 54 'zext' 'zext_ln22_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 55 [2/2] (1.54ns) (root node of the DSP)   --->   "%add_ln22_3 = add i21 %mul_ln22_3, i21 %zext_ln22_9" [fir.cpp:22]   --->   Operation 55 'add' 'add_ln22_3' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 10> <Delay = 5.03>
+ST_11 : Operation 56 [1/1] (0.00ns)   --->   "%spectopmodule_ln5 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [fir.cpp:5]   --->   Operation 56 'spectopmodule' 'spectopmodule_ln5' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 57 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %y"   --->   Operation 57 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %y, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 59 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i12 %x"   --->   Operation 59 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %x, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 61 [1/1] (0.00ns)   --->   "%sext_ln22_2 = sext i21 %add_ln22_1" [fir.cpp:22]   --->   Operation 61 'sext' 'sext_ln22_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln22_10 = zext i22 %add_ln22_2" [fir.cpp:22]   --->   Operation 62 'zext' 'zext_ln22_10' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 63 [1/2] (1.54ns) (root node of the DSP)   --->   "%add_ln22_3 = add i21 %mul_ln22_3, i21 %zext_ln22_9" [fir.cpp:22]   --->   Operation 63 'add' 'add_ln22_3' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 116 'DSP48' <Latency = 3> <II = 1> <Delay = 1.59> <IPBlock> <Opcode : 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln22_11 = zext i21 %add_ln22_3" [fir.cpp:22]   --->   Operation 64 'zext' 'zext_ln22_11' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 65 [1/1] (1.74ns)   --->   "%add_ln22_4 = add i23 %zext_ln22_11, i23 %zext_ln22_10" [fir.cpp:22]   --->   Operation 65 'add' 'add_ln22_4' <Predicate = true> <Delay = 1.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln22_12 = zext i23 %add_ln22_4" [fir.cpp:22]   --->   Operation 66 'zext' 'zext_ln22_12' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 67 [1/1] (1.75ns)   --->   "%acc_1 = add i24 %zext_ln22_12, i24 %sext_ln22_2" [fir.cpp:22]   --->   Operation 67 'add' 'acc_1' <Predicate = true> <Delay = 1.75> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 68 [1/1] (0.00ns)   --->   "%sext_ln27 = sext i24 %acc_1" [fir.cpp:27]   --->   Operation 68 'sext' 'sext_ln27' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 69 [1/1] (0.00ns)   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %y, i32 %sext_ln27" [fir.cpp:27]   --->   Operation 69 'write' 'write_ln27' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 70 [1/1] (0.00ns)   --->   "%ret_ln28 = ret" [fir.cpp:28]   --->   Operation 70 'ret' 'ret_ln28' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.192ns
+The critical path consists of the following:
+	wire read operation ('x_read', fir.cpp:5) on port 'x' (fir.cpp:5) [8]  (0.000 ns)
+	'memshiftread' operation 12 bit ('p_08', fir.cpp:15) [9]  (1.192 ns)
+
+ <State 2>: 1.192ns
+The critical path consists of the following:
+	'memshiftread' operation 12 bit ('p_s', fir.cpp:22) [10]  (1.192 ns)
+
+ <State 3>: 1.192ns
+The critical path consists of the following:
+	'memshiftread' operation 12 bit ('p_1', fir.cpp:22) [14]  (1.192 ns)
+
+ <State 4>: 1.192ns
+The critical path consists of the following:
+	'memshiftread' operation 12 bit ('p_2', fir.cpp:22) [18]  (1.192 ns)
+
+ <State 5>: 2.122ns
+The critical path consists of the following:
+	'memshiftread' operation 12 bit ('p_3', fir.cpp:22) [22]  (1.192 ns)
+	'mul' operation 21 bit of DSP[40] ('mul_ln22_2', fir.cpp:22) [24]  (0.930 ns)
+
+ <State 6>: 1.192ns
+The critical path consists of the following:
+	'memshiftread' operation 12 bit ('p_4', fir.cpp:22) [26]  (1.192 ns)
+
+ <State 7>: 6.486ns
+The critical path consists of the following:
+	'memshiftread' operation 12 bit ('p_5', fir.cpp:22) [29]  (1.192 ns)
+	'mul' operation 20 bit ('mul_ln22_4', fir.cpp:22) [31]  (3.753 ns)
+	'add' operation 20 bit of DSP[36] ('add_ln22', fir.cpp:22) [36]  (1.540 ns)
+
+ <State 8>: 3.080ns
+The critical path consists of the following:
+	'add' operation 20 bit of DSP[36] ('add_ln22', fir.cpp:22) [36]  (1.540 ns)
+	'add' operation 21 bit of DSP[38] ('add_ln22_1', fir.cpp:22) [38]  (1.540 ns)
+
+ <State 9>: 1.540ns
+The critical path consists of the following:
+	'add' operation 21 bit of DSP[38] ('add_ln22_1', fir.cpp:22) [38]  (1.540 ns)
+
+ <State 10>: 5.293ns
+The critical path consists of the following:
+	'mul' operation 21 bit ('mul_ln22_3', fir.cpp:22) [28]  (3.753 ns)
+	'add' operation 21 bit of DSP[42] ('add_ln22_3', fir.cpp:22) [42]  (1.540 ns)
+
+ <State 11>: 5.039ns
+The critical path consists of the following:
+	'add' operation 21 bit of DSP[42] ('add_ln22_3', fir.cpp:22) [42]  (1.540 ns)
+	'add' operation 23 bit ('add_ln22_4', fir.cpp:22) [44]  (1.741 ns)
+	'add' operation 24 bit ('acc', fir.cpp:22) [46]  (1.758 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

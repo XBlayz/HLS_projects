@@ -1,0 +1,368 @@
+
+*** Running vivado
+    with args -log fir_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_0.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 16:59:50 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+ERROR: [Common 17-354] Could not open 'C' for writing.
+source fir_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.cache/ip 
+Command: synth_design -top fir_0 -part xc7z020clg484-3 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19204
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1317.422 ; gain = 541.383
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fir_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:70]
+INFO: [Synth 8-3491] module 'fir' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:11' bound to instance 'U0' of component 'fir' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'fir' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:25]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 11 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'fir_shift_reg_RAM_AUTO_1R1W' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_shift_reg_RAM_AUTO_1R1W.vhd:11' bound to instance 'shift_reg_U' of component 'fir_shift_reg_RAM_AUTO_1R1W' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'fir_shift_reg_RAM_AUTO_1R1W' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_shift_reg_RAM_AUTO_1R1W.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'fir_shift_reg_RAM_AUTO_1R1W' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_shift_reg_RAM_AUTO_1R1W.vhd:29]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 11 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'fir_c_ROM_AUTO_1R' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_c_ROM_AUTO_1R.vhd:10' bound to instance 'c_U' of component 'fir_c_ROM_AUTO_1R' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'fir_c_ROM_AUTO_1R' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_c_ROM_AUTO_1R.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'fir_c_ROM_AUTO_1R' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_c_ROM_AUTO_1R.vhd:28]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fir_mul_10s_32s_32_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mul_10s_32s_32_1_1.vhd:7' bound to instance 'mul_10s_32s_32_1_1_U1' of component 'fir_mul_10s_32s_32_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'fir_mul_10s_32s_32_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mul_10s_32s_32_1_1.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'fir_mul_10s_32s_32_1_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir_mul_10s_32s_32_1_1.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'fir' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/hdl/vhdl/fir.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'fir_0' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/synth/fir_0.vhd:70]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port reset in module fir_c_ROM_AUTO_1R is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module fir_shift_reg_RAM_AUTO_1R1W is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1435.441 ; gain = 659.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1435.441 ; gain = 659.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1435.441 ; gain = 659.402
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1435.441 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/constraints/fir_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.gen/sources_1/ip/fir_0/constraints/fir_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.runs/fir_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.runs/fir_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1514.559 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1514.559 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1514.559 ; gain = 738.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1514.559 ; gain = 738.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1514.559 ; gain = 738.520
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1514.559 ; gain = 738.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
++---Multipliers : 
+	              10x32  Multipliers := 1     
++---RAMs : 
+	              352 Bit	(11 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	  12 Input   10 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP mul_10s_32s_32_1_1_U1/tmp_product, operation Mode is: A''*B''.
+DSP Report: register c_U/q0_reg is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: register c_load_reg_274_reg is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: register mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: register mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: operator mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: operator mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_10s_32s_32_1_1_U1/tmp_product.
+DSP Report: Generating DSP mul_ln22_reg_279_reg, operation Mode is: (PCIN>>17)+A''*B''.
+DSP Report: register c_U/q0_reg is absorbed into DSP mul_ln22_reg_279_reg.
+DSP Report: register shift_reg_U/q0_reg is absorbed into DSP mul_ln22_reg_279_reg.
+DSP Report: register shift_reg_load_1_reg_269_reg is absorbed into DSP mul_ln22_reg_279_reg.
+DSP Report: register c_load_reg_274_reg is absorbed into DSP mul_ln22_reg_279_reg.
+DSP Report: register mul_ln22_reg_279_reg is absorbed into DSP mul_ln22_reg_279_reg.
+DSP Report: operator mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_ln22_reg_279_reg.
+DSP Report: operator mul_10s_32s_32_1_1_U1/tmp_product is absorbed into DSP mul_ln22_reg_279_reg.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[47]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[46]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[45]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[44]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[43]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[42]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[41]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[40]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[39]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[38]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[37]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[36]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[35]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[34]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[33]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[32]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[31]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[30]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[29]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[28]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[27]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[26]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[25]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[24]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[23]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[22]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[21]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[20]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[19]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[18]) is unused and will be removed from module fir.
+INFO: [Synth 8-3332] Sequential element (mul_ln22_reg_279_reg[17]) is unused and will be removed from module fir.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1514.559 ; gain = 738.520
+---------------------------------------------------------------------------------
+ Sort Area is  mul_10s_32s_32_1_1_U1/tmp_product_0 : 0 0 : 1785 3526 : Used 1 time 0
+ Sort Area is  mul_10s_32s_32_1_1_U1/tmp_product_0 : 0 1 : 1741 3526 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+---------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object          | Inference | Size (Depth x Width) | Primitives     | 
++------------+---------------------+-----------+----------------------+----------------+
+|U0          | shift_reg_U/ram_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
++------------+---------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | A''*B''            | 18     | 10     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A''*B'' | 15     | 10     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 1    | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1678.344 ; gain = 902.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1679.566 ; gain = 903.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+---------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object          | Inference | Size (Depth x Width) | Primitives     | 
++------------+---------------------+-----------+----------------------+----------------+
+|U0          | shift_reg_U/ram_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
++------------+---------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1689.156 ; gain = 913.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.559 ; gain = 1162.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.559 ; gain = 1162.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.559 ; gain = 1162.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.559 ; gain = 1162.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.559 ; gain = 1162.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.559 ; gain = 1162.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | (PCIN>>17+A''*B'')' | 30     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|fir         | A''*B''             | 17     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 0    | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |     8|
+|2     |DSP48E1  |     2|
+|4     |LUT1     |     2|
+|5     |LUT2     |    37|
+|6     |LUT3     |    40|
+|7     |LUT4     |     6|
+|8     |LUT5     |    12|
+|9     |LUT6     |     2|
+|10    |RAM16X1S |    32|
+|11    |FDRE     |   129|
+|12    |FDSE     |     3|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.559 ; gain = 1162.520
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1938.559 ; gain = 1083.402
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.559 ; gain = 1162.520
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1947.672 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1951.348 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 32 instances
+
+Synth Design complete | Checksum: 549acc77
+INFO: [Common 17-83] Releasing license: Synthesis
+68 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1951.348 ; gain = 1405.926
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1951.348 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.runs/fir_0_synth_1/fir_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fir_0, cache-ID = 9152578d9f4b8784
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1951.348 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project01_FIR/02_loop-fission/vivado_prj/vivado_prj.runs/fir_0_synth_1/fir_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fir_0_utilization_synth.rpt -pb fir_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  4 17:00:31 2026...
