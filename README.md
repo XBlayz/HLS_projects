@@ -1,7 +1,6 @@
 # HLS_projects
 ## ToDoList
 - [ ] VHDL simulation time automatic grab from hls_cosim.rpt
-- [ ] Add structure of clk reports
 
 ## Projects structure
 ### Report generation directories
@@ -105,6 +104,19 @@
     │   │           └── post-synth_timing
     │   │               ├── <COMP_NAME>_tb_time_synth.wdb
     │   │               └── simulate.log
+    │   ├── ...
+    │   ├── <COMP_VERSION>_clk
+    │   │   ├── <CLK_VAL>
+    │   │   │   └── hls
+    │   │   │       ├── syn
+    │   │   │       │   ├── csynth.rpt
+    │   │   │       │   ├── csynth_design_size.rpt
+    │   │   │       │   ├── hls_compile.log
+    │   │   │       │   ├── hls_compile.rpt
+    │   │   │       │   ├── <COMP_NAME>.verbose.sched.rpt
+    │   │   │       │   └── <COMP_NAME>_csynth.rpt
+    │   │   │       └── <COMP_VERSION>_script.steps.log
+    │   │   └── ...
     │   └── ...
     └── ...
 ```
@@ -148,9 +160,9 @@ flowchart TD
     4 --> 12(12. Loop unroll)
     4 --> 13(13. Pipeline)
 
-    3 --> 14{*14. Operation chaining}
-    7 --> 15{*15. Operation chaining}
-    10 --> 16{*16. Operation chaining}
+    3 --> 14{14. Operation chaining}
+    7 --> 15{15. Operation chaining}
+    10 --> 16{16. Operation chaining}
 
     %%TODO: <BEST> --> 17[17. AXI4-Stream]
 ```
