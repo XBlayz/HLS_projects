@@ -128,6 +128,8 @@
 13. Pipeline: `.\scripts\workflow.bat project01_FIR 13_pipeline fir /tb project01_FIR_03_ap-int_tb /clk project01_FIR_00_baseline_clk`
 
 - `.\scripts\workflow.bat project01_FIR 03_ap-int fir /wf clk ` + `<CLK_VAL>`
+- `.\scripts\workflow.bat project01_FIR 07_loop-fission-array-partition fir /wf clk ` + `<CLK_VAL>`
+- `.\scripts\workflow.bat project01_FIR 10_total-unroll fir /wf clk ` + `<CLK_VAL>`
 
 ### Revisions graph
 ```mermaid
@@ -146,9 +148,9 @@ flowchart TD
     4 --> 12(12. Loop unroll)
     4 --> 13(13. Pipeline)
 
-    %% <BEST_1> --> 14{*14. Operation chaining}
-    %% <BEST_2> --> 15{*15. Operation chaining}
-    %% <BEST_3> --> 16{*16. Operation chaining}
+    3 --> 14{*14. Operation chaining}
+    7 --> 15{*15. Operation chaining}
+    10 --> 16{*16. Operation chaining}
 
     %%TODO: <BEST> --> 17[17. AXI4-Stream]
 ```
