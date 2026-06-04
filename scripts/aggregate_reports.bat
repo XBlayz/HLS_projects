@@ -87,6 +87,7 @@ call :COPY_FILE "%SRC_HLS%\hls\syn\report\csynth_design_size.rpt" "%DST_BASE%\hl
 call :COPY_FILE "%SRC_HLS%\logs\hls_compile.log" "%DST_BASE%\hls\syn"
 call :COPY_FILE "%SRC_HLS%\reports\hls_compile.rpt" "%DST_BASE%\hls\syn"
 call :COPY_FILE "%SRC_HLS%\hls\syn\report\%COMP_NAME%_csynth.rpt" "%DST_BASE%\hls\syn"
+call :COPY_FILE "%SRC_HLS%\hls\.autopilot\db\%COMP_NAME%.verbose.sched.rpt" "%DST_BASE%\hls\syn"
 
 :: hls/impl (power workflow only -- package step not run in clk workflow)
 if /i not "%WORKFLOW%"=="clk" (

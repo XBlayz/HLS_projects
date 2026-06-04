@@ -2,7 +2,6 @@
 ## ToDoList
 - [ ] VHDL simulation time automatic grab from hls_cosim.rpt
 - [ ] Add structure of clk reports
-- [ ] Saving `<COMP_NAME>.verbose.sched.rpt` file (in `<COMP_VERSION>_script/hls/.autopilot/db/`)
 
 ## Projects structure
 ### Report generation directories
@@ -85,6 +84,7 @@
     │   │   │   │   ├── csynth_design_size.rpt
     │   │   │   │   ├── hls_compile.log
     │   │   │   │   ├── hls_compile.rpt
+    │   │   │   │   ├── <COMP_NAME>.verbose.sched.rpt
     │   │   │   │   └── <COMP_NAME>_csynth.rpt
     │   │   │   ├── impl
     │   │   │   │   └── hls_run_package.log
