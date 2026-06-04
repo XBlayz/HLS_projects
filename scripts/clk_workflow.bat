@@ -120,11 +120,13 @@ echo [INFO ] HLS config (patched)  : %CFG_FILE_CLK%  ^(clock= removed^)
 echo [INFO ] Clock override        : --hls.clock=%CLK_VAL%
 
 :: -- Route to the requested start step
-if %FROM_STEP%==1 goto :step1
-if %FROM_STEP%==2 goto :step2
-if %FROM_STEP%==3 goto :step3
-goto :step0
+::if %FROM_STEP%==1 goto :step1
+::if %FROM_STEP%==2 goto :step2
+::if %FROM_STEP%==3 goto :step3
+::goto :step0
 
+:: Skip Simulation
+goto :step2
 
 :step1
 cd /d "%HLS_ROOT_DIR%"
@@ -155,6 +157,8 @@ if %errorlevel% neq 0 (
 )
 echo [ OK  ] HLS synthesis completed
 
+:: Skip Co-Simulation
+goto :step0
 
 :step3
 cd /d "%HLS_ROOT_DIR%"

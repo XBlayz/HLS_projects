@@ -44,14 +44,17 @@ if /i "%WORKFLOW%"=="clk" (
     :: Example: fir_baseline_clk-10ns -> BASE_VER=fir_baseline
     set "_TMP=!COMP_VER:_clk-==!"
     for /f "tokens=1 delims==" %%A in ("!_TMP!") do set "BASE_VER=%%A"
+    for /f "tokens=2 delims==" %%A in ("!_TMP!") do set "CLK_VAL=%%A"
+
     set "SRC_HLS=!ROOT_DIR!\projects\!PRJ_NAME!\!BASE_VER!\!COMP_VER!_script"
     set "SRC_BUILD="
+    set "DST_BASE=%ROOT_DIR%\reports\%PRJ_NAME%\!BASE_VER!_clk\!CLK_VAL!"
 ) else (
     set "SRC_HLS=%ROOT_DIR%\projects\%PRJ_NAME%\%COMP_VER%\%COMP_VER%_script"
     set "SRC_BUILD=%ROOT_DIR%\build\%PRJ_NAME%\%COMP_VER%"
+    set "DST_BASE=%ROOT_DIR%\reports\%PRJ_NAME%\%COMP_VER%"
 )
 
-set "DST_BASE=%ROOT_DIR%\reports\%PRJ_NAME%\%COMP_VER%"
 
 echo [INFO] Starting report aggregation for:
 echo        Project:   %PRJ_NAME%
