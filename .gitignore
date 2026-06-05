@@ -15,6 +15,8 @@
 # Prevent traversal and tracking of build and IDE specific directories
 /build/
 /projects/*/_ide/
+/.vscode/
+/.kilo/
 
 # ==============================================================================
 # WHITELIST RULES: Allow specific files and directories
