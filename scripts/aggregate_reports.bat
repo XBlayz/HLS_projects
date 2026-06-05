@@ -70,25 +70,25 @@ echo.
 :: HLS FILE AGGREGATION
 :: ==============================================================================
 
-:: hls/csim
-call :COPY_FILE "%SRC_HLS%\logs\hls_run_csim.log" "%DST_BASE%\hls\csim"
-call :COPY_FILE "%SRC_HLS%\hls\csim\report\%COMP_NAME%_csim.log" "%DST_BASE%\hls\csim"
+if /i not "%WORKFLOW%"=="clk" (
+    :: hls/csim (power workflow only -- C simulation step not run in clk workflow)
+    call :COPY_FILE "%SRC_HLS%\logs\hls_run_csim.log" "%DST_BASE%\hls\csim"
+    call :COPY_FILE "%SRC_HLS%\hls\csim\report\%COMP_NAME%_csim.log" "%DST_BASE%\hls\csim"
 
-:: hls/sim
-call :COPY_FILE "%SRC_HLS%\logs\hls_run_cosim.log" "%DST_BASE%\hls\sim"
-call :COPY_FILE "%SRC_HLS%\reports\hls_cosim.rpt" "%DST_BASE%\hls\sim"
-call :COPY_FILE "%SRC_HLS%\hls\sim\report\%COMP_NAME%_cosim.rpt" "%DST_BASE%\hls\sim"
+    :: hls/sim (power workflow only -- cosim step not run in clk workflow)
+    call :COPY_FILE "%SRC_HLS%\logs\hls_run_cosim.log" "%DST_BASE%\hls\sim"
+    call :COPY_FILE "%SRC_HLS%\hls\sim\report\%COMP_NAME%_cosim.rpt" "%DST_BASE%\hls\sim"
 
-:: hls/sim/waveform
-call :COPY_FILE "%SRC_HLS%\hls\sim\verilog\%COMP_NAME%.wcfg" "%DST_BASE%\hls\sim\waveform"
-call :COPY_FILE "%SRC_HLS%\hls\sim\verilog\%COMP_NAME%.wdb" "%DST_BASE%\hls\sim\waveform"
-call :COPY_FILE "%SRC_HLS%\hls\sim\verilog\%COMP_NAME%_dataflow_ana.wcfg" "%DST_BASE%\hls\sim\waveform"
+    :: hls/sim/waveform (power workflow only -- waveform step not run in clk workflow)
+    call :COPY_FILE "%SRC_HLS%\hls\sim\verilog\%COMP_NAME%.wcfg" "%DST_BASE%\hls\sim\waveform"
+    call :COPY_FILE "%SRC_HLS%\hls\sim\verilog\%COMP_NAME%.wdb" "%DST_BASE%\hls\sim\waveform"
+    call :COPY_FILE "%SRC_HLS%\hls\sim\verilog\%COMP_NAME%_dataflow_ana.wcfg" "%DST_BASE%\hls\sim\waveform"
+)
 
 :: hls/syn
 call :COPY_FILE "%SRC_HLS%\hls\syn\report\csynth.rpt" "%DST_BASE%\hls\syn"
 call :COPY_FILE "%SRC_HLS%\hls\syn\report\csynth_design_size.rpt" "%DST_BASE%\hls\syn"
 call :COPY_FILE "%SRC_HLS%\logs\hls_compile.log" "%DST_BASE%\hls\syn"
-call :COPY_FILE "%SRC_HLS%\reports\hls_compile.rpt" "%DST_BASE%\hls\syn"
 call :COPY_FILE "%SRC_HLS%\hls\syn\report\%COMP_NAME%_csynth.rpt" "%DST_BASE%\hls\syn"
 call :COPY_FILE "%SRC_HLS%\hls\.autopilot\db\%COMP_NAME%.verbose.sched.rpt" "%DST_BASE%\hls\syn"
 

@@ -47,15 +47,12 @@
     │    │       │           ├── csynth.rpt
     │    │       │           ├── csynth_design_size.rpt
     │    │       │           └── <COMP_NAME>_csynth.rpt
-    │    │       ├── logs
-    │    │       │   ├── <COMP_VERSION>_script.steps.log
-    │    │       │   ├── hls_compile.log
-    │    │       │   ├── hls_run_cosim.log
-    │    │       │   ├── hls_run_csim.log
-    │    │       │   └── hls_run_package.log
-    │    │       └── reports
-    │    │           ├── hls_compile.rpt
-    │    │           └── hls_cosim.rpt
+    │    │       └── logs
+    │    │           ├── <COMP_VERSION>_script.steps.log
+    │    │           ├── hls_compile.log
+    │    │           ├── hls_run_cosim.log
+    │    │           ├── hls_run_csim.log
+    │    │           └── hls_run_package.log
     │    └── ...
     └── ...
 ```
@@ -72,7 +69,6 @@
     │   │   │   │   └── <COMP_NAME>_csim.log
     │   │   │   ├── sim
     │   │   │   │   ├── hls_run_cosim.log
-    │   │   │   │   ├── hls_cosim.rpt
     │   │   │   │   ├── <COMP_NAME>_cosim.rpt
     │   │   │   │   └── waveform
     │   │   │   │       ├── <COMP_NAME>.wcfg
@@ -82,7 +78,6 @@
     │   │   │   │   ├── csynth.rpt
     │   │   │   │   ├── csynth_design_size.rpt
     │   │   │   │   ├── hls_compile.log
-    │   │   │   │   ├── hls_compile.rpt
     │   │   │   │   ├── <COMP_NAME>.verbose.sched.rpt
     │   │   │   │   └── <COMP_NAME>_csynth.rpt
     │   │   │   ├── impl
@@ -112,7 +107,6 @@
     │   │   │       │   ├── csynth.rpt
     │   │   │       │   ├── csynth_design_size.rpt
     │   │   │       │   ├── hls_compile.log
-    │   │   │       │   ├── hls_compile.rpt
     │   │   │       │   ├── <COMP_NAME>.verbose.sched.rpt
     │   │   │       │   └── <COMP_NAME>_csynth.rpt
     │   │   │       └── <COMP_VERSION>_script.steps.log
