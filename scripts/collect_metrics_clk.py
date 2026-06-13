@@ -184,8 +184,8 @@ def generate_plots(results: dict, out_dir: Path):
     print(f"[OK] Grafico di Pareto salvato in {pareto_path}")
 
     # 2. Fastest Solution Bar Chart
-    # Ordiniamo le liste associandole e ordinandole in base al delay (crescente)
-    sorted_data = sorted(zip(labels, delays), key=lambda x: x[1])
+    # Ordiniamo le liste associandole e ordinandole in base al clock
+    sorted_data = sorted(zip(labels, delays), key=lambda x: float(x[0]))
     sorted_labels = [x[0] for x in sorted_data]
     sorted_delays = [x[1] for x in sorted_data]
 
