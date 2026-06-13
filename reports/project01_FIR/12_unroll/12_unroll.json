@@ -1,0 +1,74 @@
+{
+  "project": "project01_FIR",
+  "version": "12_unroll",
+  "comp": "fir",
+  "primary": {
+    "clock": {
+      "target_ns": 10.0,
+      "estimated_ns": 6.486,
+      "uncertainty_ns": 2.7
+    },
+    "csynth_latency": {
+      "min_cycles": 10,
+      "max_cycles": 10
+    },
+    "cosim": {
+      "status": "Pass",
+      "latency_min_cycles": 10,
+      "latency_avg_cycles": 10,
+      "latency_max_cycles": 10,
+      "interval_min_cycles": 11,
+      "interval_avg_cycles": 11,
+      "interval_max_cycles": 11,
+      "total_exec_cycles": 329
+    },
+    "pipeline_type": "no",
+    "interval": {
+      "min_cycles": 11,
+      "max_cycles": 11
+    },
+    "resources": {
+      "lut": {
+        "used": 304,
+        "available": 53200
+      },
+      "ff": {
+        "used": 166,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 7,
+        "available": 220
+      }
+    },
+    "power_w": {
+      "static": 0.103,
+      "dynamic": 0.001,
+      "total": 0.103
+    }
+  },
+  "final": {
+    "fmax_mhz": 154.19,
+    "min_clock_period_ns": 6.4855,
+    "II": "-",
+    "latency": {
+      "max_at_target_ns": 100.0,
+      "max_at_estimated_ns": 64.86,
+      "min_at_target_ns": 100.0,
+      "min_at_estimated_ns": 64.86
+    },
+    "total_execution_time": {
+      "at_target_ns": 3290.0,
+      "at_estimated_ns": 2133.894
+    },
+    "area_total_norm": 0.039093,
+    "energy_per_op_j": 6.681e-09,
+    "energy_total_j": 2.19791e-07,
+    "adp": 83.420318,
+    "edp": 0.00046901069615399996
+  }
+}
