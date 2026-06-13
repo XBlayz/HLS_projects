@@ -1,0 +1,74 @@
+{
+  "project": "project01_FIR",
+  "version": "06_loop-fission-unroll",
+  "comp": "fir",
+  "primary": {
+    "clock": {
+      "target_ns": 10.0,
+      "estimated_ns": 2.686,
+      "uncertainty_ns": 2.7
+    },
+    "csynth_latency": {
+      "min_cycles": 65,
+      "max_cycles": 65
+    },
+    "cosim": {
+      "status": "Pass",
+      "latency_min_cycles": 65,
+      "latency_avg_cycles": 65,
+      "latency_max_cycles": 65,
+      "interval_min_cycles": 66,
+      "interval_avg_cycles": 66,
+      "interval_max_cycles": 66,
+      "total_exec_cycles": 1979
+    },
+    "pipeline_type": "no",
+    "interval": {
+      "min_cycles": 66,
+      "max_cycles": 66
+    },
+    "resources": {
+      "lut": {
+        "used": 218,
+        "available": 53200
+      },
+      "ff": {
+        "used": 175,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 1,
+        "available": 220
+      }
+    },
+    "power_w": {
+      "static": 0.103,
+      "dynamic": 0.001,
+      "total": 0.104
+    }
+  },
+  "final": {
+    "fmax_mhz": 372.3,
+    "min_clock_period_ns": 2.686,
+    "II": "-",
+    "latency": {
+      "max_at_target_ns": 650.0,
+      "max_at_estimated_ns": 174.59,
+      "min_at_target_ns": 650.0,
+      "min_at_estimated_ns": 174.59
+    },
+    "total_execution_time": {
+      "at_target_ns": 19790.0,
+      "at_estimated_ns": 5315.594
+    },
+    "area_total_norm": 0.010288,
+    "energy_per_op_j": 1.8157e-08,
+    "energy_total_j": 5.52822e-07,
+    "adp": 54.686831,
+    "edp": 0.002938577306268
+  }
+}
