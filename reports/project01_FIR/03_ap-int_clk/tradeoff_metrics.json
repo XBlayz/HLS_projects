@@ -1,0 +1,467 @@
+{
+  "10.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  },
+  "15.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  },
+  "2.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 1.54,
+      "latency_max_cycles": 104,
+      "fmax_mhz": 649.35
+    },
+    "resources": {
+      "lut": {
+        "used": 140,
+        "available": 53200
+      },
+      "ff": {
+        "used": 156,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 160.16,
+      "area_total_norm": 0.013189,
+      "adp": 2.11235
+    }
+  },
+  "2.5": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 1.566,
+      "latency_max_cycles": 84,
+      "fmax_mhz": 638.57
+    },
+    "resources": {
+      "lut": {
+        "used": 132,
+        "available": 53200
+      },
+      "ff": {
+        "used": 132,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 131.544,
+      "area_total_norm": 0.012813,
+      "adp": 1.685473
+    }
+  },
+  "20.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  },
+  "25.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  },
+  "3.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 1.566,
+      "latency_max_cycles": 84,
+      "fmax_mhz": 638.57
+    },
+    "resources": {
+      "lut": {
+        "used": 132,
+        "available": 53200
+      },
+      "ff": {
+        "used": 132,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 131.544,
+      "area_total_norm": 0.012813,
+      "adp": 1.685473
+    }
+  },
+  "3.5": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 2.552,
+      "latency_max_cycles": 74,
+      "fmax_mhz": 391.85
+    },
+    "resources": {
+      "lut": {
+        "used": 128,
+        "available": 53200
+      },
+      "ff": {
+        "used": 125,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 188.848,
+      "area_total_norm": 0.012672,
+      "adp": 2.393082
+    }
+  },
+  "4.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 2.552,
+      "latency_max_cycles": 74,
+      "fmax_mhz": 391.85
+    },
+    "resources": {
+      "lut": {
+        "used": 128,
+        "available": 53200
+      },
+      "ff": {
+        "used": 125,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 188.848,
+      "area_total_norm": 0.012672,
+      "adp": 2.393082
+    }
+  },
+  "4.5": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  },
+  "5.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  },
+  "6.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  },
+  "7.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  },
+  "8.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  },
+  "9.0": {
+    "comp_name": "fir",
+    "raw_data": {
+      "clock_estimated_ns": 3.132,
+      "latency_max_cycles": 54,
+      "fmax_mhz": 319.28
+    },
+    "resources": {
+      "lut": {
+        "used": 120,
+        "available": 53200
+      },
+      "ff": {
+        "used": 77,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 2,
+        "available": 220
+      }
+    },
+    "tradeoffs": {
+      "total_delay_ns": 169.128,
+      "area_total_norm": 0.01207,
+      "adp": 2.041375
+    }
+  }
+}
