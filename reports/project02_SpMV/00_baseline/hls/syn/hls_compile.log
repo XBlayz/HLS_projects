@@ -1,0 +1,92 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=spmv.hpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/spmv.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=spmv.cpp' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/spmv.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=spmv_tb.cpp' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/spmv_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=spmv' from hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg484-3' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-3'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'syn.array_partition.throughput_driven=off' from hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.pipeline_loops=0' from hls_config.cfg(8)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 4.63 seconds; current allocated memory: 142.055 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'spmv.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.566 seconds; current allocated memory: 144.465 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 528 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 74 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 49 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 46 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 48 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-178] Inlining function 'ap_int<32>::ap_int(float)' into 'spmv(ap_int<8> const*, ap_int<10> const*, int const*, int const*, ap_int<32>*)' (spmv.cpp:7:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.586 seconds; current allocated memory: 146.406 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 146.406 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 150.816 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 152.059 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 173.270 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 173.273 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'spmv' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'spmv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln15) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.265 seconds; current allocated memory: 173.273 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 173.273 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'spmv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/values' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/x' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/col_idx' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/row_ptr' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/y' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'spmv' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_10s_8s_32s_32_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'spmv'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 173.637 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.454 seconds; current allocated memory: 177.098 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/00_baseline/00_baseline_script/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.97 seconds; current allocated memory: 179.090 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for spmv.
+INFO: [VLOG 209-307] Generating Verilog RTL for spmv.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 326.58 MHz
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 23.91 seconds; peak allocated memory: 179.172 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 28s
