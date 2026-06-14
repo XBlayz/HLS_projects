@@ -162,4 +162,12 @@ flowchart TD
 ```
 
 # Project-02 (SpMV)
-TODO
+## Components revisions
+### Commands
+0. Baseline: `.\scripts\workflow.bat project02_SpMV 00_baseline spmv`
+
+### Revisions graph
+```mermaid
+flowchart TD
+    0[0. Baseline] -->
+```
