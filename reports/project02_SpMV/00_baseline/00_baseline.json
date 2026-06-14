@@ -9,8 +9,8 @@
       "uncertainty_ns": 2.7
     },
     "csynth_latency": {
-      "min_cycles": 177,
-      "max_cycles": 0
+      "min_cycles": null,
+      "max_cycles": null
     },
     "cosim": {
       "status": "Pass",
@@ -22,10 +22,10 @@
       "interval_max_cycles": null,
       "total_exec_cycles": 3457
     },
-    "pipeline_type": "106400",
+    "pipeline_type": "no",
     "interval": {
-      "min_cycles": 280,
-      "max_cycles": 220
+      "min_cycles": null,
+      "max_cycles": null
     },
     "resources": {
       "lut": {
@@ -49,12 +49,47 @@
       "static": 0.103,
       "dynamic": 0.001,
       "total": 0.103
+    },
+    "loops": [
+      {
+        "name": "L1",
+        "lat_min_cycles": null,
+        "lat_max_cycles": null,
+        "iter_lat": null,
+        "II": null,
+        "trip_count": 128,
+        "pipelined": false
+      },
+      {
+        "name": "L2",
+        "lat_min_cycles": null,
+        "lat_max_cycles": null,
+        "iter_lat": 6,
+        "II": null,
+        "trip_count": null,
+        "pipelined": false
+      }
+    ],
+    "fsm": {
+      "num_states": 9,
+      "critical_path_max_ns": 3.06,
+      "critical_path_per_state_ns": [
+        1.14,
+        1.62,
+        1.14,
+        3.06,
+        0.0,
+        0.93,
+        0.93,
+        1.54,
+        1.54
+      ]
     }
   },
   "final": {
     "fmax_mhz": 326.58,
     "min_clock_period_ns": 3.062,
-    "II": 280,
+    "II": "-",
     "latency": {
       "max_at_target_ns": 34570.0,
       "max_at_estimated_ns": 10585.334,
@@ -66,9 +101,35 @@
       "at_estimated_ns": 10585.334
     },
     "area_total_norm": 0.009461,
-    "energy_per_op_j": 8.8308e-08,
+    "energy_per_op_j": 1.090289e-06,
     "energy_total_j": 1.090289e-06,
     "adp": 100.147845,
-    "edp": 0.011541073221526001
+    "edp": 0.011541073221526001,
+    "loops": [
+      {
+        "name": "L1",
+        "lat_min_cycles": null,
+        "lat_max_cycles": null,
+        "iter_lat": null,
+        "II": null,
+        "trip_count": 128,
+        "pipelined": false,
+        "iter_lat_at_target_ns": null,
+        "iter_lat_at_estimated_ns": null,
+        "throughput_iter_per_ns": null
+      },
+      {
+        "name": "L2",
+        "lat_min_cycles": null,
+        "lat_max_cycles": null,
+        "iter_lat": 6,
+        "II": null,
+        "trip_count": null,
+        "pipelined": false,
+        "iter_lat_at_target_ns": 60.0,
+        "iter_lat_at_estimated_ns": 18.372,
+        "throughput_iter_per_ns": 0.054431
+      }
+    ]
   }
 }
