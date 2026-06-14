@@ -34,10 +34,14 @@ architecture behavioral of spmv_tb is
             col_idx_ce0     : out std_logic;
             col_idx_q0      : in  std_logic_vector(31 downto 0);
 
-            -- Interfaccia Memoria: row_ptr (dim 129, int=32) -> 8 bit address
+            -- Interfaccia Memoria: row_ptr (dim 129, int=32) -> Dual Port
             row_ptr_address0: out std_logic_vector(7 downto 0);
             row_ptr_ce0     : out std_logic;
             row_ptr_q0      : in  std_logic_vector(31 downto 0);
+
+            row_ptr_address1: out std_logic_vector(7 downto 0);
+            row_ptr_ce1     : out std_logic;
+            row_ptr_q1      : in  std_logic_vector(31 downto 0);
 
             -- Interfaccia Memoria: y (dim 128, OUT_BIT=32) -> 7 bit address
             y_address0      : out std_logic_vector(6 downto 0);
@@ -76,9 +80,13 @@ architecture behavioral of spmv_tb is
     signal col_idx_ce_sig   : std_logic;
     signal col_idx_q_sig    : std_logic_vector(31 downto 0) := (others => '0');
 
-    signal row_ptr_addr_sig : std_logic_vector(7 downto 0);
-    signal row_ptr_ce_sig   : std_logic;
-    signal row_ptr_q_sig    : std_logic_vector(31 downto 0) := (others => '0');
+    signal row_ptr_addr_sig  : std_logic_vector(7 downto 0);
+    signal row_ptr_ce_sig    : std_logic;
+    signal row_ptr_q_sig     : std_logic_vector(31 downto 0) := (others => '0');
+
+    signal row_ptr_addr1_sig : std_logic_vector(7 downto 0);
+    signal row_ptr_ce1_sig   : std_logic;
+    signal row_ptr_q1_sig    : std_logic_vector(31 downto 0) := (others => '0');
 
     signal y_addr_sig : std_logic_vector(6 downto 0);
     signal y_ce_sig   : std_logic;
@@ -130,6 +138,10 @@ begin
             row_ptr_ce0      => row_ptr_ce_sig,
             row_ptr_q0       => row_ptr_q_sig,
 
+            row_ptr_address1 => row_ptr_addr1_sig,
+            row_ptr_ce1      => row_ptr_ce1_sig,
+            row_ptr_q1       => row_ptr_q1_sig,
+
             y_address0       => y_addr_sig,
             y_ce0            => y_ce_sig,
             y_we0            => y_we_sig,
@@ -179,8 +191,13 @@ begin
     rom_row_ptr_proc : process(clk_sig)
     begin
         if rising_edge(clk_sig) then
+            -- Read port 0
             if row_ptr_ce_sig = '1' then
                 row_ptr_q_sig <= rom_row_ptr(to_integer(unsigned(row_ptr_addr_sig)));
+            end if;
+            -- Read port 1
+            if row_ptr_ce1_sig = '1' then
+                row_ptr_q1_sig <= rom_row_ptr(to_integer(unsigned(row_ptr_addr1_sig)));
             end if;
         end if;
     end process;
