@@ -1,0 +1,458 @@
+
+
+================================================================
+== Synthesis Summary Report of 'spmv'
+================================================================
++ General Information: 
+    * Date:           Mon Jun 15 19:36:40 2026
+    * Version:        2025.2 (Build 6295257 on Nov 12 2025)
+    * Project:        08_pipeline-unroll-2-cyclic-4-v3-L2_script
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-3
+    
+
+* Performance & Resource Estimates: 
++----------------------+------+-------------------+----------+---------+------+----------+---------+-----------+------+------+--------+-----------+-----------+-----+
+|        Modules       | Issue|                   | Iteration|         | Trip |          |       Latency       |      |      |        |           |           |     |
+|        & Loops       | Type |   Violation Type  |  Latency | Interval| Count| Pipelined| (cycles)|    (ns)   | Slack| BRAM |   DSP  |     FF    |    LUT    | URAM|
++----------------------+------+-------------------+----------+---------+------+----------+---------+-----------+------+------+--------+-----------+-----------+-----+
+|+ spmv                |     -|                  -|         -|    17922|     -|        no|    17921|  1.792e+05|  2.20|     -|  4 (1%)|  1573 (1%)|  3307 (6%)|    -|
+| o L1                 |     -|                  -|       140|        -|   128|        no|    17920|  1.792e+05|  7.30|     -|       -|          -|          -|    -|
+|  + spmv_Pipeline_L2  |     -|                  -|         -|        -|     -|       yes|      136|  1.360e+03|  2.20|     -|  4 (1%)|  207 (~0%)|  3242 (6%)|    -|
+|   o L2               |    II|  Memory Dependency|         8|        4|    32|       yes|      134|  1.340e+03|  7.30|     -|       -|          -|          -|    -|
++----------------------+------+-------------------+----------+---------+------+----------+---------+-----------+------+------+--------+-----------+-----------+-----+
+    II Violation Information: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------------+-----------+----------+
+| Port               | Direction | Bitwidth |
++--------------------+-----------+----------+
+| col_idx_0_address0 | out       | 8        |
+| col_idx_0_address1 | out       | 8        |
+| col_idx_0_q0       | in        | 32       |
+| col_idx_0_q1       | in        | 32       |
+| col_idx_1_address0 | out       | 8        |
+| col_idx_1_address1 | out       | 8        |
+| col_idx_1_q0       | in        | 32       |
+| col_idx_1_q1       | in        | 32       |
+| row_ptr_address0   | out       | 8        |
+| row_ptr_address1   | out       | 8        |
+| row_ptr_q0         | in        | 32       |
+| row_ptr_q1         | in        | 32       |
+| values_0_address0  | out       | 8        |
+| values_0_address1  | out       | 8        |
+| values_0_q0        | in        | 8        |
+| values_0_q1        | in        | 8        |
+| values_1_address0  | out       | 8        |
+| values_1_address1  | out       | 8        |
+| values_1_q0        | in        | 8        |
+| values_1_q1        | in        | 8        |
+| y_address0         | out       | 7        |
+| y_d0               | out       | 32       |
++--------------------+-----------+----------+
+
+* Other Ports
++-------+---------+-----------+----------+
+| Port  | Mode    | Direction | Bitwidth |
++-------+---------+-----------+----------+
+| x_0   | ap_none | in        | 10       |
+| x_1   | ap_none | in        | 10       |
+| x_10  | ap_none | in        | 10       |
+| x_100 | ap_none | in        | 10       |
+| x_101 | ap_none | in        | 10       |
+| x_102 | ap_none | in        | 10       |
+| x_103 | ap_none | in        | 10       |
+| x_104 | ap_none | in        | 10       |
+| x_105 | ap_none | in        | 10       |
+| x_106 | ap_none | in        | 10       |
+| x_107 | ap_none | in        | 10       |
+| x_108 | ap_none | in        | 10       |
+| x_109 | ap_none | in        | 10       |
+| x_11  | ap_none | in        | 10       |
+| x_110 | ap_none | in        | 10       |
+| x_111 | ap_none | in        | 10       |
+| x_112 | ap_none | in        | 10       |
+| x_113 | ap_none | in        | 10       |
+| x_114 | ap_none | in        | 10       |
+| x_115 | ap_none | in        | 10       |
+| x_116 | ap_none | in        | 10       |
+| x_117 | ap_none | in        | 10       |
+| x_118 | ap_none | in        | 10       |
+| x_119 | ap_none | in        | 10       |
+| x_12  | ap_none | in        | 10       |
+| x_120 | ap_none | in        | 10       |
+| x_121 | ap_none | in        | 10       |
+| x_122 | ap_none | in        | 10       |
+| x_123 | ap_none | in        | 10       |
+| x_124 | ap_none | in        | 10       |
+| x_125 | ap_none | in        | 10       |
+| x_126 | ap_none | in        | 10       |
+| x_127 | ap_none | in        | 10       |
+| x_13  | ap_none | in        | 10       |
+| x_14  | ap_none | in        | 10       |
+| x_15  | ap_none | in        | 10       |
+| x_16  | ap_none | in        | 10       |
+| x_17  | ap_none | in        | 10       |
+| x_18  | ap_none | in        | 10       |
+| x_19  | ap_none | in        | 10       |
+| x_2   | ap_none | in        | 10       |
+| x_20  | ap_none | in        | 10       |
+| x_21  | ap_none | in        | 10       |
+| x_22  | ap_none | in        | 10       |
+| x_23  | ap_none | in        | 10       |
+| x_24  | ap_none | in        | 10       |
+| x_25  | ap_none | in        | 10       |
+| x_26  | ap_none | in        | 10       |
+| x_27  | ap_none | in        | 10       |
+| x_28  | ap_none | in        | 10       |
+| x_29  | ap_none | in        | 10       |
+| x_3   | ap_none | in        | 10       |
+| x_30  | ap_none | in        | 10       |
+| x_31  | ap_none | in        | 10       |
+| x_32  | ap_none | in        | 10       |
+| x_33  | ap_none | in        | 10       |
+| x_34  | ap_none | in        | 10       |
+| x_35  | ap_none | in        | 10       |
+| x_36  | ap_none | in        | 10       |
+| x_37  | ap_none | in        | 10       |
+| x_38  | ap_none | in        | 10       |
+| x_39  | ap_none | in        | 10       |
+| x_4   | ap_none | in        | 10       |
+| x_40  | ap_none | in        | 10       |
+| x_41  | ap_none | in        | 10       |
+| x_42  | ap_none | in        | 10       |
+| x_43  | ap_none | in        | 10       |
+| x_44  | ap_none | in        | 10       |
+| x_45  | ap_none | in        | 10       |
+| x_46  | ap_none | in        | 10       |
+| x_47  | ap_none | in        | 10       |
+| x_48  | ap_none | in        | 10       |
+| x_49  | ap_none | in        | 10       |
+| x_5   | ap_none | in        | 10       |
+| x_50  | ap_none | in        | 10       |
+| x_51  | ap_none | in        | 10       |
+| x_52  | ap_none | in        | 10       |
+| x_53  | ap_none | in        | 10       |
+| x_54  | ap_none | in        | 10       |
+| x_55  | ap_none | in        | 10       |
+| x_56  | ap_none | in        | 10       |
+| x_57  | ap_none | in        | 10       |
+| x_58  | ap_none | in        | 10       |
+| x_59  | ap_none | in        | 10       |
+| x_6   | ap_none | in        | 10       |
+| x_60  | ap_none | in        | 10       |
+| x_61  | ap_none | in        | 10       |
+| x_62  | ap_none | in        | 10       |
+| x_63  | ap_none | in        | 10       |
+| x_64  | ap_none | in        | 10       |
+| x_65  | ap_none | in        | 10       |
+| x_66  | ap_none | in        | 10       |
+| x_67  | ap_none | in        | 10       |
+| x_68  | ap_none | in        | 10       |
+| x_69  | ap_none | in        | 10       |
+| x_7   | ap_none | in        | 10       |
+| x_70  | ap_none | in        | 10       |
+| x_71  | ap_none | in        | 10       |
+| x_72  | ap_none | in        | 10       |
+| x_73  | ap_none | in        | 10       |
+| x_74  | ap_none | in        | 10       |
+| x_75  | ap_none | in        | 10       |
+| x_76  | ap_none | in        | 10       |
+| x_77  | ap_none | in        | 10       |
+| x_78  | ap_none | in        | 10       |
+| x_79  | ap_none | in        | 10       |
+| x_8   | ap_none | in        | 10       |
+| x_80  | ap_none | in        | 10       |
+| x_81  | ap_none | in        | 10       |
+| x_82  | ap_none | in        | 10       |
+| x_83  | ap_none | in        | 10       |
+| x_84  | ap_none | in        | 10       |
+| x_85  | ap_none | in        | 10       |
+| x_86  | ap_none | in        | 10       |
+| x_87  | ap_none | in        | 10       |
+| x_88  | ap_none | in        | 10       |
+| x_89  | ap_none | in        | 10       |
+| x_9   | ap_none | in        | 10       |
+| x_90  | ap_none | in        | 10       |
+| x_91  | ap_none | in        | 10       |
+| x_92  | ap_none | in        | 10       |
+| x_93  | ap_none | in        | 10       |
+| x_94  | ap_none | in        | 10       |
+| x_95  | ap_none | in        | 10       |
+| x_96  | ap_none | in        | 10       |
+| x_97  | ap_none | in        | 10       |
+| x_98  | ap_none | in        | 10       |
+| x_99  | ap_none | in        | 10       |
++-------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------+
+| Argument | Direction | Datatype           |
++----------+-----------+--------------------+
+| values   | in        | ap_int<8> const *  |
+| x        | in        | ap_int<10> const * |
+| col_idx  | in        | int const *        |
+| row_ptr  | in        | int const *        |
+| y        | out       | ap_int<32>*        |
++----------+-----------+--------------------+
+
+* SW-to-HW Mapping
++----------+--------------------+---------+----------+
+| Argument | HW Interface       | HW Type | HW Usage |
++----------+--------------------+---------+----------+
+| values   | values_0_address0  | port    | offset   |
+| values   | values_0_ce0       | port    |          |
+| values   | values_0_q0        | port    |          |
+| values   | values_0_address1  | port    | offset   |
+| values   | values_0_ce1       | port    |          |
+| values   | values_0_q1        | port    |          |
+| values   | values_1_address0  | port    | offset   |
+| values   | values_1_ce0       | port    |          |
+| values   | values_1_q0        | port    |          |
+| values   | values_1_address1  | port    | offset   |
+| values   | values_1_ce1       | port    |          |
+| values   | values_1_q1        | port    |          |
+| x        | x_0                | port    |          |
+| x        | x_1                | port    |          |
+| x        | x_2                | port    |          |
+| x        | x_3                | port    |          |
+| x        | x_4                | port    |          |
+| x        | x_5                | port    |          |
+| x        | x_6                | port    |          |
+| x        | x_7                | port    |          |
+| x        | x_8                | port    |          |
+| x        | x_9                | port    |          |
+| x        | x_10               | port    |          |
+| x        | x_11               | port    |          |
+| x        | x_12               | port    |          |
+| x        | x_13               | port    |          |
+| x        | x_14               | port    |          |
+| x        | x_15               | port    |          |
+| x        | x_16               | port    |          |
+| x        | x_17               | port    |          |
+| x        | x_18               | port    |          |
+| x        | x_19               | port    |          |
+| x        | x_20               | port    |          |
+| x        | x_21               | port    |          |
+| x        | x_22               | port    |          |
+| x        | x_23               | port    |          |
+| x        | x_24               | port    |          |
+| x        | x_25               | port    |          |
+| x        | x_26               | port    |          |
+| x        | x_27               | port    |          |
+| x        | x_28               | port    |          |
+| x        | x_29               | port    |          |
+| x        | x_30               | port    |          |
+| x        | x_31               | port    |          |
+| x        | x_32               | port    |          |
+| x        | x_33               | port    |          |
+| x        | x_34               | port    |          |
+| x        | x_35               | port    |          |
+| x        | x_36               | port    |          |
+| x        | x_37               | port    |          |
+| x        | x_38               | port    |          |
+| x        | x_39               | port    |          |
+| x        | x_40               | port    |          |
+| x        | x_41               | port    |          |
+| x        | x_42               | port    |          |
+| x        | x_43               | port    |          |
+| x        | x_44               | port    |          |
+| x        | x_45               | port    |          |
+| x        | x_46               | port    |          |
+| x        | x_47               | port    |          |
+| x        | x_48               | port    |          |
+| x        | x_49               | port    |          |
+| x        | x_50               | port    |          |
+| x        | x_51               | port    |          |
+| x        | x_52               | port    |          |
+| x        | x_53               | port    |          |
+| x        | x_54               | port    |          |
+| x        | x_55               | port    |          |
+| x        | x_56               | port    |          |
+| x        | x_57               | port    |          |
+| x        | x_58               | port    |          |
+| x        | x_59               | port    |          |
+| x        | x_60               | port    |          |
+| x        | x_61               | port    |          |
+| x        | x_62               | port    |          |
+| x        | x_63               | port    |          |
+| x        | x_64               | port    |          |
+| x        | x_65               | port    |          |
+| x        | x_66               | port    |          |
+| x        | x_67               | port    |          |
+| x        | x_68               | port    |          |
+| x        | x_69               | port    |          |
+| x        | x_70               | port    |          |
+| x        | x_71               | port    |          |
+| x        | x_72               | port    |          |
+| x        | x_73               | port    |          |
+| x        | x_74               | port    |          |
+| x        | x_75               | port    |          |
+| x        | x_76               | port    |          |
+| x        | x_77               | port    |          |
+| x        | x_78               | port    |          |
+| x        | x_79               | port    |          |
+| x        | x_80               | port    |          |
+| x        | x_81               | port    |          |
+| x        | x_82               | port    |          |
+| x        | x_83               | port    |          |
+| x        | x_84               | port    |          |
+| x        | x_85               | port    |          |
+| x        | x_86               | port    |          |
+| x        | x_87               | port    |          |
+| x        | x_88               | port    |          |
+| x        | x_89               | port    |          |
+| x        | x_90               | port    |          |
+| x        | x_91               | port    |          |
+| x        | x_92               | port    |          |
+| x        | x_93               | port    |          |
+| x        | x_94               | port    |          |
+| x        | x_95               | port    |          |
+| x        | x_96               | port    |          |
+| x        | x_97               | port    |          |
+| x        | x_98               | port    |          |
+| x        | x_99               | port    |          |
+| x        | x_100              | port    |          |
+| x        | x_101              | port    |          |
+| x        | x_102              | port    |          |
+| x        | x_103              | port    |          |
+| x        | x_104              | port    |          |
+| x        | x_105              | port    |          |
+| x        | x_106              | port    |          |
+| x        | x_107              | port    |          |
+| x        | x_108              | port    |          |
+| x        | x_109              | port    |          |
+| x        | x_110              | port    |          |
+| x        | x_111              | port    |          |
+| x        | x_112              | port    |          |
+| x        | x_113              | port    |          |
+| x        | x_114              | port    |          |
+| x        | x_115              | port    |          |
+| x        | x_116              | port    |          |
+| x        | x_117              | port    |          |
+| x        | x_118              | port    |          |
+| x        | x_119              | port    |          |
+| x        | x_120              | port    |          |
+| x        | x_121              | port    |          |
+| x        | x_122              | port    |          |
+| x        | x_123              | port    |          |
+| x        | x_124              | port    |          |
+| x        | x_125              | port    |          |
+| x        | x_126              | port    |          |
+| x        | x_127              | port    |          |
+| col_idx  | col_idx_0_address0 | port    | offset   |
+| col_idx  | col_idx_0_ce0      | port    |          |
+| col_idx  | col_idx_0_q0       | port    |          |
+| col_idx  | col_idx_0_address1 | port    | offset   |
+| col_idx  | col_idx_0_ce1      | port    |          |
+| col_idx  | col_idx_0_q1       | port    |          |
+| col_idx  | col_idx_1_address0 | port    | offset   |
+| col_idx  | col_idx_1_ce0      | port    |          |
+| col_idx  | col_idx_1_q0       | port    |          |
+| col_idx  | col_idx_1_address1 | port    | offset   |
+| col_idx  | col_idx_1_ce1      | port    |          |
+| col_idx  | col_idx_1_q1       | port    |          |
+| row_ptr  | row_ptr_address0   | port    | offset   |
+| row_ptr  | row_ptr_ce0        | port    |          |
+| row_ptr  | row_ptr_q0         | port    |          |
+| row_ptr  | row_ptr_address1   | port    | offset   |
+| row_ptr  | row_ptr_ce1        | port    |          |
+| row_ptr  | row_ptr_q1         | port    |          |
+| y        | y_address0         | port    | offset   |
+| y        | y_ce0              | port    |          |
+| y        | y_we0              | port    |          |
+| y        | y_d0               | port    |          |
++----------+--------------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------+-----+--------+---------------+-----------+--------------------------+---------+
+| Name                               | DSP | Pragma | Variable      | Op        | Impl                     | Latency |
++------------------------------------+-----+--------+---------------+-----------+--------------------------+---------+
+| + spmv                             | 4   |        |               |           |                          |         |
+|   icmp_ln16_fu_1277_p2             |     |        | icmp_ln16     | seteq     | auto                     | 0       |
+|   add_ln20_fu_1283_p2              |     |        | add_ln20      | add       | fabric                   | 0       |
+|  + spmv_Pipeline_L2                | 4   |        |               |           |                          |         |
+|    icmp_ln20_fu_1579_p2            |     |        | icmp_ln20     | setlt     | auto                     | 0       |
+|    tmp_2_fu_1718_p258              |     |        | select_ln31   | select    | auto_sel                 | 0       |
+|    select_ln31_1_fu_1707_p3        |     |        | select_ln31_1 | select    | auto_sel                 | 0       |
+|    sparsemux_257_7_10_1_1_U1       |     |        | tmp_2         | sparsemux | compactencoding_dontcare | 0       |
+|    mac_muladd_10s_8s_32s_32_4_1_U5 | 1   |        | mul_ln31      | mul       | dsp_slice                | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U5 | 1   |        | sext_ln31_2   | sext      | dsp_slice                | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U5 | 1   |        | add_ln31      | add       | dsp_slice                | 3       |
+|    add_ln20_fu_1610_p2             |     |        | add_ln20      | add       | fabric                   | 0       |
+|    icmp_ln20_1_fu_1634_p2          |     |        | icmp_ln20_1   | setlt     | auto                     | 0       |
+|    select_ln31_2_fu_2122_p3        |     |        | select_ln31_2 | select    | auto_sel                 | 0       |
+|    grp_fu_1547_p3                  |     |        | select_ln31_3 | select    | auto_sel                 | 0       |
+|    sparsemux_257_7_10_1_1_U2       |     |        | tmp_5         | sparsemux | compactencoding_dontcare | 0       |
+|    mac_muladd_10s_8s_32s_32_4_1_U6 | 1   |        | mul_ln31_1    | mul       | dsp_slice                | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U6 | 1   |        | sext_ln31_5   | sext      | dsp_slice                | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U6 | 1   |        | add_ln31_1    | add       | dsp_slice                | 3       |
+|    add_ln20_1_fu_1639_p2           |     |        | add_ln20_1    | add       | fabric                   | 0       |
+|    icmp_ln20_2_fu_1655_p2          |     |        | icmp_ln20_2   | setlt     | auto                     | 0       |
+|    tmp_8_fu_2564_p258              |     |        | select_ln31_4 | select    | auto_sel                 | 0       |
+|    select_ln31_5_fu_2557_p3        |     |        | select_ln31_5 | select    | auto_sel                 | 0       |
+|    sparsemux_257_7_10_1_1_U3       |     |        | tmp_8         | sparsemux | compactencoding_dontcare | 0       |
+|    mac_muladd_10s_8s_32s_32_4_1_U7 | 1   |        | mul_ln31_2    | mul       | dsp_slice                | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U7 | 1   |        | sext_ln31_8   | sext      | dsp_slice                | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U7 | 1   |        | add_ln31_2    | add       | dsp_slice                | 3       |
+|    add_ln20_2_fu_1660_p2           |     |        | add_ln20_2    | add       | fabric                   | 0       |
+|    icmp_ln20_3_fu_1676_p2          |     |        | icmp_ln20_3   | setlt     | auto                     | 0       |
+|    tmp_s_fu_2971_p258              |     |        | select_ln31_6 | select    | auto_sel                 | 0       |
+|    grp_fu_1547_p3                  |     |        | select_ln31_7 | select    | auto_sel                 | 0       |
+|    sparsemux_257_7_10_1_1_U4       |     |        | tmp_s         | sparsemux | compactencoding_dontcare | 0       |
+|    mac_muladd_10s_8s_32s_32_4_1_U8 | 1   |        | mul_ln31_3    | mul       | dsp_slice                | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U8 | 1   |        | sext_ln31_11  | sext      | dsp_slice                | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U8 | 1   |        | add_ln31_3    | add       | dsp_slice                | 3       |
+|    add_ln20_3_fu_1681_p2           |     |        | add_ln20_3    | add       | fabric                   | 0       |
++------------------------------------+-----+--------+---------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------------+-----------------------+
+| Type            | Options                               | Location              |
++-----------------+---------------------------------------+-----------------------+
+| ARRAY_PARTITION | variable=values type=cyclic factor=2  | in spmv (spmv.cpp:11) |
+| ARRAY_PARTITION | variable=col_idx type=cyclic factor=2 | in spmv (spmv.cpp:12) |
+| ARRAY_PARTITION | variable=x type=complete              | in spmv (spmv.cpp:13) |
+| LOOP_TRIPCOUNT  | min=1 max=128 avg=4                   | in spmv (spmv.cpp:24) |
+| PIPELINE        | ii=1                                  | in spmv (spmv.cpp:26) |
+| UNROLL          | factor=2*2                            | in spmv (spmv.cpp:28) |
++-----------------+---------------------------------------+-----------------------+
+
+
