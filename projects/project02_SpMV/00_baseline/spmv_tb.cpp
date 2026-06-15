@@ -8,19 +8,29 @@
  * Software reference model (Golden Model) for the SpMV.
  * Used to compute the expected results and verify the hardware implementation.
  */
-void golden_spmv(
+void golden_mvm(
     const mtx_data_t values[NNZ], const vec_data_t x[NCOLS],
     const int col_idx[NNZ], const int row_ptr[NROWS + 1],
     out_data_t y[NROWS]
 ) {
-    // Iterate over rows
+    // Iterate over all rows (dense pattern)
     L1: for (int row = 0; row < NROWS; row++) {
         out_data_t sum = 0.0f;
 
-        // Iterate over non-zero elements
-        L2: for (int idx = row_ptr[row]; idx < row_ptr[row + 1]; idx++) {
+        // Iterate over all columns (dense pattern)
+        L2: for (int col = 0; col < NCOLS; col++) {
+            mtx_data_t matrix_val = 0.0f;
+
+            // Search for the specific column in the current CSR row
+            for (int idx = row_ptr[row]; idx < row_ptr[row + 1]; idx++) {
+                if (col_idx[idx] == col) {
+                    matrix_val = values[idx];
+                    break;
+                }
+            }
+
             // --- MAC ---
-            sum += values[idx] * x[col_idx[idx]];
+            sum += matrix_val * x[col];
         }
 
         y[row] = sum;
@@ -83,7 +93,7 @@ int main() {
     //-----------------------------------------------------------------
     // Reference
     //-----------------------------------------------------------------
-    golden_spmv(values, x, col_idx, row_ptr, sw_y);
+    golden_mvm(values, x, col_idx, row_ptr, sw_y);
 
     //-----------------------------------------------------------------
     // Verification
