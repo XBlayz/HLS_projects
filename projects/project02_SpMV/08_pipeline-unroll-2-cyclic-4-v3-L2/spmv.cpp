@@ -7,9 +7,9 @@ void spmv(
     const int col_idx[NNZ], const int row_ptr[NROWS + 1],
     out_data_t y[NROWS]
 ) {
-    //* OPTIMIZATION(Cyclic-2): cyclic partitioning and complete partitioning
-    #pragma HLS array_partition variable=values type=cyclic factor=F
-    #pragma HLS array_partition variable=col_idx type=cyclic factor=F
+    //* OPTIMIZATION(Cyclic-4): cyclic partitioning and complete partitioning
+    #pragma HLS array_partition variable=values type=cyclic factor=F*2
+    #pragma HLS array_partition variable=col_idx type=cyclic factor=F*2
     #pragma HLS array_partition variable=x type=complete // Need to be complete because we can't predict witch location will be used
 
     // Iterate over rows
@@ -25,7 +25,7 @@ void spmv(
             //* OPTIMIZATION(Pipeline): running MAC in pipeline
             #pragma HLS pipeline II=1
             //* OPTIMIZATION(Unroll-2): partial unroll of MAC operation
-            #pragma HLS unroll factor=F*2
+            #pragma HLS unroll factor=F
 
             // --- MAC ---
             sum += values[idx] * x[col_idx[idx]];
