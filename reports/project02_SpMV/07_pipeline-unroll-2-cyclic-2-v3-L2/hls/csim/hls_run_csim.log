@@ -1,0 +1,208 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/07_pipeline-unroll-2-cyclic-2-v3-L2/07_pipeline-unroll-2-cyclic-2-v3-L2_script 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/07_pipeline-unroll-2-cyclic-2-v3-L2/07_pipeline-unroll-2-cyclic-2-v3-L2_script/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/07_pipeline-unroll-2-cyclic-2-v3-L2/07_pipeline-unroll-2-cyclic-2-v3-L2_script'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=spmv.hpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/07_pipeline-unroll-2-cyclic-2-v3-L2/spmv.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=spmv.cpp' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/07_pipeline-unroll-2-cyclic-2-v3-L2/spmv.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=spmv_tb.cpp' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/07_pipeline-unroll-2-cyclic-2-v3-L2/spmv_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=spmv' from hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg484-3' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-3'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'syn.array_partition.throughput_driven=off' from hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.pipeline_loops=0' from hls_config.cfg(8)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/07_pipeline-unroll-2-cyclic-2-v3-L2/07_pipeline-unroll-2-cyclic-2-v3-L2_script/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../spmv_tb.cpp in debug mode
+   Compiling ../../../../spmv.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../spmv_tb.cpp:5:
+In file included from ../../../../spmv.hpp:3:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Softwares/AMD-Design/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/Softwares/AMD-Design/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../spmv.cpp:1:
+In file included from ../../../../spmv.hpp:3:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Softwares/AMD-Design/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Softwares/AMD-Design/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/Softwares/AMD-Design/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+==============================================================
+                    SPMV TESTBENCH                            
+==============================================================
+Rows : 128
+Cols : 128
+NNZ  : 512
+==============================================================
+ROW       DUT               REFERENCE         STATUS    
+--------------------------------------------------------------
+0         82                82                PASS      
+1         179               179               PASS      
+2         505               505               PASS      
+3         465               465               PASS      
+4         620               620               PASS      
+5         703               703               PASS      
+6         132               132               PASS      
+7         271               271               PASS      
+8         435               435               PASS      
+9         565               565               PASS      
+10        731               731               PASS      
+11        509               509               PASS      
+12        185               185               PASS      
+13        341               341               PASS      
+14        301               301               PASS      
+15        677               677               PASS      
+16        891               891               PASS      
+17        274               274               PASS      
+18        155               155               PASS      
+19        283               283               PASS      
+20        379               379               PASS      
+21        517               517               PASS      
+22        629               629               PASS      
+23        121               121               PASS      
+24        209               209               PASS      
+25        356               356               PASS      
+26        477               477               PASS      
+27        657               657               PASS      
+28        549               549               PASS      
+29        116               116               PASS      
+30        271               271               PASS      
+31        435               435               PASS      
+32        573               573               PASS      
+33        770               770               PASS      
+34        550               550               PASS      
+35        109               109               PASS      
+36        341               341               PASS      
+37        547               547               PASS      
+38        565               565               PASS      
+39        739               739               PASS      
+40        274               274               PASS      
+41        155               155               PASS      
+42        285               285               PASS      
+43        389               389               PASS      
+44        841               841               PASS      
+45        689               689               PASS      
+46        92                92                PASS      
+47        205               205               PASS      
+48        269               269               PASS      
+49        373               373               PASS      
+50        657               657               PASS      
+51        558               558               PASS      
+52        139               139               PASS      
+53        269               269               PASS      
+54        458               458               PASS      
+55        621               621               PASS      
+56        469               469               PASS      
+57        557               557               PASS      
+58        104               104               PASS      
+59        285               285               PASS      
+60        547               547               PASS      
+61        727               727               PASS      
+62        575               575               PASS      
+63        76                76                PASS      
+64        149               149               PASS      
+65        457               457               PASS      
+66        433               433               PASS      
+67        587               587               PASS      
+68        701               701               PASS      
+69        92                92                PASS      
+70        205               205               PASS      
+71        377               377               PASS      
+72        523               523               PASS      
+73        694               694               PASS      
+74        770               770               PASS      
+75        146               146               PASS      
+76        301               301               PASS      
+77        277               277               PASS      
+78        627               627               PASS      
+79        469               469               PASS      
+80        557               557               PASS      
+81        203               203               PASS      
+82        375               375               PASS      
+83        351               351               PASS      
+84        488               488               PASS      
+85        599               599               PASS      
+86        303               303               PASS      
+87        114               114               PASS      
+88        321               321               PASS      
+89        433               433               PASS      
+90        587               587               PASS      
+91        715               715               PASS      
+92        97                97                PASS      
+93        235               235               PASS      
+94        398               398               PASS      
+95        535               535               PASS      
+96        731               731               PASS      
+97        616               616               PASS      
+98        130               130               PASS      
+99        301               301               PASS      
+100       277               277               PASS      
+101       635               635               PASS      
+102       848               848               PASS      
+103       598               598               PASS      
+104       127               127               PASS      
+105       256               256               PASS      
+106       359               359               PASS      
+107       631               631               PASS      
+108       447               447               PASS      
+109       303               303               PASS      
+110       177               177               PASS      
+111       323               323               PASS      
+112       443               443               PASS      
+113       622               622               PASS      
+114       775               775               PASS      
+115       102               102               PASS      
+116       231               231               PASS      
+117       311               311               PASS      
+118       431               431               PASS      
+119       731               731               PASS      
+120       625               625               PASS      
+121       85                85                PASS      
+122       299               299               PASS      
+123       504               504               PASS      
+124       683               683               PASS      
+125       547               547               PASS      
+126       231               231               PASS      
+127       122               122               PASS      
+--------------------------------------------------------------
+>> SIMULATION STATUS: PASSED
+==============================================================
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 7.609 seconds; peak allocated memory: 142.973 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 11s

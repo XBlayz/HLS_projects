@@ -24,10 +24,10 @@ INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from
 INFO: [HLS 200-1465] Applying config ini 'syn.array_partition.throughput_driven=off' from hls_config.cfg(9)
 INFO: [HLS 200-1465] Applying config ini 'syn.compile.pipeline_loops=0' from hls_config.cfg(8)
 INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/vitis-comp.json
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.605 seconds; current allocated memory: 142.297 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.786 seconds; current allocated memory: 141.910 MB.
 INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
 INFO: [HLS 200-10] Analyzing design file 'spmv.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.887 seconds; current allocated memory: 144.938 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.742 seconds; current allocated memory: 144.438 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 200-1995] There were 529 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 95 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/syn/report/csynth_design_size.rpt:2)
@@ -45,56 +45,56 @@ INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Perform
 INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 77 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 83 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 214-188] Unrolling loop 'L2' (spmv.cpp:16:13) in function 'spmv' partially with a factor of 2 (spmv.cpp:7:0)
-INFO: [HLS 214-178] Inlining function 'ap_int<32>::ap_int(float)' into 'spmv(ap_int<8> const*, ap_int<10> const*, int const*, int const*, ap_int<32>*)' (spmv.cpp:7:0)
-INFO: [HLS 214-248] Applying array_partition to 'values': Cyclic partitioning with factor 2 on dimension 1. (spmv.cpp:7:0)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.292 seconds; current allocated memory: 146.887 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 146.887 MB.
+INFO: [HLS 214-188] Unrolling loop 'L2' (spmv.cpp:20:13) in function 'spmv' partially with a factor of 2 (spmv.cpp:9:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<32>::ap_int(float)' into 'spmv(ap_int<8> const*, ap_int<10> const*, int const*, int const*, ap_int<32>*)' (spmv.cpp:9:0)
+INFO: [HLS 214-248] Applying array_partition to 'values': Cyclic partitioning with factor 2 on dimension 1. (spmv.cpp:9:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.256 seconds; current allocated memory: 146.293 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.006 seconds; current allocated memory: 146.293 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 151.211 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 150.605 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 152.770 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 174.348 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 177.129 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.021 seconds; current allocated memory: 152.031 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 173.441 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 176.543 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'spmv' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'spmv_Pipeline_L2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln27) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln27_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_1) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-61] Pipelining loop 'L2'.
-WARNING: [HLS 200-880] The II Violation in module 'spmv_Pipeline_L2' (loop 'L2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add_i4_0_write_ln27', spmv.cpp:27) of variable 'add_ln27_1', spmv.cpp:27 32 bit on local variable 'add_i4_0' and 'load' operation 32 bit ('add_i4_0_load', spmv.cpp:27) on local variable 'add_i4_0'.
+WARNING: [HLS 200-880] The II Violation in module 'spmv_Pipeline_L2' (loop 'L2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add_i4_0_write_ln31', spmv.cpp:31) of variable 'add_ln31_1', spmv.cpp:31 32 bit on local variable 'add_i4_0' and 'load' operation 32 bit ('add_i4_0_load', spmv.cpp:31) on local variable 'add_i4_0'.
 Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 8, loop 'L2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 181.371 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 180.797 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 182.398 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 181.848 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'spmv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 182.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 181.945 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.375 seconds; current allocated memory: 182.547 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.522 seconds; current allocated memory: 182.012 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'spmv_Pipeline_L2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'spmv_Pipeline_L2' pipeline 'L2' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mac_muladd_10s_8s_32s_32_4_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'spmv_Pipeline_L2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 184.555 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 184.047 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'spmv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -106,13 +106,13 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/row_ptr' to 'ap_memor
 INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/y' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'spmv' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'spmv'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.338 seconds; current allocated memory: 186.016 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.455 seconds; current allocated memory: 189.828 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.245 seconds; current allocated memory: 185.219 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.344 seconds; current allocated memory: 189.148 MB.
 INFO: [HLS 200-2225] Wrote inferred directives to file C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/syn/inferred_directives.ini
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.423 seconds; current allocated memory: 193.027 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.065 seconds; current allocated memory: 192.285 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for spmv.
 INFO: [VLOG 209-307] Generating Verilog RTL for spmv.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 200.88 MHz
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 24.001 seconds; peak allocated memory: 193.094 MB.
-INFO: [v++ 60-791] Total elapsed time: 0h 0m 28s
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 21.463 seconds; peak allocated memory: 192.352 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 25s

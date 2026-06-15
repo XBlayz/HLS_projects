@@ -8,12 +8,11 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Mon Jun 15 10:57:16 2026
+  **** Start of session at: Mon Jun 15 11:39:25 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source spmv_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 531.836 ; gain = 220.258
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
@@ -26,9 +25,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-3
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 34248
+INFO: [Synth 8-7075] Helper process launched with PID 30972
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1318.695 ; gain = 541.145
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1317.438 ; gain = 541.801
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'spmv_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/synth/spmv_0.vhd:101]
 INFO: [Synth 8-3491] module 'spmv' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:11' bound to instance 'U0' of component 'spmv' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/synth/spmv_0.vhd:243]
@@ -115,18 +114,18 @@ INFO: [Synth 8-7129] Port col_idx_q1[9] in module spmv_spmv_Pipeline_L2 is eithe
 INFO: [Synth 8-7129] Port col_idx_q1[8] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
 INFO: [Synth 8-7129] Port col_idx_q1[7] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1439.363 ; gain = 661.812
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1437.465 ; gain = 661.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1439.363 ; gain = 661.812
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1437.465 ; gain = 661.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1439.363 ; gain = 661.812
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1437.465 ; gain = 661.828
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1439.363 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1437.465 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -137,27 +136,27 @@ Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/proj
 Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/spmv_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1513.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1513.969 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1513.641 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 1513.969 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1513.641 ; gain = 736.090
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1513.969 ; gain = 738.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1513.641 ; gain = 736.090
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1513.969 ; gain = 738.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1513.641 ; gain = 736.090
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1513.969 ; gain = 738.332
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3936] Found unconnected internal register 'p_reg_reg' and it is trimmed from '48' to '32' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:47]
 INFO: [Synth 8-3936] Found unconnected internal register 'm_reg_reg' and it is trimmed from '43' to '32' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:40]
@@ -167,7 +166,7 @@ INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' throug
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1513.641 ; gain = 736.090
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1513.969 ; gain = 738.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -209,7 +208,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 DSP Report: Generating DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B'')')'.
-DSP Report: register grp_spmv_Pipeline_L2_fu_96/select_ln27_reg_414_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/select_ln31_reg_414_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
 DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
 DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
 DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
@@ -274,7 +273,7 @@ INFO: [Synth 8-7129] Port col_idx_q1[10] in module spmv is either unconnected or
 INFO: [Synth 8-7129] Port col_idx_q1[9] in module spmv is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1513.641 ; gain = 736.090
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1513.969 ; gain = 738.332
 ---------------------------------------------------------------------------------
  Sort Area is  grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_0 : 0 0 : 734 1470 : Used 1 time 0
  Sort Area is  grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_0 : 0 1 : 736 1470 : Used 1 time 0
@@ -298,19 +297,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1685.090 ; gain = 907.539
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1678.008 ; gain = 902.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1714.883 ; gain = 937.332
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1707.551 ; gain = 931.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1726.539 ; gain = 948.988
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1718.906 ; gain = 943.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -328,37 +327,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1944.645 ; gain = 1169.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1944.645 ; gain = 1169.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1944.645 ; gain = 1169.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1944.645 ; gain = 1169.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1944.645 ; gain = 1169.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1944.645 ; gain = 1169.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -368,7 +367,7 @@ Static Shift Register Report:
 +------------+---------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name | RTL Name                                                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +------------+---------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|spmv        | grp_spmv_Pipeline_L2_fu_96/icmp_ln16_1_reg_405_pp0_iter2_reg_reg[0] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|spmv        | grp_spmv_Pipeline_L2_fu_96/icmp_ln20_1_reg_405_pp0_iter2_reg_reg[0] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 +------------+---------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -410,31 +409,31 @@ Report Cell Usage:
 |12    |FDSE    |     2|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1944.645 ; gain = 1169.008
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1952.469 ; gain = 1100.641
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 1944.645 ; gain = 1092.504
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1944.645 ; gain = 1169.008
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1961.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1953.746 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1965.273 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1957.387 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: c55c4a4e
+Synth Design complete | Checksum: eacda4d3
 INFO: [Common 17-83] Releasing license: Synthesis
 146 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1965.273 ; gain = 1422.230
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1965.273 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1957.387 ; gain = 1411.469
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1957.387 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/spmv_0_synth_1/spmv_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP spmv_0, cache-ID = 4a9338b5b816bd86
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP spmv_0, cache-ID = 230ad8e7e05a717b
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1965.273 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1957.387 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/spmv_0_synth_1/spmv_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file spmv_0_utilization_synth.rpt -pb spmv_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 10:58:06 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 11:40:11 2026...

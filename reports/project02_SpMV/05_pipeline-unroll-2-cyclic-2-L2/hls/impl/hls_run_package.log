@@ -30,7 +30,7 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Mon Jun 15 10:56:55 2026
+  **** Start of session at: Mon Jun 15 11:34:45 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -39,7 +39,6 @@ INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/Users/stefa/Work
 INFO: Copied 1 ipmisc file(s) to C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/impl/ip/misc
 INFO: Copied 4 verilog file(s) to C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/impl/ip/hdl/verilog
 INFO: Copied 4 vhdl file(s) to C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/impl/ip/hdl/vhdl
-ipx::create_core: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 537.652 ; gain = 215.418
 INFO: Import ports from HDL: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/impl/ip/hdl/vhdl/spmv.vhd (spmv)
 INFO: Add clock interface ap_clk
 INFO: Add reset interface ap_rst
@@ -74,7 +73,7 @@ INFO: Calling post_process_sysgen to specialize IP
 Generating sysgen info xml from json file
 INFO: Created IP C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/impl/ip/component.xml
 INFO: Created IP archive C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/05_pipeline-unroll-2-cyclic-2-L2_script/hls/impl/ip/xilinx_com_hls_spmv_1_0.zip
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 10:57:03 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 11:34:52 2026...
 INFO: [HLS 200-802] Generated output file 05_pipeline-unroll-2-cyclic-2-L2_script/spmv.zip
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 11.987 seconds; peak allocated memory: 208.875 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 16s
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 10.832 seconds; peak allocated memory: 209.102 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 14s

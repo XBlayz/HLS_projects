@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'spmv'
 ================================================================
 + General Information: 
-    * Date:           Mon Jun 15 10:55:49 2026
+    * Date:           Mon Jun 15 11:33:44 2026
     * Version:        2025.2 (Build 6295257 on Nov 12 2025)
     * Project:        05_pipeline-unroll-2-cyclic-2-L2_script
     * Solution:       hls (Vivado IP Flow Target)
@@ -135,21 +135,21 @@
 | Name                               | DSP | Pragma | Variable      | Op     | Impl      | Latency |
 +------------------------------------+-----+--------+---------------+--------+-----------+---------+
 | + spmv                             | 2   |        |               |        |           |         |
-|   icmp_ln12_fu_121_p2              |     |        | icmp_ln12     | seteq  | auto      | 0       |
-|   add_ln16_fu_127_p2               |     |        | add_ln16      | add    | fabric    | 0       |
+|   icmp_ln16_fu_121_p2              |     |        | icmp_ln16     | seteq  | auto      | 0       |
+|   add_ln20_fu_127_p2               |     |        | add_ln20      | add    | fabric    | 0       |
 |  + spmv_Pipeline_L2                | 2   |        |               |        |           |         |
-|    icmp_ln16_fu_212_p2             |     |        | icmp_ln16     | setlt  | auto      | 0       |
-|    select_ln27_fu_288_p3           |     |        | select_ln27   | select | auto_sel  | 0       |
-|    mac_muladd_10s_8s_32s_32_4_1_U1 | 1   |        | mul_ln27      | mul    | dsp_slice | 3       |
-|    mac_muladd_10s_8s_32s_32_4_1_U1 | 1   |        | sext_ln27_2   | sext   | dsp_slice | 3       |
-|    mac_muladd_10s_8s_32s_32_4_1_U1 | 1   |        | add_ln27      | add    | dsp_slice | 3       |
-|    add_ln16_fu_246_p2              |     |        | add_ln16      | add    | fabric    | 0       |
-|    icmp_ln16_1_fu_267_p2           |     |        | icmp_ln16_1   | setlt  | auto      | 0       |
-|    select_ln27_1_fu_312_p3         |     |        | select_ln27_1 | select | auto_sel  | 0       |
-|    mac_muladd_10s_8s_32s_32_4_1_U2 | 1   |        | mul_ln27_1    | mul    | dsp_slice | 3       |
-|    mac_muladd_10s_8s_32s_32_4_1_U2 | 1   |        | sext_ln27_5   | sext   | dsp_slice | 3       |
-|    mac_muladd_10s_8s_32s_32_4_1_U2 | 1   |        | add_ln27_1    | add    | dsp_slice | 3       |
-|    add_ln16_1_fu_272_p2            |     |        | add_ln16_1    | add    | fabric    | 0       |
+|    icmp_ln20_fu_212_p2             |     |        | icmp_ln20     | setlt  | auto      | 0       |
+|    select_ln31_fu_288_p3           |     |        | select_ln31   | select | auto_sel  | 0       |
+|    mac_muladd_10s_8s_32s_32_4_1_U1 | 1   |        | mul_ln31      | mul    | dsp_slice | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U1 | 1   |        | sext_ln31_2   | sext   | dsp_slice | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U1 | 1   |        | add_ln31      | add    | dsp_slice | 3       |
+|    add_ln20_fu_246_p2              |     |        | add_ln20      | add    | fabric    | 0       |
+|    icmp_ln20_1_fu_267_p2           |     |        | icmp_ln20_1   | setlt  | auto      | 0       |
+|    select_ln31_1_fu_312_p3         |     |        | select_ln31_1 | select | auto_sel  | 0       |
+|    mac_muladd_10s_8s_32s_32_4_1_U2 | 1   |        | mul_ln31_1    | mul    | dsp_slice | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U2 | 1   |        | sext_ln31_5   | sext   | dsp_slice | 3       |
+|    mac_muladd_10s_8s_32s_32_4_1_U2 | 1   |        | add_ln31_1    | add    | dsp_slice | 3       |
+|    add_ln20_1_fu_272_p2            |     |        | add_ln20_1    | add    | fabric    | 0       |
 +------------------------------------+-----+--------+---------------+--------+-----------+---------+
 
 
@@ -162,13 +162,13 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------------+---------------------------------------+-----------------------+
-| Type            | Options                               | Location              |
-+-----------------+---------------------------------------+-----------------------+
-| ARRAY_PARTITION | variable=values cyclic factor=2 dim=1 | in spmv (spmv.cpp:9)  |
-| LOOP_TRIPCOUNT  | min=1 max=128 avg=4                   | in spmv (spmv.cpp:20) |
-| PIPELINE        | ii=1                                  | in spmv (spmv.cpp:22) |
-| UNROLL          | factor=2                              | in spmv (spmv.cpp:24) |
-+-----------------+---------------------------------------+-----------------------+
++-----------------+--------------------------------------+-----------------------+
+| Type            | Options                              | Location              |
++-----------------+--------------------------------------+-----------------------+
+| ARRAY_PARTITION | variable=values type=cyclic factor=2 | in spmv (spmv.cpp:11) |
+| LOOP_TRIPCOUNT  | min=1 max=128 avg=4                  | in spmv (spmv.cpp:24) |
+| PIPELINE        | ii=1                                 | in spmv (spmv.cpp:26) |
+| UNROLL          | factor=2                             | in spmv (spmv.cpp:28) |
++-----------------+--------------------------------------+-----------------------+
 
 

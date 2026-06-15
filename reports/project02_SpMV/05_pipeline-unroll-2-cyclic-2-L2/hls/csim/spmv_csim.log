@@ -1,5 +1,4 @@
 INFO: [SIM 2] *************** CSIM start ***************
-   Compiling ../../../../spmv_tb.cpp in debug mode
    Compiling ../../../../spmv.cpp in debug mode
    Generating csim.exe
 ==============================================================
