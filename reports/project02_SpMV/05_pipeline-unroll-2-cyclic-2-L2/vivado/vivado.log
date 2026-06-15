@@ -1,0 +1,841 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Jun 15 10:57:04 2026
+# Process ID         : 12760
+# Current directory  : C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2
+# Command line       : vivado.exe -mode batch -notrace -source ..\..\..\scripts\vivado_power_report.tcl -tclargs project02_SpMV 05_pipeline-unroll-2-cyclic-2-L2 spmv project02_SpMV_00_baseline_tb project02_SpMV_00_baseline_clk 1000ns
+# Log file           : C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado.log
+# Journal file       : C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2\vivado.jou
+# Running On         : Legion5-Stefano
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 260 w/ Radeon 780M Graphics
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33617 MB
+# Swap memory        : 6174 MB
+# Total Virtual      : 39791 MB
+# Available Virtual  : 11386 MB
+#-----------------------------------------------------------
+source {..\..\..\scripts\vivado_power_report.tcl} -notrace
+
+========================================================
+ TARGET: 05_pipeline-unroll-2-cyclic-2-L2  (spmv)
+ PART  : xc7z020clg484-3
+ BUILD : .
+========================================================
+
+========================================================
+ STEP 1 -- Create project
+========================================================
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj'
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 536.684 ; gain = 221.293
+[ OK  ] Project 'vivado_prj' created -- PART: xc7z020clg484-3
+
+========================================================
+ STEP 2 -- Import IP repository
+========================================================
+[ OK  ] IP repository directory: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/ip_repo
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
+[ OK  ] IP catalog updated -- repo: ./ip_repo
+
+========================================================
+ STEP 3 -- Instantiate IP and generate targets
+========================================================
+[INFO ] Creating IP: xilinx.com:hls:spmv:1.0 -> spmv_0
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'spmv_0'...
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'spmv_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'spmv_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'spmv_0'...
+[ OK  ] XCI file: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.srcs/sources_1/ip/spmv_0/spmv_0.xci
+[ OK  ] IP 'spmv_0' instantiated and all targets generated
+
+========================================================
+ STEP 4 -- IP OOC synthesis  (spmv_0_synth_1)
+========================================================
+[INFO ] Launching spmv_0_synth_1 (8 jobs)...
+[Mon Jun 15 10:57:13 2026] Launched spmv_0_synth_1...
+Run output will be captured here: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/spmv_0_synth_1/runme.log
+[Mon Jun 15 10:57:14 2026] Waiting for spmv_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log spmv_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source spmv_0.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Jun 15 10:57:16 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source spmv_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 531.836 ; gain = 220.258
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.cache/ip 
+Command: synth_design -top spmv_0 -part xc7z020clg484-3 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34248
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1318.695 ; gain = 541.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'spmv_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/synth/spmv_0.vhd:101]
+INFO: [Synth 8-3491] module 'spmv' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:11' bound to instance 'U0' of component 'spmv' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/synth/spmv_0.vhd:243]
+INFO: [Synth 8-638] synthesizing module 'spmv' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:56]
+INFO: [Synth 8-3491] module 'spmv_spmv_Pipeline_L2' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2.vhd:11' bound to instance 'grp_spmv_Pipeline_L2_fu_96' of component 'spmv_spmv_Pipeline_L2' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'spmv_spmv_Pipeline_L2' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2.vhd:50]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:59' bound to instance 'mac_muladd_10s_8s_32s_32_4_1_U1' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2.vhd:190]
+INFO: [Synth 8-638] synthesizing module 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:10' bound to instance 'spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'spmv_mac_muladd_10s_8s_32s_32_4_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:59' bound to instance 'mac_muladd_10s_8s_32s_32_4_1_U2' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2.vhd:207]
+INFO: [Synth 8-3491] module 'spmv_flow_control_loop_pipe_sequential_init' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_flow_control_loop_pipe_sequential_init.vhd:13' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'spmv_flow_control_loop_pipe_sequential_init' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'spmv_flow_control_loop_pipe_sequential_init' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_flow_control_loop_pipe_sequential_init.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'spmv_flow_control_loop_pipe_sequential_init' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_flow_control_loop_pipe_sequential_init.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'spmv_spmv_Pipeline_L2' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'spmv' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'spmv_0' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/synth/spmv_0.vhd:101]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port ap_done_int in module spmv_flow_control_loop_pipe_sequential_init is either unconnected or has no load
+INFO: [Synth 8-7129] Port rst in module spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[31] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[30] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[29] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[28] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[27] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[26] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[25] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[24] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[23] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[22] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[21] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[20] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[19] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[18] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[17] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[16] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[15] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[14] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[13] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[12] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[11] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[10] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[9] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[8] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[7] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[31] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[30] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[29] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[28] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[27] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[26] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[25] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[24] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[23] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[22] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[21] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[20] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[19] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[18] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[17] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[16] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[15] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[14] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[13] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[12] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[11] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[10] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[9] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[8] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[7] in module spmv_spmv_Pipeline_L2 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1439.363 ; gain = 661.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1439.363 ; gain = 661.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1439.363 ; gain = 661.812
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1439.363 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/constraints/spmv_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/constraints/spmv_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/spmv_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/spmv_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1513.641 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1513.641 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1513.641 ; gain = 736.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1513.641 ; gain = 736.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1513.641 ; gain = 736.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'p_reg_reg' and it is trimmed from '48' to '32' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:47]
+INFO: [Synth 8-3936] Found unconnected internal register 'm_reg_reg' and it is trimmed from '43' to '32' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:40]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1513.641 ; gain = 736.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               18 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B'')')'.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/select_ln27_reg_414_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/x_load_1_reg_449_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m is absorbed into DSP grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U2/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+INFO: [Synth 8-7129] Port col_idx_q0[31] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[30] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[29] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[28] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[27] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[26] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[25] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[24] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[23] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[22] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[21] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[20] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[19] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[18] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[17] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[16] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[15] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[14] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[13] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[12] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[11] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[10] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[9] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[8] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q0[7] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[31] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[30] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[29] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[28] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[27] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[26] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[25] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[24] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[23] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[22] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[21] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[20] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[19] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[18] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[17] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[16] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[15] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[14] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[13] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[12] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[11] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[10] in module spmv is either unconnected or has no load
+INFO: [Synth 8-7129] Port col_idx_q1[9] in module spmv is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1513.641 ; gain = 736.090
+---------------------------------------------------------------------------------
+ Sort Area is  grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_0 : 0 0 : 734 1470 : Used 1 time 0
+ Sort Area is  grp_spmv_Pipeline_L2_fu_96/mac_muladd_10s_8s_32s_32_4_1_U1/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_0 : 0 1 : 736 1470 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                               | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|spmv                                      | (C+(A2*B'')')'    | 10     | 8      | 32     | -      | 32     | 1    | 2    | 0    | -    | -     | 1    | 1    | 
+|spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (PCIN+(A''*B2)')' | 10     | 8      | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
++------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1685.090 ; gain = 907.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1714.883 ; gain = 937.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1726.539 ; gain = 948.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+---------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|spmv        | grp_spmv_Pipeline_L2_fu_96/icmp_ln16_1_reg_405_pp0_iter2_reg_reg[0] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+---------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                               | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|spmv                                      | (C+(A'*B'')')'    | 30     | 18     | 48     | -      | 32     | 1    | 2    | 0    | -    | -     | 1    | 1    | 
+|spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (PCIN+(A''*B')')' | 30     | 18     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
++------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    26|
+|2     |DSP48E1 |     2|
+|4     |LUT1    |     2|
+|5     |LUT2    |    10|
+|6     |LUT3    |    23|
+|7     |LUT4    |   105|
+|8     |LUT5    |    41|
+|9     |LUT6    |    42|
+|10    |SRL16E  |     1|
+|11    |FDRE    |   237|
+|12    |FDSE    |     2|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1952.469 ; gain = 1100.641
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1952.469 ; gain = 1174.918
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1961.637 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1965.273 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c55c4a4e
+INFO: [Common 17-83] Releasing license: Synthesis
+146 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1965.273 ; gain = 1422.230
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1965.273 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/spmv_0_synth_1/spmv_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP spmv_0, cache-ID = 4a9338b5b816bd86
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1965.273 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/spmv_0_synth_1/spmv_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file spmv_0_utilization_synth.rpt -pb spmv_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 10:58:06 2026...
+[Mon Jun 15 10:58:09 2026] spmv_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:55 . Memory (MB): peak = 561.223 ; gain = 0.000
+[ OK  ] Run 'spmv_0_synth_1' -- synth_design Complete!
+
+========================================================
+ STEP 5 -- Generate IP RTL wrapper
+========================================================
+INFO: [IP_Flow 19-1706] Not generating 'Instantiation Template' target for IP 'spmv_0'. Target already exists and is up to date.
+[ OK  ] Wrapper generated -- synthesis top: 'spmv_0_sv'
+
+========================================================
+ STEP 6 -- Import clock constraint
+========================================================
+[ OK  ] Clock constraint file: ../../../srcs/vivado/const/project02_SpMV_00_baseline_clk.xdc
+[ OK  ] Constraint added: ../../../srcs/vivado/const/project02_SpMV_00_baseline_clk.xdc
+
+========================================================
+ STEP 7 -- Import testbench
+========================================================
+[ OK  ] Testbench file: ../../../srcs/vivado/project02_SpMV_00_baseline_tb.vhd
+[ OK  ] Testbench 'spmv_tb' added to sim_1
+
+========================================================
+ STEP 8 -- Top-level synthesis  (synth_1)
+========================================================
+[INFO ] Launching synth_1 (8 jobs)...
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Mon Jun 15 10:58:10 2026] Launched synth_1...
+Run output will be captured here: C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/synth_1/runme.log
+[Mon Jun 15 10:58:10 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log spmv_0_sv.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source spmv_0_sv.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Jun 15 10:58:12 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source spmv_0_sv.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 532.715 ; gain = 217.801
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Softwares/AMD-Design/2025.2/Vivado/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.cache/ip 
+Command: synth_design -top spmv_0_sv -part xc7z020clg484-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 32552
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1316.973 ; gain = 540.137
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'spmv_0_sv' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/spmv_0_sv.sv:55]
+INFO: [Synth 8-638] synthesizing module 'spmv_0' [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/synth_1/.Xil/Vivado-15876-Legion5-Stefano/realtime/spmv_0_stub.vhdl:60]
+INFO: [Synth 8-6155] done synthesizing module 'spmv_0_sv' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/spmv_0_sv.sv:55]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1435.008 ; gain = 658.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1435.008 ; gain = 658.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1435.008 ; gain = 658.172
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1435.008 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/spmv_0/spmv_0_in_context.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/spmv_0/spmv_0_in_context.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/const/project02_SpMV_00_baseline_clk.xdc]
+Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/const/project02_SpMV_00_baseline_clk.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1435.008 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1435.008 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1435.008 ; gain = 658.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1435.008 ; gain = 658.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1435.008 ; gain = 658.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1435.008 ; gain = 658.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1447.301 ; gain = 670.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1620.098 ; gain = 843.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1620.098 ; gain = 843.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1629.766 ; gain = 852.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1879.105 ; gain = 1102.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1879.105 ; gain = 1102.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1879.105 ; gain = 1102.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1879.105 ; gain = 1102.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1879.105 ; gain = 1102.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1879.105 ; gain = 1102.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |spmv_0        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |spmv |     1|
+|2     |IBUF |   183|
+|3     |OBUF |   134|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1879.105 ; gain = 1102.270
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1879.105 ; gain = 1102.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1879.105 ; gain = 1102.270
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1888.230 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1891.863 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 23bdaf44
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1891.863 ; gain = 1344.832
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1891.863 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.runs/synth_1/spmv_0_sv.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file spmv_0_sv_utilization_synth.rpt -pb spmv_0_sv_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 10:58:58 2026...
+[Mon Jun 15 10:59:00 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:50 . Memory (MB): peak = 561.223 ; gain = 0.000
+[ OK  ] Run 'synth_1' -- synth_design Complete!
+
+========================================================
+ STEP 9 -- Post-synthesis timing simulation + SAIF
+========================================================
+[INFO ] Simulation runtime : 1000ns
+[INFO ] SAIF output        : ./vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/dump.saif
+[INFO ] Launching post-synthesis timing simulation...
+Command: launch_simulation  -mode post-synthesis -type timing
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Mon Jun 15 10:59:00 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'spmv_tb'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis timing simulation in 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Softwares/AMD-Design/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-20] The target language is set to VHDL, it is not supported for simulation type 'timing', using Verilog instead.
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-3
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/spmv_0.dcp' for cell 'inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 816.293 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/const/project02_SpMV_00_baseline_clk.xdc]
+Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/const/project02_SpMV_00_baseline_clk.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 959.516 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 959.516 ; gain = 398.293
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/spmv_tb_time_synth.v"
+INFO: [SIM-utils-27] Writing SDF file...
+INFO: [SIM-utils-28] write_sdf -mode timesim -process_corner slow -force -file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/spmv_tb_time_synth.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/spmv_tb_time_synth.v
+INFO: [SIM-utils-37] SDF generated:C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/spmv_tb_time_synth.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Softwares/AMD-Design/2025.2/Vivado/data/xsim/xsim.ini' copied to run dir:'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spmv_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim'
+"xvlog --incr --relax -prj spmv_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/spmv_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spmv_0
+INFO: [VRFC 10-311] analyzing module spmv_0_spmv
+INFO: [VRFC 10-311] analyzing module spmv_0_spmv_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-311] analyzing module spmv_0_spmv_mac_muladd_10s_8s_32s_32_4_1
+INFO: [VRFC 10-311] analyzing module spmv_0_spmv_mac_muladd_10s_8s_32s_32_4_1_0
+INFO: [VRFC 10-311] analyzing module spmv_0_spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module spmv_0_spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_1
+INFO: [VRFC 10-311] analyzing module spmv_0_spmv_spmv_Pipeline_L2
+INFO: [VRFC 10-311] analyzing module spmv_0_sv
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj spmv_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project02_SpMV_00_baseline_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'spmv_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim'
+"xelab --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spmv_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spmv_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Softwares/AMD-Design/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spmv_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spmv_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <values_address0> does not exist in entity <spmv_0>.  Please compare the definition of block <spmv_0> to its component declaration and its instantion to detect the mismatch. [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project02_SpMV_00_baseline_tb.vhd:23]
+ERROR: [VRFC 10-718] formal port <values_ce0> does not exist in entity <spmv_0>.  Please compare the definition of block <spmv_0> to its component declaration and its instantion to detect the mismatch. [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project02_SpMV_00_baseline_tb.vhd:24]
+ERROR: [VRFC 10-718] formal port <values_q0> does not exist in entity <spmv_0>.  Please compare the definition of block <spmv_0> to its component declaration and its instantion to detect the mismatch. [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/srcs/vivado/project02_SpMV_00_baseline_tb.vhd:25]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/05_pipeline-unroll-2-cyclic-2-L2/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1436.250 ; gain = 875.027
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+    while executing
+"launch_simulation -mode post-synthesis -type timing"
+    (file "..\..\..\scripts\vivado_power_report.tcl" line 287)
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 10:59:18 2026...
