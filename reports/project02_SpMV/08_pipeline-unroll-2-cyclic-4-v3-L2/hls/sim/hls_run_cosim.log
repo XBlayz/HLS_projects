@@ -181,6 +181,10 @@ pdir_merged readonly
 pdir_merged readonly
 pdir_merged readonly
 pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
+pdir_merged readonly
 pdir_merged writeonly
 INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
 INFO: [COSIM 212-323] Starting verilog simulation. 
@@ -200,12 +204,20 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-U
 INFO: [VRFC 10-311] analyzing module AESL_automem_col_idx_0
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/AESL_automem_col_idx_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_col_idx_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/AESL_automem_col_idx_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_col_idx_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/AESL_automem_col_idx_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_col_idx_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/AESL_automem_row_ptr.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_row_ptr
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/AESL_automem_values_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_values_0
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/AESL_automem_values_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_values_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/AESL_automem_values_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_values_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/AESL_automem_values_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_values_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/AESL_automem_y.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_y
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/spmv.autotb.v" into library xil_defaultlib
@@ -219,6 +231,10 @@ INFO: [VRFC 10-311] analyzing module spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0
 INFO: [VRFC 10-311] analyzing module spmv_mac_muladd_10s_8s_32s_32_4_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/spmv_sparsemux_257_7_10_1_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module spmv_sparsemux_257_7_10_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/spmv_sparsemux_9_2_7_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spmv_sparsemux_9_2_7_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/spmv_sparsemux_9_2_8_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spmv_sparsemux_9_2_8_1_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/spmv_spmv_Pipeline_L2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module spmv_spmv_Pipeline_L2
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/projects/project02_SpMV/08_pipeline-unroll-2-cyclic-4-v3-L2/08_pipeline-unroll-2-cyclic-4-v3-L2_script/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
@@ -244,6 +260,8 @@ Compiling package xil_defaultlib.svr_pkg
 Compiling package xil_defaultlib.file_agent_pkg
 Compiling package xil_defaultlib.spmv_subsystem_pkg
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.spmv_sparsemux_9_2_7_1_1(din0_WI...
+Compiling module xil_defaultlib.spmv_sparsemux_9_2_8_1_1(din0_WI...
 Compiling module xil_defaultlib.spmv_sparsemux_257_7_10_1_1(din0...
 Compiling module xil_defaultlib.spmv_mac_muladd_10s_8s_32s_32_4_...
 Compiling module xil_defaultlib.spmv_mac_muladd_10s_8s_32s_32_4_...
@@ -255,13 +273,17 @@ Compiling module xil_defaultlib.svr_if(DATA_WIDTH=10)
 Compiling module xil_defaultlib.sv_module_top
 Compiling module xil_defaultlib.AESL_automem_values_0
 Compiling module xil_defaultlib.AESL_automem_values_1
+Compiling module xil_defaultlib.AESL_automem_values_2
+Compiling module xil_defaultlib.AESL_automem_values_3
 Compiling module xil_defaultlib.AESL_automem_col_idx_0
 Compiling module xil_defaultlib.AESL_automem_col_idx_1
+Compiling module xil_defaultlib.AESL_automem_col_idx_2
+Compiling module xil_defaultlib.AESL_automem_col_idx_3
 Compiling module xil_defaultlib.AESL_automem_row_ptr
 Compiling module xil_defaultlib.AESL_automem_y
 Compiling module xil_defaultlib.nodf_module_intf_default
 Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=5)
-Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=4)
+Compiling module xil_defaultlib.upc_loop_intf_default
 Compiling module xil_defaultlib.dataflow_monitor_1
 Compiling module xil_defaultlib.apatb_spmv_top
 Compiling module xil_defaultlib.glbl
@@ -271,7 +293,7 @@ Built simulation snapshot spmv
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Mon Jun 15 19:37:58 2026
+  **** Start of session at: Mon Jun 15 19:54:02 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -279,7 +301,7 @@ source xsim.dir/spmv/xsim_script.tcl
 # xsim {spmv} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=spmv_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -view {{spmv_dataflow_ana.wcfg}} -tclbatch {spmv.tcl} -protoinst {spmv.protoinst}
 INFO: [Wavedata 42-565] Reading protoinst file spmv.protoinst
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_spmv_top/AESL_inst_spmv//AESL_inst_spmv_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_spmv_top/AESL_inst_spmv/grp_spmv_Pipeline_L2_fu_1124/grp_spmv_Pipeline_L2_fu_1124_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_spmv_top/AESL_inst_spmv/grp_spmv_Pipeline_L2_fu_1132/grp_spmv_Pipeline_L2_fu_1132_activity
 Time resolution is 1 ps
 open_wave_config spmv_dataflow_ana.wcfg
 source spmv.tcl
@@ -299,6 +321,18 @@ source spmv.tcl
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/row_ptr_q0 -into $return_group -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/row_ptr_ce0 -into $return_group -color #ffff00 -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/row_ptr_address0 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_3_q1 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_3_ce1 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_3_address1 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_3_q0 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_3_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_3_address0 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_2_q1 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_2_ce1 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_2_address1 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_2_q0 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_2_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_2_address0 -into $return_group -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_1_q1 -into $return_group -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_1_ce1 -into $return_group -color #ffff00 -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/col_idx_1_address1 -into $return_group -radix hex
@@ -439,6 +473,18 @@ source spmv.tcl
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/x_2 -into $return_group -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/x_1 -into $return_group -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/x_0 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_3_q1 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_3_ce1 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_3_address1 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_3_q0 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_3_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_3_address0 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_2_q1 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_2_ce1 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_2_address1 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_2_q0 -into $return_group -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_2_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/AESL_inst_spmv/values_2_address0 -into $return_group -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/values_1_q1 -into $return_group -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/values_1_ce1 -into $return_group -color #ffff00 -radix hex
 ## add_wave /apatb_spmv_top/AESL_inst_spmv/values_1_address1 -into $return_group -radix hex
@@ -469,9 +515,13 @@ source spmv.tcl
 ## add_wave /apatb_spmv_top/done_cnt -into $tb_simstatus_group -radix hex
 ## add_wave /apatb_spmv_top/LENGTH_col_idx_0 -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_spmv_top/LENGTH_col_idx_1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_spmv_top/LENGTH_col_idx_2 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_spmv_top/LENGTH_col_idx_3 -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_spmv_top/LENGTH_row_ptr -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_spmv_top/LENGTH_values_0 -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_spmv_top/LENGTH_values_1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_spmv_top/LENGTH_values_2 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_spmv_top/LENGTH_values_3 -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_spmv_top/LENGTH_x_0 -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_spmv_top/LENGTH_x_1 -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_spmv_top/LENGTH_x_10 -into $tb_portdepth_group -radix hex
@@ -615,6 +665,18 @@ source spmv.tcl
 ## add_wave /apatb_spmv_top/row_ptr_q0 -into $tb_return_group -radix hex
 ## add_wave /apatb_spmv_top/row_ptr_ce0 -into $tb_return_group -color #ffff00 -radix hex
 ## add_wave /apatb_spmv_top/row_ptr_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/col_idx_3_q1 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/col_idx_3_ce1 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/col_idx_3_address1 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/col_idx_3_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/col_idx_3_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/col_idx_3_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/col_idx_2_q1 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/col_idx_2_ce1 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/col_idx_2_address1 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/col_idx_2_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/col_idx_2_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/col_idx_2_address0 -into $tb_return_group -radix hex
 ## add_wave /apatb_spmv_top/col_idx_1_q1 -into $tb_return_group -radix hex
 ## add_wave /apatb_spmv_top/col_idx_1_ce1 -into $tb_return_group -color #ffff00 -radix hex
 ## add_wave /apatb_spmv_top/col_idx_1_address1 -into $tb_return_group -radix hex
@@ -755,6 +817,18 @@ source spmv.tcl
 ## add_wave /apatb_spmv_top/x_2 -into $tb_return_group -radix hex
 ## add_wave /apatb_spmv_top/x_1 -into $tb_return_group -radix hex
 ## add_wave /apatb_spmv_top/x_0 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/values_3_q1 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/values_3_ce1 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/values_3_address1 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/values_3_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/values_3_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/values_3_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/values_2_q1 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/values_2_ce1 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/values_2_address1 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/values_2_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_spmv_top/values_2_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_spmv_top/values_2_address0 -into $tb_return_group -radix hex
 ## add_wave /apatb_spmv_top/values_1_q1 -into $tb_return_group -radix hex
 ## add_wave /apatb_spmv_top/values_1_ce1 -into $tb_return_group -color #ffff00 -radix hex
 ## add_wave /apatb_spmv_top/values_1_address1 -into $tb_return_group -radix hex
@@ -3896,12 +3970,12 @@ UVM_INFO D:/Softwares/AMD-Design/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 1 [0.00%] @ "125000"
-// RTL Simulation : 1 / 1 [100.00%] @ "19375000"
+// RTL Simulation : 1 / 1 [100.00%] @ "16815000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 19445 ns : File "D:/Softwares/AMD-Design/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+$finish called at time : 16885 ns : File "D:/Softwares/AMD-Design/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 ## quit
-INFO: xsimkernel Simulation Memory Usage: 317464 KB (Peak: 317464 KB), Simulation CPU Usage: 3764 ms
-INFO: [Common 17-206] Exiting xsim at Mon Jun 15 19:38:13 2026...
+INFO: xsimkernel Simulation Memory Usage: 316744 KB (Peak: 316744 KB), Simulation CPU Usage: 3671 ms
+INFO: [Common 17-206] Exiting xsim at Mon Jun 15 19:54:18 2026...
 INFO: [COSIM 212-316] Starting C post checking ...
 ==============================================================
                     SPMV TESTBENCH                            
@@ -4045,5 +4119,5 @@ ROW       DUT               REFERENCE         STATUS
 ==============================================================
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 88.508 seconds; peak allocated memory: 216.375 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 32s
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 82.635 seconds; peak allocated memory: 217.070 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 26s
