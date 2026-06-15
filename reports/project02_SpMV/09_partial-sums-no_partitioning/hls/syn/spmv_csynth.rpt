@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vitis HLS Report for 'spmv'
+================================================================
+* Date:           Mon Jun 15 12:51:28 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 12 2025)
+* Project:        09_partial-sums-no_partitioning_script
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.128 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |   Interval   | Pipeline|
+    |   min   |   max   |    min    |    max   |  min |  max  |   Type  |
+    +---------+---------+-----------+----------+------+-------+---------+
+    |     1537|    34049|  15.370 us|  0.340 ms|  1538|  34050|       no|
+    +---------+---------+-----------+----------+------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------+--------------------+---------+---------+-----------+----------+-----+-----+-------------------+
+        |                               |                    |  Latency (cycles) |  Latency (absolute)  |  Interval |      Pipeline     |
+        |            Instance           |       Module       |   min   |   max   |    min    |    max   | min | max |        Type       |
+        +-------------------------------+--------------------+---------+---------+-----------+----------+-----+-----+-------------------+
+        |grp_spmv_Pipeline_L2_1_fu_106  |spmv_Pipeline_L2_1  |        8|      262|  80.000 ns|  2.620 us|    0|    0|  loop pipeline stp|
+        +-------------------------------+--------------------+---------+---------+-----------+----------+-----+-----+-------------------+
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- L1      |     1536|    34048|  12 ~ 266|          -|          -|   128|        no|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    134|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    4|     545|    675|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     34|    -|
+|Register         |        -|    -|      86|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    4|     631|    843|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+--------------------+---------+----+-----+-----+-----+
+    |            Instance           |       Module       | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------+--------------------+---------+----+-----+-----+-----+
+    |grp_spmv_Pipeline_L2_1_fu_106  |spmv_Pipeline_L2_1  |        0|   4|  545|  675|    0|
+    +-------------------------------+--------------------+---------+----+-----+-----+-----+
+    |Total                          |                    |        0|   4|  545|  675|    0|
+    +-------------------------------+--------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln22_fu_138_p2    |         +|   0|  0|  15|           8|           1|
+    |add_ln50_1_fu_177_p2  |         +|   0|  0|  39|          32|          32|
+    |add_ln50_2_fu_183_p2  |         +|   0|  0|  32|          32|          32|
+    |add_ln50_fu_171_p2    |         +|   0|  0|  32|          32|          32|
+    |icmp_ln16_fu_132_p2   |      icmp|   0|  0|  16|           8|           9|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 134|         112|         106|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  25|          6|    1|          6|
+    |row_fu_48  |   9|          2|    8|         16|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  34|          8|    9|         22|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+----+----+-----+-----------+
+    |                    Name                    | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                   |   5|   0|    5|          0|
+    |end_reg_244                                 |  32|   0|   32|          0|
+    |grp_spmv_Pipeline_L2_1_fu_106_ap_start_reg  |   1|   0|    1|          0|
+    |row_fu_48                                   |   8|   0|    8|          0|
+    |start_reg_239                               |  32|   0|   32|          0|
+    |zext_ln16_reg_224                           |   8|   0|   64|         56|
+    +--------------------------------------------+----+----+-----+-----------+
+    |Total                                       |  86|   0|  142|         56|
+    +--------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------+-----+-----+------------+--------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|          spmv|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|          spmv|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|          spmv|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|          spmv|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|          spmv|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|          spmv|  return value|
+|values_address0   |  out|    9|   ap_memory|        values|         array|
+|values_ce0        |  out|    1|   ap_memory|        values|         array|
+|values_q0         |   in|    8|   ap_memory|        values|         array|
+|values_address1   |  out|    9|   ap_memory|        values|         array|
+|values_ce1        |  out|    1|   ap_memory|        values|         array|
+|values_q1         |   in|    8|   ap_memory|        values|         array|
+|x_address0        |  out|    7|   ap_memory|             x|         array|
+|x_ce0             |  out|    1|   ap_memory|             x|         array|
+|x_q0              |   in|   10|   ap_memory|             x|         array|
+|x_address1        |  out|    7|   ap_memory|             x|         array|
+|x_ce1             |  out|    1|   ap_memory|             x|         array|
+|x_q1              |   in|   10|   ap_memory|             x|         array|
+|col_idx_address0  |  out|    9|   ap_memory|       col_idx|         array|
+|col_idx_ce0       |  out|    1|   ap_memory|       col_idx|         array|
+|col_idx_q0        |   in|   32|   ap_memory|       col_idx|         array|
+|col_idx_address1  |  out|    9|   ap_memory|       col_idx|         array|
+|col_idx_ce1       |  out|    1|   ap_memory|       col_idx|         array|
+|col_idx_q1        |   in|   32|   ap_memory|       col_idx|         array|
+|row_ptr_address0  |  out|    8|   ap_memory|       row_ptr|         array|
+|row_ptr_ce0       |  out|    1|   ap_memory|       row_ptr|         array|
+|row_ptr_q0        |   in|   32|   ap_memory|       row_ptr|         array|
+|row_ptr_address1  |  out|    8|   ap_memory|       row_ptr|         array|
+|row_ptr_ce1       |  out|    1|   ap_memory|       row_ptr|         array|
+|row_ptr_q1        |   in|   32|   ap_memory|       row_ptr|         array|
+|y_address0        |  out|    7|   ap_memory|             y|         array|
+|y_ce0             |  out|    1|   ap_memory|             y|         array|
+|y_we0             |  out|    1|   ap_memory|             y|         array|
+|y_d0              |  out|   32|   ap_memory|             y|         array|
++------------------+-----+-----+------------+--------------+--------------+
+

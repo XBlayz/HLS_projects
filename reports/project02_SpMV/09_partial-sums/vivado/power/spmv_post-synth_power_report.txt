@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date             : Mon Jun 15 12:38:37 2026
+| Date             : Mon Jun 15 13:04:16 2026
 | Host             : Legion5-Stefano running 64-bit major release  (build 9200)
 | Command          : report_power -name spmv_0_power_1 -file ../../../reports/project02_SpMV/09_partial-sums/vivado/power/spmv_post-synth_power_report.txt -format text -hier all -xpe ../../../reports/project02_SpMV/09_partial-sums/vivado/power/spmv_post-synth_power_report.xml -rpx ../../../reports/project02_SpMV/09_partial-sums/vivado/power/spmv_post-synth_power_report.rpx
 | Design           : spmv_0
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Total On-Chip Power (W)  | 0.114                                                                                                                                                |
+| Total On-Chip Power (W)  | 0.115                                                                                                                                                |
 | Design Power Budget (W)  | Unspecified*                                                                                                                                         |
 | Power Budget Margin (W)  | NA                                                                                                                                                   |
-| Dynamic (W)              | 0.012                                                                                                                                                |
+| Dynamic (W)              | 0.013                                                                                                                                                |
 | Device Static (W)        | 0.103                                                                                                                                                |
 | Effective TJA (C/W)      | 11.5                                                                                                                                                 |
 | Max Ambient (C)          | 98.7                                                                                                                                                 |
@@ -41,7 +41,7 @@ Table of Contents
 | Confidence Level         | High                                                                                                                                                 |
 | Setting File             | ---                                                                                                                                                  |
 | Simulation Activity File | C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.sim/sim_1/synth/timing/xsim/dump.saif |
-| Design Nets Matched      | 97%   (4557/4697)                                                                                                                                    |
+| Design Nets Matched      | 92%   (6084/6594)                                                                                                                                    |
 +--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.012 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |     3051 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      904 |     53200 |            1.70 |
-|   Others                |     0.000 |       13 |       --- |             --- |
-|   Register              |     0.000 |     1537 |    106400 |            1.44 |
-|   CARRY4                |     0.000 |       34 |     13300 |            0.26 |
-|   LUT as Shift Register |     0.000 |        2 |     17400 |            0.01 |
-|   F7/F8 Muxes           |     0.000 |      500 |     53200 |            0.94 |
-| Signals                 |    <0.001 |     1989 |       --- |             --- |
-| DSPs                    |     0.000 |        2 |       220 |            0.91 |
+| Clocks                  |     0.013 |        3 |       --- |             --- |
+| Slice Logic             |    <0.001 |     4756 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |     1822 |     53200 |            3.42 |
+|   Register              |    <0.001 |     1703 |    106400 |            1.60 |
+|   Others                |     0.000 |       19 |       --- |             --- |
+|   LUT as Shift Register |     0.000 |        4 |     17400 |            0.02 |
+|   CARRY4                |     0.000 |       60 |     13300 |            0.45 |
+|   F7/F8 Muxes           |     0.000 |     1000 |     53200 |            1.88 |
+| Signals                 |    <0.001 |     2610 |       --- |             --- |
+| DSPs                    |     0.000 |        4 |       220 |            1.82 |
 | Static Power            |     0.103 |          |           |                 |
-| Total                   |     0.114 |          |           |                 |
+| Total                   |     0.115 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.012 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.020 |       0.013 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -149,9 +149,9 @@ Table of Contents
 +------------------------------------+-----------+---------+-----------+----------+------------+---------+-----------+-------+---------+
 | Name                               | Power (W) | Clock # | Clock (W) | Signal # | Signal (W) | Logic # | Logic (W) | Dsp # | Dsp (W) |
 +------------------------------------+-----------+---------+-----------+----------+------------+---------+-----------+-------+---------+
-| spmv_0                             |     0.012 |       3 |     0.012 |     1989 |     <0.001 |    3051 |    <0.001 |     2 |   0.000 |
-|   U0                               |     0.012 |       3 |     0.012 |     1989 |     <0.001 |    3050 |    <0.001 |     2 |   0.000 |
-|     grp_spmv_Pipeline_L2_1_fu_1128 |     0.001 |       3 |     0.001 |      608 |      0.000 |    1666 |    <0.001 |     2 |   0.000 |
+| spmv_0                             |     0.013 |       3 |     0.013 |     2610 |     <0.001 |    4756 |    <0.001 |     4 |   0.000 |
+|   U0                               |     0.013 |       3 |     0.013 |     2610 |     <0.001 |    4755 |    <0.001 |     4 |   0.000 |
+|     grp_spmv_Pipeline_L2_1_fu_1136 |     0.003 |       3 |     0.003 |     1229 |     <0.001 |    3371 |    <0.001 |     4 |   0.000 |
 +------------------------------------+-----------+---------+-----------+----------+------------+---------+-----------+-------+---------+
 
 

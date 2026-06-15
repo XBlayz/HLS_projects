@@ -270,7 +270,7 @@ Built simulation snapshot spmv
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Mon Jun 15 12:33:37 2026
+  **** Start of session at: Mon Jun 15 13:01:13 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -278,7 +278,7 @@ source xsim.dir/spmv/xsim_script.tcl
 # xsim {spmv} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=spmv_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -view {{spmv_dataflow_ana.wcfg}} -tclbatch {spmv.tcl} -protoinst {spmv.protoinst}
 INFO: [Wavedata 42-565] Reading protoinst file spmv.protoinst
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_spmv_top/AESL_inst_spmv//AESL_inst_spmv_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_spmv_top/AESL_inst_spmv/grp_spmv_Pipeline_L2_1_fu_1128/grp_spmv_Pipeline_L2_1_fu_1128_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_spmv_top/AESL_inst_spmv/grp_spmv_Pipeline_L2_1_fu_1136/grp_spmv_Pipeline_L2_1_fu_1136_activity
 Time resolution is 1 ps
 open_wave_config spmv_dataflow_ana.wcfg
 source spmv.tcl
@@ -3899,8 +3899,8 @@ UVM_INFO D:/Softwares/AMD-Design/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 13045 ns : File "D:/Softwares/AMD-Design/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 ## quit
-INFO: xsimkernel Simulation Memory Usage: 315968 KB (Peak: 315968 KB), Simulation CPU Usage: 4484 ms
-INFO: [Common 17-206] Exiting xsim at Mon Jun 15 12:33:51 2026...
+INFO: xsimkernel Simulation Memory Usage: 315436 KB (Peak: 315436 KB), Simulation CPU Usage: 4296 ms
+INFO: [Common 17-206] Exiting xsim at Mon Jun 15 13:01:27 2026...
 INFO: [COSIM 212-316] Starting C post checking ...
 ==============================================================
                     SPMV TESTBENCH                            
@@ -4044,5 +4044,5 @@ ROW       DUT               REFERENCE         STATUS
 ==============================================================
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 88.545 seconds; peak allocated memory: 216.688 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 32s
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 76.635 seconds; peak allocated memory: 216.398 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 20s

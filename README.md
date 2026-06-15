@@ -176,6 +176,7 @@ flowchart TD
 7. Pipeline + Unroll-2 + Cyclic-2 (v3) L2: `.\scripts\workflow.bat project02_SpMV 07_pipeline-unroll-2-cyclic-2-v3-L2 spmv /clk project02_SpMV_00_baseline_clk`
 8. Pipeline + Unroll-4 + Cyclic-2 (v3) L2: `.\scripts\workflow.bat project02_SpMV 08_pipeline-unroll-4-cyclic-2-v3-L2 spmv /clk project02_SpMV_00_baseline_clk`
 9. Partial sums: `.\scripts\workflow.bat project02_SpMV 09_partial-sums spmv /clk project02_SpMV_00_baseline_clk`
+   -   Partial sums (no partition): `.\scripts\workflow.bat project02_SpMV 09_partial-sums-no_partitioning spmv /clk project02_SpMV_00_baseline_clk`
 
 ### Revisions graph
 ```mermaid

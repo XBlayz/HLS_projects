@@ -8,7 +8,7 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Mon Jun 15 12:36:34 2026
+  **** Start of session at: Mon Jun 15 13:01:58 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -25,15 +25,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-3
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14880
+INFO: [Synth 8-7075] Helper process launched with PID 29012
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1315.891 ; gain = 539.910
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1317.457 ; gain = 541.641
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'spmv_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/synth/spmv_0.vhd:229]
 INFO: [Synth 8-3491] module 'spmv' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:11' bound to instance 'U0' of component 'spmv' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/synth/spmv_0.vhd:883]
 INFO: [Synth 8-638] synthesizing module 'spmv' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:184]
-INFO: [Synth 8-3491] module 'spmv_spmv_Pipeline_L2_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:11' bound to instance 'grp_spmv_Pipeline_L2_1_fu_1128' of component 'spmv_spmv_Pipeline_L2_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:567]
-INFO: [Synth 8-638] synthesizing module 'spmv_spmv_Pipeline_L2_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:180]
+INFO: [Synth 8-3491] module 'spmv_spmv_Pipeline_L2_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:11' bound to instance 'grp_spmv_Pipeline_L2_1_fu_1136' of component 'spmv_spmv_Pipeline_L2_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:577]
+INFO: [Synth 8-638] synthesizing module 'spmv_spmv_Pipeline_L2_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:184]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 1 - type: integer 
 	Parameter CASE0 bound to: 7'b0000000 
@@ -295,7 +295,7 @@ INFO: [Synth 8-638] synthesizing module 'spmv_spmv_Pipeline_L2_1' [c:/Users/stef
 	Parameter def_WIDTH bound to: 10 - type: integer 
 	Parameter sel_WIDTH bound to: 7 - type: integer 
 	Parameter dout_WIDTH bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'spmv_sparsemux_257_7_10_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_sparsemux_257_7_10_1_1.vhd:11' bound to instance 'sparsemux_257_7_10_1_1_U1' of component 'spmv_sparsemux_257_7_10_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:973]
+INFO: [Synth 8-3491] module 'spmv_sparsemux_257_7_10_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_sparsemux_257_7_10_1_1.vhd:11' bound to instance 'sparsemux_257_7_10_1_1_U1' of component 'spmv_sparsemux_257_7_10_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:1288]
 INFO: [Synth 8-638] synthesizing module 'spmv_sparsemux_257_7_10_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_sparsemux_257_7_10_1_1.vhd:798]
 INFO: [Synth 8-226] default block is never used [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_sparsemux_257_7_10_1_1.vhd:808]
 INFO: [Synth 8-256] done synthesizing module 'spmv_sparsemux_257_7_10_1_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_sparsemux_257_7_10_1_1.vhd:798]
@@ -560,14 +560,538 @@ INFO: [Synth 8-256] done synthesizing module 'spmv_sparsemux_257_7_10_1_1' (0#1)
 	Parameter def_WIDTH bound to: 10 - type: integer 
 	Parameter sel_WIDTH bound to: 7 - type: integer 
 	Parameter dout_WIDTH bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'spmv_sparsemux_257_7_10_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_sparsemux_257_7_10_1_1.vhd:11' bound to instance 'sparsemux_257_7_10_1_1_U2' of component 'spmv_sparsemux_257_7_10_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:1369]
+INFO: [Synth 8-3491] module 'spmv_sparsemux_257_7_10_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_sparsemux_257_7_10_1_1.vhd:11' bound to instance 'sparsemux_257_7_10_1_1_U2' of component 'spmv_sparsemux_257_7_10_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:1684]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 7'b0000000 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter CASE1 bound to: 7'b0000001 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter CASE2 bound to: 7'b0000010 
+	Parameter din2_WIDTH bound to: 10 - type: integer 
+	Parameter CASE3 bound to: 7'b0000011 
+	Parameter din3_WIDTH bound to: 10 - type: integer 
+	Parameter CASE4 bound to: 7'b0000100 
+	Parameter din4_WIDTH bound to: 10 - type: integer 
+	Parameter CASE5 bound to: 7'b0000101 
+	Parameter din5_WIDTH bound to: 10 - type: integer 
+	Parameter CASE6 bound to: 7'b0000110 
+	Parameter din6_WIDTH bound to: 10 - type: integer 
+	Parameter CASE7 bound to: 7'b0000111 
+	Parameter din7_WIDTH bound to: 10 - type: integer 
+	Parameter CASE8 bound to: 7'b0001000 
+	Parameter din8_WIDTH bound to: 10 - type: integer 
+	Parameter CASE9 bound to: 7'b0001001 
+	Parameter din9_WIDTH bound to: 10 - type: integer 
+	Parameter CASE10 bound to: 7'b0001010 
+	Parameter din10_WIDTH bound to: 10 - type: integer 
+	Parameter CASE11 bound to: 7'b0001011 
+	Parameter din11_WIDTH bound to: 10 - type: integer 
+	Parameter CASE12 bound to: 7'b0001100 
+	Parameter din12_WIDTH bound to: 10 - type: integer 
+	Parameter CASE13 bound to: 7'b0001101 
+	Parameter din13_WIDTH bound to: 10 - type: integer 
+	Parameter CASE14 bound to: 7'b0001110 
+	Parameter din14_WIDTH bound to: 10 - type: integer 
+	Parameter CASE15 bound to: 7'b0001111 
+	Parameter din15_WIDTH bound to: 10 - type: integer 
+	Parameter CASE16 bound to: 7'b0010000 
+	Parameter din16_WIDTH bound to: 10 - type: integer 
+	Parameter CASE17 bound to: 7'b0010001 
+	Parameter din17_WIDTH bound to: 10 - type: integer 
+	Parameter CASE18 bound to: 7'b0010010 
+	Parameter din18_WIDTH bound to: 10 - type: integer 
+	Parameter CASE19 bound to: 7'b0010011 
+	Parameter din19_WIDTH bound to: 10 - type: integer 
+	Parameter CASE20 bound to: 7'b0010100 
+	Parameter din20_WIDTH bound to: 10 - type: integer 
+	Parameter CASE21 bound to: 7'b0010101 
+	Parameter din21_WIDTH bound to: 10 - type: integer 
+	Parameter CASE22 bound to: 7'b0010110 
+	Parameter din22_WIDTH bound to: 10 - type: integer 
+	Parameter CASE23 bound to: 7'b0010111 
+	Parameter din23_WIDTH bound to: 10 - type: integer 
+	Parameter CASE24 bound to: 7'b0011000 
+	Parameter din24_WIDTH bound to: 10 - type: integer 
+	Parameter CASE25 bound to: 7'b0011001 
+	Parameter din25_WIDTH bound to: 10 - type: integer 
+	Parameter CASE26 bound to: 7'b0011010 
+	Parameter din26_WIDTH bound to: 10 - type: integer 
+	Parameter CASE27 bound to: 7'b0011011 
+	Parameter din27_WIDTH bound to: 10 - type: integer 
+	Parameter CASE28 bound to: 7'b0011100 
+	Parameter din28_WIDTH bound to: 10 - type: integer 
+	Parameter CASE29 bound to: 7'b0011101 
+	Parameter din29_WIDTH bound to: 10 - type: integer 
+	Parameter CASE30 bound to: 7'b0011110 
+	Parameter din30_WIDTH bound to: 10 - type: integer 
+	Parameter CASE31 bound to: 7'b0011111 
+	Parameter din31_WIDTH bound to: 10 - type: integer 
+	Parameter CASE32 bound to: 7'b0100000 
+	Parameter din32_WIDTH bound to: 10 - type: integer 
+	Parameter CASE33 bound to: 7'b0100001 
+	Parameter din33_WIDTH bound to: 10 - type: integer 
+	Parameter CASE34 bound to: 7'b0100010 
+	Parameter din34_WIDTH bound to: 10 - type: integer 
+	Parameter CASE35 bound to: 7'b0100011 
+	Parameter din35_WIDTH bound to: 10 - type: integer 
+	Parameter CASE36 bound to: 7'b0100100 
+	Parameter din36_WIDTH bound to: 10 - type: integer 
+	Parameter CASE37 bound to: 7'b0100101 
+	Parameter din37_WIDTH bound to: 10 - type: integer 
+	Parameter CASE38 bound to: 7'b0100110 
+	Parameter din38_WIDTH bound to: 10 - type: integer 
+	Parameter CASE39 bound to: 7'b0100111 
+	Parameter din39_WIDTH bound to: 10 - type: integer 
+	Parameter CASE40 bound to: 7'b0101000 
+	Parameter din40_WIDTH bound to: 10 - type: integer 
+	Parameter CASE41 bound to: 7'b0101001 
+	Parameter din41_WIDTH bound to: 10 - type: integer 
+	Parameter CASE42 bound to: 7'b0101010 
+	Parameter din42_WIDTH bound to: 10 - type: integer 
+	Parameter CASE43 bound to: 7'b0101011 
+	Parameter din43_WIDTH bound to: 10 - type: integer 
+	Parameter CASE44 bound to: 7'b0101100 
+	Parameter din44_WIDTH bound to: 10 - type: integer 
+	Parameter CASE45 bound to: 7'b0101101 
+	Parameter din45_WIDTH bound to: 10 - type: integer 
+	Parameter CASE46 bound to: 7'b0101110 
+	Parameter din46_WIDTH bound to: 10 - type: integer 
+	Parameter CASE47 bound to: 7'b0101111 
+	Parameter din47_WIDTH bound to: 10 - type: integer 
+	Parameter CASE48 bound to: 7'b0110000 
+	Parameter din48_WIDTH bound to: 10 - type: integer 
+	Parameter CASE49 bound to: 7'b0110001 
+	Parameter din49_WIDTH bound to: 10 - type: integer 
+	Parameter CASE50 bound to: 7'b0110010 
+	Parameter din50_WIDTH bound to: 10 - type: integer 
+	Parameter CASE51 bound to: 7'b0110011 
+	Parameter din51_WIDTH bound to: 10 - type: integer 
+	Parameter CASE52 bound to: 7'b0110100 
+	Parameter din52_WIDTH bound to: 10 - type: integer 
+	Parameter CASE53 bound to: 7'b0110101 
+	Parameter din53_WIDTH bound to: 10 - type: integer 
+	Parameter CASE54 bound to: 7'b0110110 
+	Parameter din54_WIDTH bound to: 10 - type: integer 
+	Parameter CASE55 bound to: 7'b0110111 
+	Parameter din55_WIDTH bound to: 10 - type: integer 
+	Parameter CASE56 bound to: 7'b0111000 
+	Parameter din56_WIDTH bound to: 10 - type: integer 
+	Parameter CASE57 bound to: 7'b0111001 
+	Parameter din57_WIDTH bound to: 10 - type: integer 
+	Parameter CASE58 bound to: 7'b0111010 
+	Parameter din58_WIDTH bound to: 10 - type: integer 
+	Parameter CASE59 bound to: 7'b0111011 
+	Parameter din59_WIDTH bound to: 10 - type: integer 
+	Parameter CASE60 bound to: 7'b0111100 
+	Parameter din60_WIDTH bound to: 10 - type: integer 
+	Parameter CASE61 bound to: 7'b0111101 
+	Parameter din61_WIDTH bound to: 10 - type: integer 
+	Parameter CASE62 bound to: 7'b0111110 
+	Parameter din62_WIDTH bound to: 10 - type: integer 
+	Parameter CASE63 bound to: 7'b0111111 
+	Parameter din63_WIDTH bound to: 10 - type: integer 
+	Parameter CASE64 bound to: 7'b1000000 
+	Parameter din64_WIDTH bound to: 10 - type: integer 
+	Parameter CASE65 bound to: 7'b1000001 
+	Parameter din65_WIDTH bound to: 10 - type: integer 
+	Parameter CASE66 bound to: 7'b1000010 
+	Parameter din66_WIDTH bound to: 10 - type: integer 
+	Parameter CASE67 bound to: 7'b1000011 
+	Parameter din67_WIDTH bound to: 10 - type: integer 
+	Parameter CASE68 bound to: 7'b1000100 
+	Parameter din68_WIDTH bound to: 10 - type: integer 
+	Parameter CASE69 bound to: 7'b1000101 
+	Parameter din69_WIDTH bound to: 10 - type: integer 
+	Parameter CASE70 bound to: 7'b1000110 
+	Parameter din70_WIDTH bound to: 10 - type: integer 
+	Parameter CASE71 bound to: 7'b1000111 
+	Parameter din71_WIDTH bound to: 10 - type: integer 
+	Parameter CASE72 bound to: 7'b1001000 
+	Parameter din72_WIDTH bound to: 10 - type: integer 
+	Parameter CASE73 bound to: 7'b1001001 
+	Parameter din73_WIDTH bound to: 10 - type: integer 
+	Parameter CASE74 bound to: 7'b1001010 
+	Parameter din74_WIDTH bound to: 10 - type: integer 
+	Parameter CASE75 bound to: 7'b1001011 
+	Parameter din75_WIDTH bound to: 10 - type: integer 
+	Parameter CASE76 bound to: 7'b1001100 
+	Parameter din76_WIDTH bound to: 10 - type: integer 
+	Parameter CASE77 bound to: 7'b1001101 
+	Parameter din77_WIDTH bound to: 10 - type: integer 
+	Parameter CASE78 bound to: 7'b1001110 
+	Parameter din78_WIDTH bound to: 10 - type: integer 
+	Parameter CASE79 bound to: 7'b1001111 
+	Parameter din79_WIDTH bound to: 10 - type: integer 
+	Parameter CASE80 bound to: 7'b1010000 
+	Parameter din80_WIDTH bound to: 10 - type: integer 
+	Parameter CASE81 bound to: 7'b1010001 
+	Parameter din81_WIDTH bound to: 10 - type: integer 
+	Parameter CASE82 bound to: 7'b1010010 
+	Parameter din82_WIDTH bound to: 10 - type: integer 
+	Parameter CASE83 bound to: 7'b1010011 
+	Parameter din83_WIDTH bound to: 10 - type: integer 
+	Parameter CASE84 bound to: 7'b1010100 
+	Parameter din84_WIDTH bound to: 10 - type: integer 
+	Parameter CASE85 bound to: 7'b1010101 
+	Parameter din85_WIDTH bound to: 10 - type: integer 
+	Parameter CASE86 bound to: 7'b1010110 
+	Parameter din86_WIDTH bound to: 10 - type: integer 
+	Parameter CASE87 bound to: 7'b1010111 
+	Parameter din87_WIDTH bound to: 10 - type: integer 
+	Parameter CASE88 bound to: 7'b1011000 
+	Parameter din88_WIDTH bound to: 10 - type: integer 
+	Parameter CASE89 bound to: 7'b1011001 
+	Parameter din89_WIDTH bound to: 10 - type: integer 
+	Parameter CASE90 bound to: 7'b1011010 
+	Parameter din90_WIDTH bound to: 10 - type: integer 
+	Parameter CASE91 bound to: 7'b1011011 
+	Parameter din91_WIDTH bound to: 10 - type: integer 
+	Parameter CASE92 bound to: 7'b1011100 
+	Parameter din92_WIDTH bound to: 10 - type: integer 
+	Parameter CASE93 bound to: 7'b1011101 
+	Parameter din93_WIDTH bound to: 10 - type: integer 
+	Parameter CASE94 bound to: 7'b1011110 
+	Parameter din94_WIDTH bound to: 10 - type: integer 
+	Parameter CASE95 bound to: 7'b1011111 
+	Parameter din95_WIDTH bound to: 10 - type: integer 
+	Parameter CASE96 bound to: 7'b1100000 
+	Parameter din96_WIDTH bound to: 10 - type: integer 
+	Parameter CASE97 bound to: 7'b1100001 
+	Parameter din97_WIDTH bound to: 10 - type: integer 
+	Parameter CASE98 bound to: 7'b1100010 
+	Parameter din98_WIDTH bound to: 10 - type: integer 
+	Parameter CASE99 bound to: 7'b1100011 
+	Parameter din99_WIDTH bound to: 10 - type: integer 
+	Parameter CASE100 bound to: 7'b1100100 
+	Parameter din100_WIDTH bound to: 10 - type: integer 
+	Parameter CASE101 bound to: 7'b1100101 
+	Parameter din101_WIDTH bound to: 10 - type: integer 
+	Parameter CASE102 bound to: 7'b1100110 
+	Parameter din102_WIDTH bound to: 10 - type: integer 
+	Parameter CASE103 bound to: 7'b1100111 
+	Parameter din103_WIDTH bound to: 10 - type: integer 
+	Parameter CASE104 bound to: 7'b1101000 
+	Parameter din104_WIDTH bound to: 10 - type: integer 
+	Parameter CASE105 bound to: 7'b1101001 
+	Parameter din105_WIDTH bound to: 10 - type: integer 
+	Parameter CASE106 bound to: 7'b1101010 
+	Parameter din106_WIDTH bound to: 10 - type: integer 
+	Parameter CASE107 bound to: 7'b1101011 
+	Parameter din107_WIDTH bound to: 10 - type: integer 
+	Parameter CASE108 bound to: 7'b1101100 
+	Parameter din108_WIDTH bound to: 10 - type: integer 
+	Parameter CASE109 bound to: 7'b1101101 
+	Parameter din109_WIDTH bound to: 10 - type: integer 
+	Parameter CASE110 bound to: 7'b1101110 
+	Parameter din110_WIDTH bound to: 10 - type: integer 
+	Parameter CASE111 bound to: 7'b1101111 
+	Parameter din111_WIDTH bound to: 10 - type: integer 
+	Parameter CASE112 bound to: 7'b1110000 
+	Parameter din112_WIDTH bound to: 10 - type: integer 
+	Parameter CASE113 bound to: 7'b1110001 
+	Parameter din113_WIDTH bound to: 10 - type: integer 
+	Parameter CASE114 bound to: 7'b1110010 
+	Parameter din114_WIDTH bound to: 10 - type: integer 
+	Parameter CASE115 bound to: 7'b1110011 
+	Parameter din115_WIDTH bound to: 10 - type: integer 
+	Parameter CASE116 bound to: 7'b1110100 
+	Parameter din116_WIDTH bound to: 10 - type: integer 
+	Parameter CASE117 bound to: 7'b1110101 
+	Parameter din117_WIDTH bound to: 10 - type: integer 
+	Parameter CASE118 bound to: 7'b1110110 
+	Parameter din118_WIDTH bound to: 10 - type: integer 
+	Parameter CASE119 bound to: 7'b1110111 
+	Parameter din119_WIDTH bound to: 10 - type: integer 
+	Parameter CASE120 bound to: 7'b1111000 
+	Parameter din120_WIDTH bound to: 10 - type: integer 
+	Parameter CASE121 bound to: 7'b1111001 
+	Parameter din121_WIDTH bound to: 10 - type: integer 
+	Parameter CASE122 bound to: 7'b1111010 
+	Parameter din122_WIDTH bound to: 10 - type: integer 
+	Parameter CASE123 bound to: 7'b1111011 
+	Parameter din123_WIDTH bound to: 10 - type: integer 
+	Parameter CASE124 bound to: 7'b1111100 
+	Parameter din124_WIDTH bound to: 10 - type: integer 
+	Parameter CASE125 bound to: 7'b1111101 
+	Parameter din125_WIDTH bound to: 10 - type: integer 
+	Parameter CASE126 bound to: 7'b1111110 
+	Parameter din126_WIDTH bound to: 10 - type: integer 
+	Parameter CASE127 bound to: 7'b1111111 
+	Parameter din127_WIDTH bound to: 10 - type: integer 
+	Parameter def_WIDTH bound to: 10 - type: integer 
+	Parameter sel_WIDTH bound to: 7 - type: integer 
+	Parameter dout_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'spmv_sparsemux_257_7_10_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_sparsemux_257_7_10_1_1.vhd:11' bound to instance 'sparsemux_257_7_10_1_1_U3' of component 'spmv_sparsemux_257_7_10_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:2080]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 7'b0000000 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter CASE1 bound to: 7'b0000001 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter CASE2 bound to: 7'b0000010 
+	Parameter din2_WIDTH bound to: 10 - type: integer 
+	Parameter CASE3 bound to: 7'b0000011 
+	Parameter din3_WIDTH bound to: 10 - type: integer 
+	Parameter CASE4 bound to: 7'b0000100 
+	Parameter din4_WIDTH bound to: 10 - type: integer 
+	Parameter CASE5 bound to: 7'b0000101 
+	Parameter din5_WIDTH bound to: 10 - type: integer 
+	Parameter CASE6 bound to: 7'b0000110 
+	Parameter din6_WIDTH bound to: 10 - type: integer 
+	Parameter CASE7 bound to: 7'b0000111 
+	Parameter din7_WIDTH bound to: 10 - type: integer 
+	Parameter CASE8 bound to: 7'b0001000 
+	Parameter din8_WIDTH bound to: 10 - type: integer 
+	Parameter CASE9 bound to: 7'b0001001 
+	Parameter din9_WIDTH bound to: 10 - type: integer 
+	Parameter CASE10 bound to: 7'b0001010 
+	Parameter din10_WIDTH bound to: 10 - type: integer 
+	Parameter CASE11 bound to: 7'b0001011 
+	Parameter din11_WIDTH bound to: 10 - type: integer 
+	Parameter CASE12 bound to: 7'b0001100 
+	Parameter din12_WIDTH bound to: 10 - type: integer 
+	Parameter CASE13 bound to: 7'b0001101 
+	Parameter din13_WIDTH bound to: 10 - type: integer 
+	Parameter CASE14 bound to: 7'b0001110 
+	Parameter din14_WIDTH bound to: 10 - type: integer 
+	Parameter CASE15 bound to: 7'b0001111 
+	Parameter din15_WIDTH bound to: 10 - type: integer 
+	Parameter CASE16 bound to: 7'b0010000 
+	Parameter din16_WIDTH bound to: 10 - type: integer 
+	Parameter CASE17 bound to: 7'b0010001 
+	Parameter din17_WIDTH bound to: 10 - type: integer 
+	Parameter CASE18 bound to: 7'b0010010 
+	Parameter din18_WIDTH bound to: 10 - type: integer 
+	Parameter CASE19 bound to: 7'b0010011 
+	Parameter din19_WIDTH bound to: 10 - type: integer 
+	Parameter CASE20 bound to: 7'b0010100 
+	Parameter din20_WIDTH bound to: 10 - type: integer 
+	Parameter CASE21 bound to: 7'b0010101 
+	Parameter din21_WIDTH bound to: 10 - type: integer 
+	Parameter CASE22 bound to: 7'b0010110 
+	Parameter din22_WIDTH bound to: 10 - type: integer 
+	Parameter CASE23 bound to: 7'b0010111 
+	Parameter din23_WIDTH bound to: 10 - type: integer 
+	Parameter CASE24 bound to: 7'b0011000 
+	Parameter din24_WIDTH bound to: 10 - type: integer 
+	Parameter CASE25 bound to: 7'b0011001 
+	Parameter din25_WIDTH bound to: 10 - type: integer 
+	Parameter CASE26 bound to: 7'b0011010 
+	Parameter din26_WIDTH bound to: 10 - type: integer 
+	Parameter CASE27 bound to: 7'b0011011 
+	Parameter din27_WIDTH bound to: 10 - type: integer 
+	Parameter CASE28 bound to: 7'b0011100 
+	Parameter din28_WIDTH bound to: 10 - type: integer 
+	Parameter CASE29 bound to: 7'b0011101 
+	Parameter din29_WIDTH bound to: 10 - type: integer 
+	Parameter CASE30 bound to: 7'b0011110 
+	Parameter din30_WIDTH bound to: 10 - type: integer 
+	Parameter CASE31 bound to: 7'b0011111 
+	Parameter din31_WIDTH bound to: 10 - type: integer 
+	Parameter CASE32 bound to: 7'b0100000 
+	Parameter din32_WIDTH bound to: 10 - type: integer 
+	Parameter CASE33 bound to: 7'b0100001 
+	Parameter din33_WIDTH bound to: 10 - type: integer 
+	Parameter CASE34 bound to: 7'b0100010 
+	Parameter din34_WIDTH bound to: 10 - type: integer 
+	Parameter CASE35 bound to: 7'b0100011 
+	Parameter din35_WIDTH bound to: 10 - type: integer 
+	Parameter CASE36 bound to: 7'b0100100 
+	Parameter din36_WIDTH bound to: 10 - type: integer 
+	Parameter CASE37 bound to: 7'b0100101 
+	Parameter din37_WIDTH bound to: 10 - type: integer 
+	Parameter CASE38 bound to: 7'b0100110 
+	Parameter din38_WIDTH bound to: 10 - type: integer 
+	Parameter CASE39 bound to: 7'b0100111 
+	Parameter din39_WIDTH bound to: 10 - type: integer 
+	Parameter CASE40 bound to: 7'b0101000 
+	Parameter din40_WIDTH bound to: 10 - type: integer 
+	Parameter CASE41 bound to: 7'b0101001 
+	Parameter din41_WIDTH bound to: 10 - type: integer 
+	Parameter CASE42 bound to: 7'b0101010 
+	Parameter din42_WIDTH bound to: 10 - type: integer 
+	Parameter CASE43 bound to: 7'b0101011 
+	Parameter din43_WIDTH bound to: 10 - type: integer 
+	Parameter CASE44 bound to: 7'b0101100 
+	Parameter din44_WIDTH bound to: 10 - type: integer 
+	Parameter CASE45 bound to: 7'b0101101 
+	Parameter din45_WIDTH bound to: 10 - type: integer 
+	Parameter CASE46 bound to: 7'b0101110 
+	Parameter din46_WIDTH bound to: 10 - type: integer 
+	Parameter CASE47 bound to: 7'b0101111 
+	Parameter din47_WIDTH bound to: 10 - type: integer 
+	Parameter CASE48 bound to: 7'b0110000 
+	Parameter din48_WIDTH bound to: 10 - type: integer 
+	Parameter CASE49 bound to: 7'b0110001 
+	Parameter din49_WIDTH bound to: 10 - type: integer 
+	Parameter CASE50 bound to: 7'b0110010 
+	Parameter din50_WIDTH bound to: 10 - type: integer 
+	Parameter CASE51 bound to: 7'b0110011 
+	Parameter din51_WIDTH bound to: 10 - type: integer 
+	Parameter CASE52 bound to: 7'b0110100 
+	Parameter din52_WIDTH bound to: 10 - type: integer 
+	Parameter CASE53 bound to: 7'b0110101 
+	Parameter din53_WIDTH bound to: 10 - type: integer 
+	Parameter CASE54 bound to: 7'b0110110 
+	Parameter din54_WIDTH bound to: 10 - type: integer 
+	Parameter CASE55 bound to: 7'b0110111 
+	Parameter din55_WIDTH bound to: 10 - type: integer 
+	Parameter CASE56 bound to: 7'b0111000 
+	Parameter din56_WIDTH bound to: 10 - type: integer 
+	Parameter CASE57 bound to: 7'b0111001 
+	Parameter din57_WIDTH bound to: 10 - type: integer 
+	Parameter CASE58 bound to: 7'b0111010 
+	Parameter din58_WIDTH bound to: 10 - type: integer 
+	Parameter CASE59 bound to: 7'b0111011 
+	Parameter din59_WIDTH bound to: 10 - type: integer 
+	Parameter CASE60 bound to: 7'b0111100 
+	Parameter din60_WIDTH bound to: 10 - type: integer 
+	Parameter CASE61 bound to: 7'b0111101 
+	Parameter din61_WIDTH bound to: 10 - type: integer 
+	Parameter CASE62 bound to: 7'b0111110 
+	Parameter din62_WIDTH bound to: 10 - type: integer 
+	Parameter CASE63 bound to: 7'b0111111 
+	Parameter din63_WIDTH bound to: 10 - type: integer 
+	Parameter CASE64 bound to: 7'b1000000 
+	Parameter din64_WIDTH bound to: 10 - type: integer 
+	Parameter CASE65 bound to: 7'b1000001 
+	Parameter din65_WIDTH bound to: 10 - type: integer 
+	Parameter CASE66 bound to: 7'b1000010 
+	Parameter din66_WIDTH bound to: 10 - type: integer 
+	Parameter CASE67 bound to: 7'b1000011 
+	Parameter din67_WIDTH bound to: 10 - type: integer 
+	Parameter CASE68 bound to: 7'b1000100 
+	Parameter din68_WIDTH bound to: 10 - type: integer 
+	Parameter CASE69 bound to: 7'b1000101 
+	Parameter din69_WIDTH bound to: 10 - type: integer 
+	Parameter CASE70 bound to: 7'b1000110 
+	Parameter din70_WIDTH bound to: 10 - type: integer 
+	Parameter CASE71 bound to: 7'b1000111 
+	Parameter din71_WIDTH bound to: 10 - type: integer 
+	Parameter CASE72 bound to: 7'b1001000 
+	Parameter din72_WIDTH bound to: 10 - type: integer 
+	Parameter CASE73 bound to: 7'b1001001 
+	Parameter din73_WIDTH bound to: 10 - type: integer 
+	Parameter CASE74 bound to: 7'b1001010 
+	Parameter din74_WIDTH bound to: 10 - type: integer 
+	Parameter CASE75 bound to: 7'b1001011 
+	Parameter din75_WIDTH bound to: 10 - type: integer 
+	Parameter CASE76 bound to: 7'b1001100 
+	Parameter din76_WIDTH bound to: 10 - type: integer 
+	Parameter CASE77 bound to: 7'b1001101 
+	Parameter din77_WIDTH bound to: 10 - type: integer 
+	Parameter CASE78 bound to: 7'b1001110 
+	Parameter din78_WIDTH bound to: 10 - type: integer 
+	Parameter CASE79 bound to: 7'b1001111 
+	Parameter din79_WIDTH bound to: 10 - type: integer 
+	Parameter CASE80 bound to: 7'b1010000 
+	Parameter din80_WIDTH bound to: 10 - type: integer 
+	Parameter CASE81 bound to: 7'b1010001 
+	Parameter din81_WIDTH bound to: 10 - type: integer 
+	Parameter CASE82 bound to: 7'b1010010 
+	Parameter din82_WIDTH bound to: 10 - type: integer 
+	Parameter CASE83 bound to: 7'b1010011 
+	Parameter din83_WIDTH bound to: 10 - type: integer 
+	Parameter CASE84 bound to: 7'b1010100 
+	Parameter din84_WIDTH bound to: 10 - type: integer 
+	Parameter CASE85 bound to: 7'b1010101 
+	Parameter din85_WIDTH bound to: 10 - type: integer 
+	Parameter CASE86 bound to: 7'b1010110 
+	Parameter din86_WIDTH bound to: 10 - type: integer 
+	Parameter CASE87 bound to: 7'b1010111 
+	Parameter din87_WIDTH bound to: 10 - type: integer 
+	Parameter CASE88 bound to: 7'b1011000 
+	Parameter din88_WIDTH bound to: 10 - type: integer 
+	Parameter CASE89 bound to: 7'b1011001 
+	Parameter din89_WIDTH bound to: 10 - type: integer 
+	Parameter CASE90 bound to: 7'b1011010 
+	Parameter din90_WIDTH bound to: 10 - type: integer 
+	Parameter CASE91 bound to: 7'b1011011 
+	Parameter din91_WIDTH bound to: 10 - type: integer 
+	Parameter CASE92 bound to: 7'b1011100 
+	Parameter din92_WIDTH bound to: 10 - type: integer 
+	Parameter CASE93 bound to: 7'b1011101 
+	Parameter din93_WIDTH bound to: 10 - type: integer 
+	Parameter CASE94 bound to: 7'b1011110 
+	Parameter din94_WIDTH bound to: 10 - type: integer 
+	Parameter CASE95 bound to: 7'b1011111 
+	Parameter din95_WIDTH bound to: 10 - type: integer 
+	Parameter CASE96 bound to: 7'b1100000 
+	Parameter din96_WIDTH bound to: 10 - type: integer 
+	Parameter CASE97 bound to: 7'b1100001 
+	Parameter din97_WIDTH bound to: 10 - type: integer 
+	Parameter CASE98 bound to: 7'b1100010 
+	Parameter din98_WIDTH bound to: 10 - type: integer 
+	Parameter CASE99 bound to: 7'b1100011 
+	Parameter din99_WIDTH bound to: 10 - type: integer 
+	Parameter CASE100 bound to: 7'b1100100 
+	Parameter din100_WIDTH bound to: 10 - type: integer 
+	Parameter CASE101 bound to: 7'b1100101 
+	Parameter din101_WIDTH bound to: 10 - type: integer 
+	Parameter CASE102 bound to: 7'b1100110 
+	Parameter din102_WIDTH bound to: 10 - type: integer 
+	Parameter CASE103 bound to: 7'b1100111 
+	Parameter din103_WIDTH bound to: 10 - type: integer 
+	Parameter CASE104 bound to: 7'b1101000 
+	Parameter din104_WIDTH bound to: 10 - type: integer 
+	Parameter CASE105 bound to: 7'b1101001 
+	Parameter din105_WIDTH bound to: 10 - type: integer 
+	Parameter CASE106 bound to: 7'b1101010 
+	Parameter din106_WIDTH bound to: 10 - type: integer 
+	Parameter CASE107 bound to: 7'b1101011 
+	Parameter din107_WIDTH bound to: 10 - type: integer 
+	Parameter CASE108 bound to: 7'b1101100 
+	Parameter din108_WIDTH bound to: 10 - type: integer 
+	Parameter CASE109 bound to: 7'b1101101 
+	Parameter din109_WIDTH bound to: 10 - type: integer 
+	Parameter CASE110 bound to: 7'b1101110 
+	Parameter din110_WIDTH bound to: 10 - type: integer 
+	Parameter CASE111 bound to: 7'b1101111 
+	Parameter din111_WIDTH bound to: 10 - type: integer 
+	Parameter CASE112 bound to: 7'b1110000 
+	Parameter din112_WIDTH bound to: 10 - type: integer 
+	Parameter CASE113 bound to: 7'b1110001 
+	Parameter din113_WIDTH bound to: 10 - type: integer 
+	Parameter CASE114 bound to: 7'b1110010 
+	Parameter din114_WIDTH bound to: 10 - type: integer 
+	Parameter CASE115 bound to: 7'b1110011 
+	Parameter din115_WIDTH bound to: 10 - type: integer 
+	Parameter CASE116 bound to: 7'b1110100 
+	Parameter din116_WIDTH bound to: 10 - type: integer 
+	Parameter CASE117 bound to: 7'b1110101 
+	Parameter din117_WIDTH bound to: 10 - type: integer 
+	Parameter CASE118 bound to: 7'b1110110 
+	Parameter din118_WIDTH bound to: 10 - type: integer 
+	Parameter CASE119 bound to: 7'b1110111 
+	Parameter din119_WIDTH bound to: 10 - type: integer 
+	Parameter CASE120 bound to: 7'b1111000 
+	Parameter din120_WIDTH bound to: 10 - type: integer 
+	Parameter CASE121 bound to: 7'b1111001 
+	Parameter din121_WIDTH bound to: 10 - type: integer 
+	Parameter CASE122 bound to: 7'b1111010 
+	Parameter din122_WIDTH bound to: 10 - type: integer 
+	Parameter CASE123 bound to: 7'b1111011 
+	Parameter din123_WIDTH bound to: 10 - type: integer 
+	Parameter CASE124 bound to: 7'b1111100 
+	Parameter din124_WIDTH bound to: 10 - type: integer 
+	Parameter CASE125 bound to: 7'b1111101 
+	Parameter din125_WIDTH bound to: 10 - type: integer 
+	Parameter CASE126 bound to: 7'b1111110 
+	Parameter din126_WIDTH bound to: 10 - type: integer 
+	Parameter CASE127 bound to: 7'b1111111 
+	Parameter din127_WIDTH bound to: 10 - type: integer 
+	Parameter def_WIDTH bound to: 10 - type: integer 
+	Parameter sel_WIDTH bound to: 7 - type: integer 
+	Parameter dout_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'spmv_sparsemux_257_7_10_1_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_sparsemux_257_7_10_1_1.vhd:11' bound to instance 'sparsemux_257_7_10_1_1_U4' of component 'spmv_sparsemux_257_7_10_1_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:2476]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 4 - type: integer 
 	Parameter din0_WIDTH bound to: 10 - type: integer 
 	Parameter din1_WIDTH bound to: 8 - type: integer 
 	Parameter din2_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:59' bound to instance 'mac_muladd_10s_8s_32s_32_4_1_U3' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:1765]
+INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:59' bound to instance 'mac_muladd_10s_8s_32s_32_4_1_U5' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:2872]
 INFO: [Synth 8-638] synthesizing module 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:77]
 INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:10' bound to instance 'spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:92]
 INFO: [Synth 8-638] synthesizing module 'spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:22]
@@ -579,11 +1103,25 @@ INFO: [Synth 8-256] done synthesizing module 'spmv_mac_muladd_10s_8s_32s_32_4_1'
 	Parameter din1_WIDTH bound to: 8 - type: integer 
 	Parameter din2_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:59' bound to instance 'mac_muladd_10s_8s_32s_32_4_1_U4' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:1782]
-INFO: [Synth 8-3491] module 'spmv_flow_control_loop_pipe_sequential_init' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_flow_control_loop_pipe_sequential_init.vhd:13' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'spmv_flow_control_loop_pipe_sequential_init' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:1799]
+INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:59' bound to instance 'mac_muladd_10s_8s_32s_32_4_1_U6' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:2889]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:59' bound to instance 'mac_muladd_10s_8s_32s_32_4_1_U7' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:2906]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'spmv_mac_muladd_10s_8s_32s_32_4_1' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:59' bound to instance 'mac_muladd_10s_8s_32s_32_4_1_U8' of component 'spmv_mac_muladd_10s_8s_32s_32_4_1' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:2923]
+INFO: [Synth 8-3491] module 'spmv_flow_control_loop_pipe_sequential_init' declared at 'c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_flow_control_loop_pipe_sequential_init.vhd:13' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'spmv_flow_control_loop_pipe_sequential_init' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:2940]
 INFO: [Synth 8-638] synthesizing module 'spmv_flow_control_loop_pipe_sequential_init' [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_flow_control_loop_pipe_sequential_init.vhd:39]
 INFO: [Synth 8-256] done synthesizing module 'spmv_flow_control_loop_pipe_sequential_init' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_flow_control_loop_pipe_sequential_init.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'spmv_spmv_Pipeline_L2_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'spmv_spmv_Pipeline_L2_1' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_spmv_Pipeline_L2_1.vhd:184]
 INFO: [Synth 8-256] done synthesizing module 'spmv' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv.vhd:184]
 INFO: [Synth 8-256] done synthesizing module 'spmv_0' (0#1) [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/synth/spmv_0.vhd:229]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
@@ -689,18 +1227,18 @@ INFO: [Synth 8-7129] Port col_idx_1_q1[20] in module spmv_spmv_Pipeline_L2_1 is 
 INFO: [Synth 8-7129] Port col_idx_1_q1[19] in module spmv_spmv_Pipeline_L2_1 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1444.906 ; gain = 668.926
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1449.109 ; gain = 673.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1444.906 ; gain = 668.926
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1449.109 ; gain = 673.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1444.906 ; gain = 668.926
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1449.109 ; gain = 673.293
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1444.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1449.109 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -711,54 +1249,56 @@ Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/proj
 Finished Parsing XDC File [C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.runs/spmv_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1525.004 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1527.430 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 1525.004 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1527.430 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1525.004 ; gain = 749.023
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1527.430 ; gain = 751.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1525.004 ; gain = 749.023
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1527.430 ; gain = 751.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1525.004 ; gain = 749.023
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1527.430 ; gain = 751.613
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3936] Found unconnected internal register 'p_reg_reg' and it is trimmed from '48' to '32' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:47]
 INFO: [Synth 8-3936] Found unconnected internal register 'm_reg_reg' and it is trimmed from '43' to '32' bits. [c:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.gen/sources_1/ip/spmv_0/hdl/vhdl/spmv_mac_muladd_10s_8s_32s_32_4_1.vhd:40]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1525.004 ; gain = 749.023
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1527.430 ; gain = 751.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 2     
+	   2 Input   33 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 1     
+	   4 Input   32 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 2     
 +---Registers : 
 	               33 Bit    Registers := 1     
-	               32 Bit    Registers := 5     
-	               18 Bit    Registers := 2     
+	               32 Bit    Registers := 9     
+	               18 Bit    Registers := 4     
 	               10 Bit    Registers := 128   
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
 	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 21    
+	                1 Bit    Registers := 36    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 8     
-	   2 Input    8 Bit        Muxes := 2     
-	   2 Input    7 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 20    
+	   2 Input    8 Bit        Muxes := 8     
+	   2 Input    7 Bit        Muxes := 4     
 	   2 Input    5 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 1     
@@ -778,25 +1318,41 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
-DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
-DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.359 ; gain = 813.379
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1717.152 ; gain = 941.336
 ---------------------------------------------------------------------------------
- Sort Area is  mac_muladd_10s_8s_32s_32_4_1_U3/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_2 : 0 0 : 726 726 : Used 1 time 0
- Sort Area is  mac_muladd_10s_8s_32s_32_4_1_U4/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_0 : 0 0 : 726 726 : Used 1 time 0
+ Sort Area is  mac_muladd_10s_8s_32s_32_4_1_U5/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_4 : 0 0 : 726 726 : Used 1 time 0
+ Sort Area is  mac_muladd_10s_8s_32s_32_4_1_U6/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_3 : 0 0 : 726 726 : Used 1 time 0
+ Sort Area is  mac_muladd_10s_8s_32s_32_4_1_U7/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_2 : 0 0 : 726 726 : Used 1 time 0
+ Sort Area is  mac_muladd_10s_8s_32s_32_4_1_U8/spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0_U/p_reg_reg_0 : 0 0 : 726 726 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -805,6 +1361,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 +------------------------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name                               | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------------------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (C+(A2*B2)')' | 10     | 8      | 32     | -      | 32     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (C+(A2*B2)')' | 10     | 8      | 32     | -      | 32     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
 |spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (C+(A2*B2)')' | 10     | 8      | 32     | -      | 32     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
 |spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (C+(A2*B2)')' | 10     | 8      | 32     | -      | 32     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
 +------------------------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
@@ -817,19 +1375,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1678.074 ; gain = 902.094
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1717.152 ; gain = 941.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1691.879 ; gain = 915.898
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1717.152 ; gain = 941.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1713.688 ; gain = 937.707
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1732.094 ; gain = 956.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -847,49 +1405,51 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1941.336 ; gain = 1165.355
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1955.172 ; gain = 1179.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1941.336 ; gain = 1165.355
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1955.172 ; gain = 1179.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1941.336 ; gain = 1165.355
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1955.172 ; gain = 1179.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1941.336 ; gain = 1165.355
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1955.172 ; gain = 1179.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1941.336 ; gain = 1165.355
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1955.172 ; gain = 1179.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1941.336 ; gain = 1165.355
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1955.172 ; gain = 1179.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------+------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|spmv        | grp_spmv_Pipeline_L2_1_fu_1128/icmp_ln41_reg_3300_pp0_iter4_reg_reg[0] | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
-|spmv        | grp_spmv_Pipeline_L2_1_fu_1128/ap_loop_exit_ready_pp0_iter4_reg_reg    | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+------------+------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------+--------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|spmv        | grp_spmv_Pipeline_L2_1_fu_1136/icmp_ln41_2_reg_4642_pp0_iter5_reg_reg[0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|spmv        | grp_spmv_Pipeline_L2_1_fu_1136/ap_loop_exit_ready_pp0_iter5_reg_reg      | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|spmv        | grp_spmv_Pipeline_L2_1_fu_1136/icmp_ln41_1_reg_4632_pp0_iter5_reg_reg[0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|spmv        | grp_spmv_Pipeline_L2_1_fu_1136/icmp_ln41_reg_4622_pp0_iter5_reg_reg[0]   | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+--------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -902,6 +1462,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------------------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name                               | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------------------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (C+(A'*B')')' | 30     | 18     | 48     | -      | 32     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (C+(A'*B')')' | 30     | 18     | 48     | -      | 32     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
 |spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (C+(A'*B')')' | 30     | 18     | 48     | -      | 32     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
 |spmv_mac_muladd_10s_8s_32s_32_4_1_DSP48_0 | (C+(A'*B')')' | 30     | 18     | 48     | -      | 32     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
 +------------------------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
@@ -917,46 +1479,46 @@ Report Cell Usage:
 +------+--------+------+
 |      |Cell    |Count |
 +------+--------+------+
-|1     |CARRY4  |    34|
-|2     |DSP48E1 |     2|
-|3     |LUT1    |     1|
-|4     |LUT2    |    41|
-|5     |LUT3    |    99|
-|6     |LUT4    |   106|
-|7     |LUT5    |    34|
-|8     |LUT6    |   684|
-|9     |MUXF7   |   340|
-|10    |MUXF8   |   160|
-|11    |SRL16E  |     2|
-|12    |FDRE    |  1536|
+|1     |CARRY4  |    60|
+|2     |DSP48E1 |     4|
+|3     |LUT1    |     3|
+|4     |LUT2    |    13|
+|5     |LUT3    |   225|
+|6     |LUT4    |   208|
+|7     |LUT5    |   127|
+|8     |LUT6    |  1394|
+|9     |MUXF7   |   680|
+|10    |MUXF8   |   320|
+|11    |SRL16E  |     4|
+|12    |FDRE    |  1702|
 |13    |FDSE    |     1|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1941.336 ; gain = 1165.355
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1955.172 ; gain = 1179.355
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1941.336 ; gain = 1085.258
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1941.336 ; gain = 1165.355
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 1955.172 ; gain = 1101.035
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1955.172 ; gain = 1179.355
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1943.711 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 536 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.108 . Memory (MB): peak = 1965.609 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1064 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1946.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1969.762 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 1452ac6a
+Synth Design complete | Checksum: a92054e5
 INFO: [Common 17-83] Releasing license: Synthesis
-147 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+151 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1946.020 ; gain = 1401.895
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1946.020 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1969.762 ; gain = 1425.539
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1969.762 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.runs/spmv_0_synth_1/spmv_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP spmv_0, cache-ID = 11a0c56d28fdf748
-INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1946.020 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP spmv_0, cache-ID = 751d85e6c48345e3
+INFO: [Coretcl 2-1174] Renamed 11 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1969.762 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/stefa/Workspace/01-UNICAL/HLS/HLS_projects/build/project02_SpMV/09_partial-sums/vivado_prj/vivado_prj.runs/spmv_0_synth_1/spmv_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file spmv_0_utilization_synth.rpt -pb spmv_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 12:37:17 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 13:02:47 2026...
