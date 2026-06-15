@@ -1,6 +1,7 @@
 # HLS_projects
 ## ToDoList
 - [ ] VHDL simulation time automatic grab from hls_cosim.rpt
+- [ ] TB C SpMV using normale Matrix-Vector multiplication
 
 ## Projects structure
 ### Report generation directories
@@ -165,6 +166,16 @@ flowchart TD
 ## Components revisions
 ### Commands
 0. Baseline: `.\scripts\workflow.bat project02_SpMV 00_baseline spmv`
+    - Baseline tripcount: `.\scripts\workflow.bat project02_SpMV 00_baseline-tripcount spmv /tb project02_SpMV_00_baseline_tb /clk project02_SpMV_00_baseline_clk`
+1. Pipeline L2: `.\scripts\workflow.bat project02_SpMV 01_pipeline-L2 spmv /tb project02_SpMV_00_baseline_tb /clk project02_SpMV_00_baseline_clk`
+2. Pipeline L1: `.\scripts\workflow.bat project02_SpMV 02_pipeline-L1 spmv /tb project02_SpMV_00_baseline_tb /clk project02_SpMV_00_baseline_clk`
+3. Unroll-2 L1: `.\scripts\workflow.bat project02_SpMV 03_unroll-2-L1 spmv /tb project02_SpMV_00_baseline_tb /clk project02_SpMV_00_baseline_clk`
+4. Pipeline + Unroll-2 L2: `.\scripts\workflow.bat project02_SpMV 04_pipeline-unroll-2-L2 spmv /clk project02_SpMV_00_baseline_clk`
+5. Pipeline + Unroll-2 + Cyclic-2 L2: `.\scripts\workflow.bat project02_SpMV 05_pipeline-unroll-2-cyclic-2-L2 spmv /clk project02_SpMV_00_baseline_clk`
+6. Pipeline + Unroll-2 + Cyclic-2 (v2) L2: `.\scripts\workflow.bat project02_SpMV 06_pipeline-unroll-2-cyclic-2-v2-L2 spmv /clk project02_SpMV_00_baseline_clk`
+7. Pipeline + Unroll-2 + Cyclic-2 (v3) L2: `.\scripts\workflow.bat project02_SpMV 07_pipeline-unroll-2-cyclic-2-v3-L2 spmv /clk project02_SpMV_00_baseline_clk`
+8. Pipeline + Unroll-4 + Cyclic-2 (v3) L2: `.\scripts\workflow.bat project02_SpMV 08_pipeline-unroll-4-cyclic-2-v3-L2 spmv /clk project02_SpMV_00_baseline_clk`
+9. Partial sums: `.\scripts\workflow.bat project02_SpMV 09_partial-sums spmv /clk project02_SpMV_00_baseline_clk`
 
 ### Revisions graph
 ```mermaid
