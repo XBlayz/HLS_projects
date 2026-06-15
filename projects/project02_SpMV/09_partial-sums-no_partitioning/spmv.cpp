@@ -24,9 +24,9 @@ void spmv(
         // Iterate over non-zero elements
         L2_1: for (int k = start; k < end; k += F*2) {
             //* MIN: at lest 1 non-zero element
-            //* MAX: 128 non-zero elements (entire row)
-            //* AVG: 4 non-zero elements (typically 512 non-zero elements i total, 512/128 = 4 per row)
-            #pragma HLS loop_tripcount min=1 max=128 avg=4
+            //* MAX: 128 non-zero elements (entire row), now F*2 in parallel
+            //* AVG: 4 non-zero elements (typically 512 non-zero elements i total, 512/128 = 4 per row), now F*2 in parallel
+            #pragma HLS loop_tripcount min=1 max=128/(F*2) avg=4/(F*2)
             //* OPTIMIZATION(Pipeline): running MAC in pipeline
             #pragma HLS pipeline II=1
 
