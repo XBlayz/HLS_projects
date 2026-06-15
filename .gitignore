@@ -28,6 +28,7 @@
 !/scripts/**
 !/reports/**
 !/srcs/**
+!/docs/**
 
 # 3. Allow specific source files only inside project components
 # Structure targeted: /projects/<project_name>/<component_name>/
