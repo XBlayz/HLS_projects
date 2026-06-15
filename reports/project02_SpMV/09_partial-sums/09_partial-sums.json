@@ -1,0 +1,127 @@
+{
+  "project": "project02_SpMV",
+  "version": "09_partial-sums",
+  "comp": "spmv",
+  "primary": {
+    "clock": {
+      "target_ns": 10.0,
+      "estimated_ns": 5.128,
+      "uncertainty_ns": 2.7
+    },
+    "csynth_latency": {
+      "min_cycles": 1409,
+      "max_cycles": 17665
+    },
+    "cosim": {
+      "status": "Pass",
+      "latency_min_cycles": 1281,
+      "latency_avg_cycles": 1281,
+      "latency_max_cycles": 1281,
+      "interval_min_cycles": null,
+      "interval_avg_cycles": null,
+      "interval_max_cycles": null,
+      "total_exec_cycles": 1281
+    },
+    "pipeline_type": "no",
+    "interval": {
+      "min_cycles": 1410,
+      "max_cycles": 17666
+    },
+    "resources": {
+      "lut": {
+        "used": 3676,
+        "available": 53200
+      },
+      "ff": {
+        "used": 1962,
+        "available": 106400
+      },
+      "bram": {
+        "used": 0,
+        "available": 280
+      },
+      "dsp": {
+        "used": 4,
+        "available": 220
+      }
+    },
+    "power_w": {
+      "static": 0.103,
+      "dynamic": 0.013,
+      "total": 0.115
+    },
+    "loops": [
+      {
+        "name": "L1",
+        "iter_lat": 138,
+        "II": null,
+        "trip_count": 128,
+        "pipelined": false,
+        "lat_max_cycles": 17664
+      },
+      {
+        "name": "L2_1",
+        "iter_lat": 6,
+        "II": 1,
+        "trip_count": 128,
+        "pipelined": true,
+        "lat_max_cycles": 132
+      }
+    ],
+    "fsm": {
+      "num_states": 5,
+      "critical_path_max_ns": 5.12,
+      "critical_path_per_state_ns": [
+        1.14,
+        2.77,
+        1.14,
+        0.0,
+        5.12
+      ]
+    }
+  },
+  "final": {
+    "fmax_mhz": 195.01,
+    "min_clock_period_ns": 5.1279,
+    "II": "-",
+    "latency": {
+      "max_at_target_ns": 12810.0,
+      "max_at_estimated_ns": 6568.968,
+      "min_at_target_ns": 12810.0,
+      "min_at_estimated_ns": 6568.968
+    },
+    "total_execution_time": {
+      "at_target_ns": 12810.0,
+      "at_estimated_ns": 6568.968
+    },
+    "area_total_norm": 0.105719,
+    "energy_per_op_j": 7.55431e-07,
+    "energy_total_j": 7.55431e-07,
+    "adp": 694.464728,
+    "edp": 0.004962402065208,
+    "loops": [
+      {
+        "name": "L1",
+        "iter_lat": 138,
+        "II": null,
+        "trip_count": 128,
+        "pipelined": false,
+        "lat_max_cycles": 17664,
+        "iter_lat_at_target_ns": 1380.0,
+        "iter_lat_at_estimated_ns": 707.664,
+        "throughput_iter_per_ns": 0.001413
+      },
+      {
+        "name": "L2_1",
+        "iter_lat": 6,
+        "II": 1,
+        "trip_count": 128,
+        "pipelined": true,
+        "lat_max_cycles": 132,
+        "iter_lat_at_target_ns": 60.0,
+        "iter_lat_at_estimated_ns": 30.768,
+        "throughput_iter_per_ns": 0.032501
+      }
+    ]
+  }
+}

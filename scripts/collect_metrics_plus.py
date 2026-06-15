@@ -67,6 +67,32 @@ def _latency_cell(s: str) -> int | None:
     return None if s in ("?", "-") else _int(s)
 
 
+def _parse_range_cell(value: str):
+    """
+    Parse:
+        128       -> {"min": 128, "max": 128}
+        1 ~ 128   -> {"min": 1, "max": 128}
+        ?         -> None
+        -         -> None
+    """
+    value = value.strip()
+
+    if value in ("?", "-"):
+        return None
+
+    m = re.match(r"(\d+)\s*~\s*(\d+)", value)
+    if m:
+        return {
+            "min": int(m.group(1)),
+            "max": int(m.group(2)),
+        }
+
+    if value.isdigit():
+        v = int(value)
+        return {"min": v, "max": v}
+
+    return None
+
 # ---------------------------------------------------------------------------
 # Parsers
 # ---------------------------------------------------------------------------
@@ -78,13 +104,11 @@ def parse_csynth(text: str) -> dict:
       - latency min/max cycles  (None when variable, i.e. '?')
       - interval min/max cycles (None when variable)
       - pipeline type
-      - loop detail: per-loop trip count, iteration latency, II, pipelined flag
       - utilization (LUT, FF, BRAM, DSP) used and available
     """
     data = {}
 
     # ---- Timing -----------------------------------------------------------
-    # |ap_clk  |  10.00 ns|  6.210 ns|     2.70 ns|
     timing_row = re.search(
         r"\|\s*ap_clk\s*\|\s*([\d.]+)\s*ns\s*\|\s*([\d.]+)\s*ns\s*\|\s*([\d.]+)\s*ns\s*\|",
         text
@@ -95,10 +119,6 @@ def parse_csynth(text: str) -> dict:
         data["clock_uncertainty_ns"] = _float(timing_row.group(3))
 
     # ---- Latency summary + pipeline type ----------------------------------
-    # Cells may contain digits or '?' (variable latency); must not match
-    # utilization table rows (which contain only digits).
-    # Row format: |  67|  67| ... |  68|  68|   no|
-    #         or: |   ?|   ?| ... |   ?|   ?|   no|
     CELL = r"\s*(\?|\d+)\s*"
     lat_row = re.search(
         r"^\s*\|" + CELL + r"\|" + CELL + r"\|[^|]+\|[^|]+\|"
@@ -112,38 +132,7 @@ def parse_csynth(text: str) -> dict:
         data["interval_max_cycles"]       = _latency_cell(lat_row.group(4))
         data["pipeline_type"]             = lat_row.group(5).strip()
 
-    # ---- Loop detail ------------------------------------------------------
-    # | Loop Name|  min  |  max  | Iter Lat | II achieved | II target | Trip | Pipelined|
-    # |- L1      |      ?|      ?|         ?|           -|           -|  128|        no|
-    # | + L2     |      ?|      ?|         6|           -|           -|    ?|        no|
-    LCELL = r"\s*(\?|-|\d+)\s*"
-    loop_pat = re.compile(
-        r"^\s*\|\s*[-+]?\s*(\w+)\s*\|"  # loop name (L1, L2, ...)
-        + LCELL + r"\|"                 # latency min
-        + LCELL + r"\|"                 # latency max
-        + LCELL + r"\|"                 # iteration latency
-        + LCELL + r"\|"                 # II achieved
-        + LCELL + r"\|"                 # II target
-        + LCELL + r"\|"                 # trip count
-        + r"\s*(\w+)\s*\|",            # pipelined
-        re.MULTILINE
-    )
-    loops = []
-    for m in loop_pat.finditer(text):
-        loops.append({
-            "name":           m.group(1),
-            "lat_min_cycles": _latency_cell(m.group(2)),
-            "lat_max_cycles": _latency_cell(m.group(3)),
-            "iter_lat":       _latency_cell(m.group(4)),
-            "II":             _latency_cell(m.group(5)),
-            "trip_count":     _latency_cell(m.group(7)),
-            "pipelined":      m.group(8).strip() == "yes",
-        })
-    if loops:
-        data["loops"] = loops
-
     # ---- Utilization summary ----------------------------------------------
-    # Column order in csynth.rpt: BRAM_18K | DSP | FF | LUT | URAM
     for label, keys in [
         ("Total",     ("used_bram",  "used_dsp",  "used_ff",  "used_lut")),
         ("Available", ("avail_bram", "avail_dsp", "avail_ff", "avail_lut")),
@@ -160,18 +149,56 @@ def parse_csynth(text: str) -> dict:
     return data
 
 
+def parse_loops(text: str) -> list[dict]:
+    """
+    Extract from generic csynth.rpt:
+      - loop detail: per-loop trip count, iteration latency, II, pipelined flag
+    """
+    loops = []
+
+    for line in text.splitlines():
+        # Matches the loop rows (indicated by 'o'), ignoring modules ('+')
+        m = re.match(
+            r"^\|\s*o\s+(\w+)\s*"      # loop name
+            r"\|[^|]*"                # Issue
+            r"\|[^|]*"                # Violation
+            r"\|\s*([^|]+)"           # Iteration Latency
+            r"\|\s*([^|]+)"           # Interval
+            r"\|\s*([^|]+)"           # Trip Count
+            r"\|\s*([^|]+)"           # Pipelined
+            r"\|\s*([^|]+)",          # Latency cycles
+            line
+        )
+
+        if not m:
+            continue
+
+        def parse_int_cell(v):
+            v = v.strip()
+            if v in ("-", "?"):
+                return None
+            try:
+                return int(v)
+            except ValueError:
+                return None
+
+        loops.append({
+            "name": m.group(1),
+            "iter_lat": parse_int_cell(m.group(2)),
+            "II": parse_int_cell(m.group(3)),
+            "trip_count": parse_int_cell(m.group(4)),
+            "pipelined": m.group(5).strip().lower() == "yes",
+            "lat_max_cycles": parse_int_cell(m.group(6)),
+        })
+
+    return loops
+
+
 def parse_cosim(text: str) -> dict:
     """
-    Extract from <COMP_NAME>_cosim.rpt (Verilog row, ignores VHDL/NA rows):
-      - cosim_latency_min/avg/max cycles
-      - cosim_interval_min/avg/max cycles
-      - cosim_total_exec_cycles
-      - cosim_status
+    Extract from <COMP_NAME>_cosim.rpt (Verilog row, ignores VHDL/NA rows).
     """
     data = {}
-
-    # Match the Verilog data row (first non-NA row)
-    # |   Verilog|      Pass|   67|   67|   67|   68|   68|   68|   2039|
     verilog_row = re.search(
         r"\|\s*Verilog\s*\|\s*(\w+)\s*\|"
         r"\s*(\w+)\s*\|\s*(\w+)\s*\|\s*(\w+)\s*\|"
@@ -193,10 +220,7 @@ def parse_cosim(text: str) -> dict:
 
 
 def parse_compile_log(text: str) -> dict:
-    """
-    Extract Estimated Fmax from hls_compile.log.
-      INFO: [HLS 200-789] **** Estimated Fmax: 161.03 MHz
-    """
+    """Extract Estimated Fmax from hls_compile.log."""
     data = {}
     fmax = _first_match(r"Estimated Fmax:\s*([\d.]+)\s*MHz", text)
     if fmax:
@@ -205,14 +229,8 @@ def parse_compile_log(text: str) -> dict:
 
 
 def parse_power_report(text: str) -> dict:
-    """
-    Extract static and dynamic power from Vivado power report (.txt).
-      | Total On-Chip Power (W)  | 0.104 |
-      | Dynamic (W)              | 0.001 |
-      | Device Static (W)        | 0.103 |
-    """
+    """Extract static and dynamic power from Vivado power report (.txt)."""
     data = {}
-
     total   = _first_match(r"Total On-Chip Power \(W\)\s*\|\s*([\d.]+)", text)
     dynamic = _first_match(r"Dynamic \(W\)\s*\|\s*([\d.]+)", text)
     static  = _first_match(r"Device Static \(W\)\s*\|\s*([\d.]+)", text)
@@ -228,19 +246,12 @@ def parse_power_report(text: str) -> dict:
 
 
 def parse_verbose_sched(text: str) -> dict:
-    """
-    Extract FSM info from <COMP_NAME>.verbose.sched.rpt:
-      - num_fsm_states
-      - critical_path_ns: per-state worst-case delay (max across all states)
-    """
+    """Extract FSM info from <COMP_NAME>.verbose.sched.rpt."""
     data = {}
-
-    # * Number of FSM states : 9
     m = re.search(r"\* Number of FSM states\s*:\s*(\d+)", text)
     if m:
         data["num_fsm_states"] = _int(m.group(1))
 
-    # State N <SV = X> <Delay = Y.YY>
     state_delays = [
         _float(d)
         for d in re.findall(r"^State\s+\d+\s*<SV\s*=\s*\d+>\s*<Delay\s*=\s*([\d.]+)>", text, re.MULTILINE)
@@ -267,21 +278,18 @@ def compute_derived(raw: dict) -> dict:
     """Compute all derived / elaborated metrics from raw parsed values."""
     derived = {}
 
-    clk_target   = raw.get("clock_target_ns")
-    clk_est      = raw.get("clock_estimated_ns")
+    clk_target    = raw.get("clock_target_ns")
+    clk_est       = raw.get("clock_estimated_ns")
     pipeline_type = raw.get("pipeline_type", "no")
     is_pipelined  = pipeline_type not in ("no", None, "")
 
-    # Fmax: prefer compile-log value, fall back to 1/clk_estimated
     fmax = raw.get("fmax_mhz")
     if fmax is None and clk_est and clk_est > 0:
         fmax = round(1000.0 / clk_est, 4)
     derived["fmax_mhz"] = fmax
 
-    # Minimum achievable clock period (ns)
     derived["min_clock_period_ns"] = round(1000.0 / fmax, 4) if fmax else None
 
-    # Use cosim latency when available, fall back to csynth
     lat_max = (
         raw.get("cosim_latency_max_cycles")
         or raw.get("csynth_latency_max_cycles")
@@ -292,21 +300,17 @@ def compute_derived(raw: dict) -> dict:
     )
     ii_min = raw.get("interval_min_cycles")
 
-    # II: "-" sentinel when not pipelined
     derived["II"] = ii_min if is_pipelined else "-"
 
-    # Latency expressed with both clock values
     derived["latency_max_at_target_ns"]    = _latency_ns(lat_max, clk_target)
     derived["latency_max_at_estimated_ns"] = _latency_ns(lat_max, clk_est)
     derived["latency_min_at_target_ns"]    = _latency_ns(lat_min, clk_target)
     derived["latency_min_at_estimated_ns"] = _latency_ns(lat_min, clk_est)
 
-    # Total execution time (cosim total cycles × clocks)
     total_exec_cycles = raw.get("cosim_total_exec_cycles")
     derived["total_exec_at_target_ns"]    = _latency_ns(total_exec_cycles, clk_target)
     derived["total_exec_at_estimated_ns"] = _latency_ns(total_exec_cycles, clk_est)
 
-    # Normalised area = Σ(used_i / avail_i)
     area_parts = []
     for used_key, avail_key in [
         ("used_lut",  "avail_lut"),
@@ -321,21 +325,16 @@ def compute_derived(raw: dict) -> dict:
     area_norm = round(sum(area_parts), 6) if area_parts else None
     derived["area_total_norm"] = area_norm
 
-    # Power
     p_total = raw.get("power_total_w")
-
-    # Single-operation latency: II×clk (pipelined) or lat_max×clk (sequential)
     op_cycles = ii_min if is_pipelined else lat_max
     single_op_est_ns = _latency_ns(op_cycles, clk_est)
 
-    # Energy per operation [J] — use estimated clock
     derived["energy_per_op_j"] = (
         round(p_total * single_op_est_ns * 1e-9, 12)
         if p_total is not None and single_op_est_ns is not None
         else None
     )
 
-    # Total energy [J] — use estimated clock × total_exec_cycles
     exec_est_ns = derived.get("total_exec_at_estimated_ns")
     derived["energy_total_j"] = (
         round(p_total * exec_est_ns * 1e-9, 12)
@@ -343,14 +342,12 @@ def compute_derived(raw: dict) -> dict:
         else None
     )
 
-    # ADP = area_norm × total_exec_at_estimated_ns
     derived["adp"] = (
         round(area_norm * exec_est_ns, 6)
         if area_norm is not None and exec_est_ns is not None
         else None
     )
 
-    # EDP = energy_total × total_exec_at_estimated_ns
     e_total = derived.get("energy_total_j")
     derived["edp"] = (
         e_total * exec_est_ns
@@ -358,15 +355,12 @@ def compute_derived(raw: dict) -> dict:
         else None
     )
 
-    # ---- Loop-level derived metrics ---------------------------------------
     loops_raw = raw.get("loops", [])
     loops_derived = []
     for lp in loops_raw:
-        ld = dict(lp)  # copy raw fields
-        # Iteration latency in ns (at target and estimated clock)
+        ld = dict(lp)
         ld["iter_lat_at_target_ns"]    = _latency_ns(lp.get("iter_lat"), clk_target)
         ld["iter_lat_at_estimated_ns"] = _latency_ns(lp.get("iter_lat"), clk_est)
-        # Loop throughput: iterations per ns (= 1 / iter_lat_est_ns), when not None
         iter_lat_est = ld["iter_lat_at_estimated_ns"]
         ld["throughput_iter_per_ns"] = (
             round(1.0 / iter_lat_est, 6) if iter_lat_est else None
@@ -418,29 +412,38 @@ def collect(project: str, version: str, root: Path) -> dict:
     power_dir = reports_dir / "vivado" / "power"
 
     # Read source files
-    csynth_text  = _read(syn_dir   / f"{comp_name}_csynth.rpt")
-    cosim_text   = _read(sim_dir   / f"{comp_name}_cosim.rpt")
-    compile_text = _read(syn_dir   / "hls_compile.log")
-    power_text   = _read(power_dir / f"{comp_name}_post-synth_power_report.txt")
-    sched_text   = _read(syn_dir   / f"{comp_name}.verbose.sched.rpt")
+    main_csynth_text = _read(syn_dir   / f"{comp_name}_csynth.rpt")
+    loop_csynth_text = _read(syn_dir   / "csynth.rpt")
+    cosim_text       = _read(sim_dir   / f"{comp_name}_cosim.rpt")
+    compile_text     = _read(syn_dir   / "hls_compile.log")
+    power_text       = _read(power_dir / f"{comp_name}_post-synth_power_report.txt")
+    sched_text       = _read(syn_dir   / f"{comp_name}.verbose.sched.rpt")
 
-    if not csynth_text:
+    if not main_csynth_text:
         print(
             f"[ERROR] Missing {comp_name}_csynth.rpt in {syn_dir}",
             file=sys.stderr,
         )
         sys.exit(1)
 
+    if not loop_csynth_text:
+        print(
+            f"[WARN] Missing generic csynth.rpt in {syn_dir} — "
+            "loop details will not be extracted",
+            file=sys.stderr,
+        )
+
     if not cosim_text:
         print(
             f"[WARN] Missing {comp_name}_cosim.rpt in {sim_dir} — "
-            "cosim latency will be sourced from csynth",
+            "cosim latency will be sourced from main csynth.rpt",
             file=sys.stderr,
         )
 
     # Parse
     raw = {}
-    raw.update(parse_csynth(csynth_text))
+    raw.update(parse_csynth(main_csynth_text))
+    raw["loops"] = parse_loops(loop_csynth_text) if loop_csynth_text else []
     raw.update(parse_cosim(cosim_text))
     raw.update(parse_compile_log(compile_text))
     raw.update(parse_power_report(power_text))
@@ -454,9 +457,6 @@ def collect(project: str, version: str, root: Path) -> dict:
         "version": version,
         "comp":    comp_name,
 
-        # ------------------------------------------------------------------ #
-        # PRIMARY METRICS  — raw values collected from report files           #
-        # ------------------------------------------------------------------ #
         "primary": {
             "clock": {
                 "target_ns":      raw.get("clock_target_ns"),
@@ -493,9 +493,7 @@ def collect(project: str, version: str, root: Path) -> dict:
                 "dynamic": raw.get("power_dynamic_w"),
                 "total":   raw.get("power_total_w"),
             },
-            # Per-loop raw data from csynth loop detail table
             "loops": raw.get("loops", []),
-            # FSM structure from verbose schedule report
             "fsm": {
                 "num_states":               raw.get("num_fsm_states"),
                 "critical_path_max_ns":     raw.get("critical_path_max_ns"),
@@ -503,9 +501,6 @@ def collect(project: str, version: str, root: Path) -> dict:
             },
         },
 
-        # ------------------------------------------------------------------ #
-        # FINAL METRICS  — elaborated / derived quantities                    #
-        # ------------------------------------------------------------------ #
         "final": {
             "fmax_mhz":            derived.get("fmax_mhz"),
             "min_clock_period_ns": derived.get("min_clock_period_ns"),
@@ -525,7 +520,6 @@ def collect(project: str, version: str, root: Path) -> dict:
             "energy_total_j":   derived.get("energy_total_j"),
             "adp":              derived.get("adp"),
             "edp":              derived.get("edp"),
-            # Per-loop derived metrics (latency in ns, throughput)
             "loops": derived.get("loops", []),
         },
     }
