@@ -10,7 +10,7 @@
     },
     "csynth_latency": {
       "min_cycles": 1409,
-      "max_cycles": 17665
+      "max_cycles": 5377
     },
     "cosim": {
       "status": "Pass",
@@ -25,7 +25,7 @@
     "pipeline_type": "no",
     "interval": {
       "min_cycles": 1410,
-      "max_cycles": 17666
+      "max_cycles": 5378
     },
     "resources": {
       "lut": {
@@ -53,19 +53,19 @@
     "loops": [
       {
         "name": "L1",
-        "iter_lat": 138,
+        "iter_lat": 42,
         "II": null,
         "trip_count": 128,
         "pipelined": false,
-        "lat_max_cycles": 17664
+        "lat_max_cycles": 5376
       },
       {
         "name": "L2_1",
         "iter_lat": 6,
         "II": 1,
-        "trip_count": 128,
+        "trip_count": 32,
         "pipelined": true,
-        "lat_max_cycles": 132
+        "lat_max_cycles": 36
       }
     ],
     "fsm": {
@@ -102,22 +102,22 @@
     "loops": [
       {
         "name": "L1",
-        "iter_lat": 138,
+        "iter_lat": 42,
         "II": null,
         "trip_count": 128,
         "pipelined": false,
-        "lat_max_cycles": 17664,
-        "iter_lat_at_target_ns": 1380.0,
-        "iter_lat_at_estimated_ns": 707.664,
-        "throughput_iter_per_ns": 0.001413
+        "lat_max_cycles": 5376,
+        "iter_lat_at_target_ns": 420.0,
+        "iter_lat_at_estimated_ns": 215.376,
+        "throughput_iter_per_ns": 0.004643
       },
       {
         "name": "L2_1",
         "iter_lat": 6,
         "II": 1,
-        "trip_count": 128,
+        "trip_count": 32,
         "pipelined": true,
-        "lat_max_cycles": 132,
+        "lat_max_cycles": 36,
         "iter_lat_at_target_ns": 60.0,
         "iter_lat_at_estimated_ns": 30.768,
         "throughput_iter_per_ns": 0.032501

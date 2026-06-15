@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date             : Mon Jun 15 13:04:16 2026
+| Date             : Mon Jun 15 20:27:41 2026
 | Host             : Legion5-Stefano running 64-bit major release  (build 9200)
 | Command          : report_power -name spmv_0_power_1 -file ../../../reports/project02_SpMV/09_partial-sums/vivado/power/spmv_post-synth_power_report.txt -format text -hier all -xpe ../../../reports/project02_SpMV/09_partial-sums/vivado/power/spmv_post-synth_power_report.xml -rpx ../../../reports/project02_SpMV/09_partial-sums/vivado/power/spmv_post-synth_power_report.rpx
 | Design           : spmv_0

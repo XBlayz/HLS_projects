@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<POWERDATA author="Vivado Power Analysis" dataVersion="2025.2" design="spmv_0" designState="synthesized" date="Mon Jun 15 13:04:16 2026" pwrOpt="None" activityLevel="simulation">
+<POWERDATA author="Vivado Power Analysis" dataVersion="2025.2" design="spmv_0" designState="synthesized" date="Mon Jun 15 20:27:41 2026" pwrOpt="None" activityLevel="simulation">
 	<ENVIRONMENT>
 		<DEVICE part="xc7z020" grade="extended" package="clg484" speed="-3" process="typical" vid="No">
 		</DEVICE>

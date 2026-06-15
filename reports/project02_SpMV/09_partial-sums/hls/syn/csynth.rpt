@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'spmv'
 ================================================================
 + General Information: 
-    * Date:           Mon Jun 15 13:00:05 2026
+    * Date:           Mon Jun 15 20:23:05 2026
     * Version:        2025.2 (Build 6295257 on Nov 12 2025)
     * Project:        09_partial-sums_script
     * Solution:       hls (Vivado IP Flow Target)
@@ -17,10 +17,10 @@
 |         Modules        | Issue|               | Iteration|         | Trip |          |       Latency       |      |      |        |           |           |     |
 |         & Loops        | Type | Violation Type|  Latency | Interval| Count| Pipelined| (cycles)|    (ns)   | Slack| BRAM |   DSP  |     FF    |    LUT    | URAM|
 +------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+------+--------+-----------+-----------+-----+
-|+ spmv                  |     -|              -|         -|    17666|     -|        no|    17665|  1.766e+05|  2.17|     -|  4 (1%)|  1962 (1%)|  3676 (6%)|    -|
-| o L1                   |     -|              -|       138|        -|   128|        no|    17664|  1.766e+05|  7.30|     -|       -|          -|          -|    -|
-|  + spmv_Pipeline_L2_1  |     -|              -|         -|        -|     -|       yes|      134|  1.340e+03|  2.42|     -|  4 (1%)|  596 (~0%)|  3508 (6%)|    -|
-|   o L2_1               |     -|              -|         6|        1|   128|       yes|      132|  1.320e+03|  7.30|     -|       -|          -|          -|    -|
+|+ spmv                  |     -|              -|         -|     5378|     -|        no|     5377|  5.377e+04|  2.17|     -|  4 (1%)|  1962 (1%)|  3676 (6%)|    -|
+| o L1                   |     -|              -|        42|        -|   128|        no|     5376|  5.376e+04|  7.30|     -|       -|          -|          -|    -|
+|  + spmv_Pipeline_L2_1  |     -|              -|         -|        -|     -|       yes|       38|    380.000|  2.42|     -|  4 (1%)|  596 (~0%)|  3508 (6%)|    -|
+|   o L2_1               |     -|              -|         6|        1|    32|       yes|       36|    360.000|  7.30|     -|       -|          -|          -|    -|
 +------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+------+--------+-----------+-----------+-----+
     Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
 
@@ -400,41 +400,41 @@
 |   add_ln22_fu_1298_p2              |     |        | add_ln22      | add       | fabric                   | 0       |
 |   add_ln50_1_fu_1337_p2            |     |        | add_ln50_1    | add       | fabric                   | 0       |
 |  + spmv_Pipeline_L2_1              | 4   |        |               |           |                          |         |
-|    icmp_ln25_fu_1610_p2            |     |        | icmp_ln25     | setlt     | auto                     | 0       |
-|    tmp_2_fu_1761_p258              |     |        | select_ln42   | select    | auto_sel                 | 0       |
-|    select_ln42_1_fu_1750_p3        |     |        | select_ln42_1 | select    | auto_sel                 | 0       |
+|    icmp_ln25_fu_1608_p2            |     |        | icmp_ln25     | setlt     | auto                     | 0       |
+|    tmp_2_fu_1759_p258              |     |        | select_ln42   | select    | auto_sel                 | 0       |
+|    select_ln42_1_fu_1748_p3        |     |        | select_ln42_1 | select    | auto_sel                 | 0       |
 |    sparsemux_257_7_10_1_1_U1       |     |        | tmp_2         | sparsemux | compactencoding_dontcare | 0       |
 |    mac_muladd_10s_8s_32s_32_4_1_U5 | 1   |        | mul_ln42      | mul       | dsp_slice                | 3       |
 |    mac_muladd_10s_8s_32s_32_4_1_U5 | 1   |        | sext_ln42_2   | sext      | dsp_slice                | 3       |
 |    mac_muladd_10s_8s_32s_32_4_1_U5 | 1   |        | add_ln42      | add       | dsp_slice                | 3       |
-|    add_ln41_fu_1633_p2             |     |        | add_ln41      | add       | fabric                   | 0       |
-|    icmp_ln41_fu_1649_p2            |     |        | icmp_ln41     | setlt     | auto                     | 0       |
-|    tmp_5_fu_2183_p258              |     |        | select_ln42_2 | select    | auto_sel                 | 0       |
-|    select_ln42_3_fu_2172_p3        |     |        | select_ln42_3 | select    | auto_sel                 | 0       |
+|    add_ln41_fu_1631_p2             |     |        | add_ln41      | add       | fabric                   | 0       |
+|    icmp_ln41_fu_1647_p2            |     |        | icmp_ln41     | setlt     | auto                     | 0       |
+|    tmp_5_fu_2181_p258              |     |        | select_ln42_2 | select    | auto_sel                 | 0       |
+|    select_ln42_3_fu_2170_p3        |     |        | select_ln42_3 | select    | auto_sel                 | 0       |
 |    sparsemux_257_7_10_1_1_U2       |     |        | tmp_5         | sparsemux | compactencoding_dontcare | 0       |
 |    mac_muladd_10s_8s_32s_32_4_1_U6 | 1   |        | mul_ln42_1    | mul       | dsp_slice                | 3       |
 |    mac_muladd_10s_8s_32s_32_4_1_U6 | 1   |        | sext_ln42_5   | sext      | dsp_slice                | 3       |
 |    mac_muladd_10s_8s_32s_32_4_1_U6 | 1   |        | add_ln42_1    | add       | dsp_slice                | 3       |
-|    add_i3_17_fu_3435_p3            |     |        | add_i3_17     | select    | auto_sel                 | 0       |
-|    add_ln37_fu_1654_p2             |     |        | add_ln37      | add       | fabric                   | 0       |
-|    icmp_ln41_1_fu_1670_p2          |     |        | icmp_ln41_1   | setlt     | auto                     | 0       |
-|    tmp_8_fu_2605_p258              |     |        | select_ln42_4 | select    | auto_sel                 | 0       |
-|    select_ln42_5_fu_2594_p3        |     |        | select_ln42_5 | select    | auto_sel                 | 0       |
+|    add_i3_17_fu_3433_p3            |     |        | add_i3_17     | select    | auto_sel                 | 0       |
+|    add_ln37_fu_1652_p2             |     |        | add_ln37      | add       | fabric                   | 0       |
+|    icmp_ln41_1_fu_1668_p2          |     |        | icmp_ln41_1   | setlt     | auto                     | 0       |
+|    tmp_8_fu_2603_p258              |     |        | select_ln42_4 | select    | auto_sel                 | 0       |
+|    select_ln42_5_fu_2592_p3        |     |        | select_ln42_5 | select    | auto_sel                 | 0       |
 |    sparsemux_257_7_10_1_1_U3       |     |        | tmp_8         | sparsemux | compactencoding_dontcare | 0       |
 |    mac_muladd_10s_8s_32s_32_4_1_U7 | 1   |        | mul_ln42_2    | mul       | dsp_slice                | 3       |
 |    mac_muladd_10s_8s_32s_32_4_1_U7 | 1   |        | sext_ln42_8   | sext      | dsp_slice                | 3       |
 |    mac_muladd_10s_8s_32s_32_4_1_U7 | 1   |        | add_ln42_2    | add       | dsp_slice                | 3       |
-|    add_i3_29_fu_3440_p3            |     |        | add_i3_29     | select    | auto_sel                 | 0       |
-|    add_ln37_1_fu_1675_p2           |     |        | add_ln37_1    | add       | fabric                   | 0       |
-|    icmp_ln41_2_fu_1691_p2          |     |        | icmp_ln41_2   | setlt     | auto                     | 0       |
-|    tmp_s_fu_3027_p258              |     |        | select_ln42_6 | select    | auto_sel                 | 0       |
-|    select_ln42_7_fu_3016_p3        |     |        | select_ln42_7 | select    | auto_sel                 | 0       |
+|    add_i3_29_fu_3438_p3            |     |        | add_i3_29     | select    | auto_sel                 | 0       |
+|    add_ln37_1_fu_1673_p2           |     |        | add_ln37_1    | add       | fabric                   | 0       |
+|    icmp_ln41_2_fu_1689_p2          |     |        | icmp_ln41_2   | setlt     | auto                     | 0       |
+|    tmp_s_fu_3025_p258              |     |        | select_ln42_6 | select    | auto_sel                 | 0       |
+|    select_ln42_7_fu_3014_p3        |     |        | select_ln42_7 | select    | auto_sel                 | 0       |
 |    sparsemux_257_7_10_1_1_U4       |     |        | tmp_s         | sparsemux | compactencoding_dontcare | 0       |
 |    mac_muladd_10s_8s_32s_32_4_1_U8 | 1   |        | mul_ln42_3    | mul       | dsp_slice                | 3       |
 |    mac_muladd_10s_8s_32s_32_4_1_U8 | 1   |        | sext_ln42_11  | sext      | dsp_slice                | 3       |
 |    mac_muladd_10s_8s_32s_32_4_1_U8 | 1   |        | add_ln42_3    | add       | dsp_slice                | 3       |
-|    add_i3_311_fu_3445_p3           |     |        | add_i3_311    | select    | auto_sel                 | 0       |
-|    add_ln25_fu_1696_p2             |     |        | add_ln25      | add       | fabric                   | 0       |
+|    add_i3_311_fu_3443_p3           |     |        | add_i3_311    | select    | auto_sel                 | 0       |
+|    add_ln25_fu_1694_p2             |     |        | add_ln25      | add       | fabric                   | 0       |
 +------------------------------------+-----+--------+---------------+-----------+--------------------------+---------+
 
 
@@ -454,7 +454,7 @@
 | ARRAY_PARTITION | variable=col_idx type=cyclic factor=2 | in spmv (spmv.cpp:12) |
 | ARRAY_PARTITION | variable=x type=complete              | in spmv (spmv.cpp:13) |
 | ARRAY_PARTITION | variable=partial_sums type=complete   | in spmv (spmv.cpp:19) |
-| LOOP_TRIPCOUNT  | min=1 max=128 avg=4                   | in spmv (spmv.cpp:29) |
+| LOOP_TRIPCOUNT  | min=1 max=128/(2*2) avg=4/(2*2)       | in spmv (spmv.cpp:29) |
 | PIPELINE        | ii=1                                  | in spmv (spmv.cpp:31) |
 | UNROLL          |                                       | in spmv (spmv.cpp:35) |
 | UNROLL          |                                       | in spmv (spmv.cpp:49) |

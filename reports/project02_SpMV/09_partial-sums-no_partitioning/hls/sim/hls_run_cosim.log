@@ -260,7 +260,7 @@ Built simulation snapshot spmv
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Mon Jun 15 12:52:20 2026
+  **** Start of session at: Mon Jun 15 20:24:49 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -420,7 +420,7 @@ UVM_INFO D:/Softwares/AMD-Design/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 14305 ns : File "D:/Softwares/AMD-Design/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 ## quit
-INFO: [Common 17-206] Exiting xsim at Mon Jun 15 12:52:23 2026...
+INFO: [Common 17-206] Exiting xsim at Mon Jun 15 20:24:52 2026...
 INFO: [COSIM 212-316] Starting C post checking ...
 ==============================================================
                     SPMV TESTBENCH                            
@@ -564,5 +564,5 @@ ROW       DUT               REFERENCE         STATUS
 ==============================================================
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 50.2 seconds; peak allocated memory: 213.574 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 54s
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 51.475 seconds; peak allocated memory: 214.289 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 56s
